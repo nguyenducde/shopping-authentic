@@ -22,7 +22,7 @@
         }
 
         &__info {
-            width: 40%;
+            width: 50%;
 
             &__title {
                 margin-bottom: 6rem;
@@ -31,7 +31,6 @@
                 font-size: 4.5rem;
                 line-height: 6.75rem;
                 overflow: hidden;
-                color: $main-color;
             }
 
             &__description {
@@ -62,11 +61,33 @@
                 height: 40rem;
                 border-radius: 58% 42% 38% 62% / 42% 55% 45% 58%;
                 transform: translate(0, -50%);
-                background-color: $main-color;
                 animation: borderAnimation 10s infinite;
                 transition: border-radius 13s ease;
             }
         }
+        
+    }
+    &__control {
+        @include flex(center, center);
+        position: absolute;
+        left: 50%;
+        bottom: 5rem;
+        transform: translateX(-50%);
+
+        &__item ~ &__item {
+            margin-left: 1rem;
+        }
+
+        &__item {
+            @include flex(center, center);
+            font-size: 1.5rem;
+            cursor: pointer;
+
+            .index {
+                font-size: 1.5rem;
+            }
+        }
+        
     }
 }
 

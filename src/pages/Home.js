@@ -5,7 +5,7 @@ import homeSliderData from "../assets/fake-data/home-slider"
 export default function Home(){
     return (
         <Helmet title='Trang chủ'>
-            <HomeSlider data={homeSliderData} />
+            <HomeSlider data={homeSliderData} control={true} autoRunSlide={true} />
         </Helmet>
     )
 }
