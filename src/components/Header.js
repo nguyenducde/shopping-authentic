@@ -1,7 +1,16 @@
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from '../assets/images/Logo-2.png'
 
 export default function Header(){
+
+    useEffect(() => {
+        const header = document.querySelector('.header')
+        window.addEventListener('scroll', function(){
+            header.classList.toggle('shrink', window.scrollY > 0)
+        })
+    },[])
+
     return (
         <header>
             <div className='header'>

@@ -16,7 +16,13 @@
     height: $header-height;
     display: flex;
     align-items: center;
+    transition: height linear 0.2s;
 
+    &.shrink{
+        box-shadow: $box-shadow;
+        height: $header-shrink-height;
+
+    }
     &__logo {
         @include flex(center, center);
         position: absolute;

@@ -2,4 +2,44 @@
 
 .footer {
     margin-top: 150vh;
+    box-shadow: 0rem -0.5rem 2rem #959da533;
+    padding: 4rem 0;
+
+    &__logo {
+        height: 2.8rem;
+        margin-bottom: 1.7rem;
+    }
+    &-group {
+        display: flex;
+
+        &__item {
+            width: 25%;
+
+            &-heading {
+                font-size: 1.4rem;
+                padding-bottom: 1.7rem;
+            }
+
+            &-content {
+                font-size: 1.3rem;
+                padding-bottom: 1.2rem;
+                display: flex;
+                width: fit-content;
+                line-height: 1.4;
+                text-align: justify;
+
+                & span {
+                    color: black;
+                    padding-left: 0.3rem;
+                    font-weight: bold;
+                }
+
+                &-link {
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
 }
