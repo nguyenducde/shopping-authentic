@@ -17,6 +17,7 @@ export default function HomeSlider(props){
                                 <NavLink to={item.path} className='home-slider__item__info__link'>Xem chi tiết</NavLink>
                             </div>
                             <div className='home-slider__item__img'>
+                                <div className='shape'></div>
                                 <img src={item.img} alt='' />
                             </div>
                         </div>
