@@ -1,0 +1,59 @@
+@import './variables';
+
+.home-slider {
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: 5rem;
+    position: relative;
+
+    &__item {
+        @include flex(center, space-between);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: visible;
+        }
+
+        &__info {
+            width: 40%;
+
+            &__title {
+                margin-bottom: 6rem;
+                font-family: 'M PLUS Rounded 1c', sans-serif;
+                font-weight: 600;
+                font-size: 4.5rem;
+                line-height: 6.75rem;
+                overflow: hidden;
+                color: $main-color;
+            }
+
+            &__description {
+                margin-bottom: 6rem;
+                color: $txt-second-color;
+                font-size: 1.5rem;
+                line-height: 2.25rem;
+                overflow: hidden;
+                text-align: justify;
+            }
+        }
+
+        &__img {
+            z-index: 99;
+            height: 100%;
+
+            img {
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+}

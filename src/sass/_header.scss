@@ -21,7 +21,7 @@
     &.shrink{
         box-shadow: $box-shadow;
         height: $header-shrink-height;
-
+        z-index: 100;
     }
     &__logo {
         @include flex(center, center);

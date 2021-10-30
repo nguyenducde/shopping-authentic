@@ -1,9 +1,11 @@
 import Helmet from "../components/Helmet"
+import HomeSlider from "../components/HomeSlider"
+import homeSliderData from "../assets/fake-data/home-slider"
 
 export default function Home(){
     return (
         <Helmet title='Trang chủ'>
-            <h1>Home</h1>
+            <HomeSlider data={homeSliderData} />
         </Helmet>
     )
 }
