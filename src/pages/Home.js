@@ -1,6 +1,9 @@
+import Helmet from "../components/Helmet"
 
 export default function Home(){
     return (
-        <h1>Home</h1>
+        <Helmet title='Trang chủ'>
+            <h1>Home</h1>
+        </Helmet>
     )
 }

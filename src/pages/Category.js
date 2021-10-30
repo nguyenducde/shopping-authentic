@@ -1,6 +1,9 @@
+import Helmet from "../components/Helmet"
 
 export default function Category(){
     return (
-        <h1>Category</h1>
+        <Helmet title='Sản phẩm'>
+            <h1>Category</h1>
+        </Helmet>
     )
 }
