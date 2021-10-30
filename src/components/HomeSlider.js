@@ -36,9 +36,9 @@ export default function HomeSlider(props){
                     return (
                         <div className={`home-slider__item ${index === activeSlide ? 'active' : ''}`} key={index}>
                             <div className='home-slider__item__info'>
-                                <h3 className='home-slider__item__info__title' style={{color: item.color}}>{item.title}</h3>
+                                <h3 className='home-slider__item__info__title'>{item.title}</h3>
                                 <p className='home-slider__item__info__description'>{item.description}</p>
-                                <NavLink to={item.path} className='home-slider__item__info__link'>Xem chi tiết</NavLink>
+                                <NavLink to={item.path} className='btn home-slider__item__info__link'>Xem chi tiết</NavLink>
                             </div>
                             <div className='home-slider__item__img'>
                                 <div className='shape' style={{backgroundColor: item.color}}></div>

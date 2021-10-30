@@ -31,6 +31,7 @@
                 font-size: 4.5rem;
                 line-height: 6.75rem;
                 overflow: hidden;
+                color: $main-color;
             }
 
             &__description {
@@ -40,6 +41,18 @@
                 line-height: 2.25rem;
                 overflow: hidden;
                 text-align: justify;
+            }
+
+            &__link {
+                color: $btn-main-color;
+                background-color: $main-color;
+                transition: background-color 0.1s linear;
+
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid $main-color;
+                    color: black;
+                }
             }
         }
 
