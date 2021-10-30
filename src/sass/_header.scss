@@ -1,0 +1,62 @@
+@import './variables';
+
+@mixin flex ($align-item, $justify-content){
+    display: flex;
+    align-items: $align-item;
+    justify-content: $justify-content;
+}
+
+.header {
+    background-color: $main-bg;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    height: $header-height;
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        @include flex(center, center);
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        img {
+            height: 2.8rem;
+        }
+    }
+
+    &__menu {
+        @include flex(center, space-between);
+        height: 100%;
+        font-size: 1.5rem;
+
+        &-mobile {
+            display: none;
+        }
+
+        &-right {
+            margin: 0 -1rem;
+            
+            &-icon {
+                padding: 0.5rem 1rem;
+                margin: 0 2rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.nav {
+    display: flex;
+    margin: 0 -2rem;
+
+    &__item {
+        padding: 0 2rem;
+        font-weight: 500;
+    }
+
+    &__active {
+        color: $main-color;
+    }
+}
