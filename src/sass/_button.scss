@@ -7,4 +7,14 @@
     font-size: 1.5rem;
     padding: 1rem 2rem;
     border-radius: 4px;
+
+    color: $btn-main-color;
+    background-color: $main-color;
+    transition: background-color 0.1s linear;
+
+    &:hover {
+        background-color: transparent;
+        border: 1px solid $main-color;
+        color: black;
+    }
 }

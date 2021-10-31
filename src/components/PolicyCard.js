@@ -5,7 +5,7 @@ export default function PolicyCard(props){
     const { name, description, icon } = props
 
     return (
-        <NavLink to='/policy' className='policy-card'>
+        <NavLink exact to='/policy' className='policy-card'>
             <div className='policy-card__icon'>
                 <i className={icon}></i>
             </div>
