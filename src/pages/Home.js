@@ -34,6 +34,19 @@ export default function Home(){
                 </section>
             </div>
 
+            <div className='container'>
+                <section className='product'>
+                    <h3 className='product__heading'>Sản phẩm mới</h3>
+                    <div className='product-card'>
+                        {
+                            productData.getProducts(8).map((product, index) => {
+                                return <ProductCard product={product} key={index} />
+                            })
+                        }
+                    </div>
+                </section>
+            </div>
+
         </Helmet>
     )
 }
