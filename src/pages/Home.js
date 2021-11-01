@@ -5,6 +5,7 @@ import PolicyCard from "../components/PolicyCard"
 import policyCard from "../assets/fake-data/policy-card"
 import productData from "../assets/fake-data/products"
 import ProductCard from "../components/ProductCard"
+import Banner from "../components/Banner"
 
 export default function Home(){
     return (
@@ -45,6 +46,10 @@ export default function Home(){
                         }
                     </div>
                 </section>
+            </div>
+
+            <div className='container'>
+                <Banner />
             </div>
 
         </Helmet>
