@@ -28,6 +28,13 @@ import product_09_image_02 from '../../assets/images/products/product-09 (2).jpg
 import product_10_image_01 from '../../assets/images/products/product-10 (1).jpg'
 import product_10_image_02 from '../../assets/images/products/product-10 (2).jpg'
 
+import product_11_image_01 from '../../assets/images/products/product-11 (1).jpg'
+import product_11_image_02 from '../../assets/images/products/product-11 (2).jpg'
+
+import product_12_image_01 from '../../assets/images/products/product-12 (1).jpg'
+import product_12_image_02 from '../../assets/images/products/product-12 (2).jpg'
+
+
 const products = [
     {
         name: 'Áo thun Dinosaur 01',
@@ -128,6 +135,46 @@ const products = [
         colors: ['blue', 'black'],
         slug: 'ao-jean-phong-cach-10',
         size: ['l']
+    },
+    {
+        name: 'Áo jean 11',
+        price: 194,
+        image01: product_11_image_01,
+        image02: product_11_image_02,
+        categorySlug: 'quan-jean',
+        colors: ['blue', 'black'],
+        slug: 'ao-jean-phong-11',
+        size: ['s', 'm', 'xl']
+    },
+    {
+        name: 'Áo jean 12',
+        price: 194,
+        image01: product_12_image_01,
+        image02: product_12_image_02,
+        categorySlug: 'quan-jean',
+        colors: ['blue'],
+        slug: 'ao-jean-12',
+        size: ['s', 'm', 'xl']
+    },
+    {
+        name: 'Áo thun Dinosaur 13',
+        price: 184,
+        image01: product_01_image_01,
+        image02: product_01_image_02,
+        categorySlug: 'ao-thun',
+        colors: ['white', 'red'],
+        slug: 'ao-thun-dinosaur-13',
+        size: ['s', 'm', 'xl']
+    },
+    {
+        name: 'Áo thun Dinosaur 14',
+        price: 159,
+        image01: product_02_image_01,
+        image02: product_02_image_02,
+        categorySlug: 'ao-thun',
+        colors: ['white', 'blue'],
+        slug: 'ao-thun-dinosaur-14',
+        size: ['s', 'm']
     }
 ]
 

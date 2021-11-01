@@ -52,6 +52,19 @@ export default function Home(){
                 <Banner />
             </div>
 
+            <div className='container'>
+                <section className='product'>
+                    <h3 className='product__heading'>Sản phẩm phổ biến</h3>
+                    <div className='product-card'>
+                        {
+                            productData.getProducts(12).map((product, index) => {
+                                return <ProductCard product={product} key={index} />
+                            })
+                        }
+                    </div>
+                </section>
+            </div>
+
         </Helmet>
     )
 }
