@@ -2,15 +2,15 @@
 export const dress = [
     {
         name: 'Áo thun',
-        categorySlug: 'ao-thun'
+        dressSlug: 'ao-thun'
     },
     {
         name: 'Áo somi',
-        categorySlug: 'ao-somi'
+        dressSlug: 'ao-somi'
     },
     {
         name: 'Quần jean',
-        categorySlug: 'quan-jean'
+        dressSlug: 'quan-jean'
     }
 ]
 

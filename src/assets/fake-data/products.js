@@ -41,7 +41,7 @@ const products = [
         price: 189,
         image01: product_01_image_01,
         image02: product_01_image_02,
-        categorySlug: 'ao-thun',
+        dressSlug: 'ao-thun',
         colors: ['white', 'red', 'orange'],
         slug: 'ao-thun-dinosaur-01',
         size: ['s', 'm', 'l', 'xl']
@@ -51,7 +51,7 @@ const products = [
         price: 189,
         image01: product_02_image_01,
         image02: product_02_image_02,
-        categorySlug: 'ao-thun',
+        dressSlug: 'ao-thun',
         colors: ['white', 'black', 'orange'],
         slug: 'ao-thun-dinosaur-02',
         size: ['s', 'm', 'xl']
@@ -61,7 +61,7 @@ const products = [
         price: 190,
         image01: product_03_image_01,
         image02: product_03_image_02,
-        categorySlug: 'ao-thun',
+        dressSlug: 'ao-thun',
         colors: ['white', 'red', 'orange', 'yellow'],
         slug: 'ao-thun-dinosaur-03',
         size: ['m']
@@ -71,7 +71,7 @@ const products = [
         price: 194,
         image01: product_04_image_01,
         image02: product_04_image_02,
-        categorySlug: 'ao-thun',
+        dressSlug: 'ao-thun',
         colors: ['white', 'orange', 'blue'],
         slug: 'ao-thun-dinosaur-04',
         size: ['xl']
@@ -81,7 +81,7 @@ const products = [
         price: 159,
         image01: product_05_image_01,
         image02: product_05_image_02,
-        categorySlug: 'ao-thun',
+        dressSlug: 'ao-thun',
         colors: ['white', 'pink'],
         slug: 'ao-thun-dinosaur-05',
         size: ['xxl']
@@ -91,7 +91,7 @@ const products = [
         price: 159,
         image01: product_06_image_01,
         image02: product_06_image_02,
-        categorySlug: 'ao-thun',
+        dressSlug: 'ao-thun',
         colors: ['black'],
         slug: 'ao-thun-dinosaur-06',
         size: ['s', 'm', 'xl']
@@ -101,7 +101,7 @@ const products = [
         price: 159,
         image01: product_07_image_01,
         image02: product_07_image_02,
-        categorySlug: 'ao-somi',
+        dressSlug: 'ao-somi',
         colors: ['white', 'red', 'orange', 'blue'],
         slug: 'ao-somi-caro-07',
         size: ['l', 'xl']
@@ -111,7 +111,7 @@ const products = [
         price: 194,
         image01: product_08_image_01,
         image02: product_08_image_02,
-        categorySlug: 'ao-somi',
+        dressSlug: 'ao-somi',
         colors: ['white', 'red', 'black'],
         slug: 'ao-somi-dai-tay-08',
         size: ['s', 'm', 'xl']
@@ -121,7 +121,7 @@ const products = [
         price: 194,
         image01: product_09_image_01,
         image02: product_09_image_02,
-        categorySlug: 'ao-somi',
+        dressSlug: 'ao-somi',
         colors: ['white', 'blue'],
         slug: 'ao-somi-tay-dai-09',
         size: ['m']
@@ -131,7 +131,7 @@ const products = [
         price: 194,
         image01: product_10_image_01,
         image02: product_10_image_02,
-        categorySlug: 'quan-jean',
+        dressSlug: 'quan-jean',
         colors: ['blue', 'black'],
         slug: 'ao-jean-phong-cach-10',
         size: ['l']
@@ -141,7 +141,7 @@ const products = [
         price: 194,
         image01: product_11_image_01,
         image02: product_11_image_02,
-        categorySlug: 'quan-jean',
+        dressSlug: 'quan-jean',
         colors: ['blue', 'black'],
         slug: 'ao-jean-phong-11',
         size: ['s', 'm', 'xl']
@@ -151,7 +151,7 @@ const products = [
         price: 194,
         image01: product_12_image_01,
         image02: product_12_image_02,
-        categorySlug: 'quan-jean',
+        dressSlug: 'quan-jean',
         colors: ['blue'],
         slug: 'ao-jean-12',
         size: ['s', 'm', 'xl']
@@ -161,7 +161,7 @@ const products = [
         price: 184,
         image01: product_01_image_01,
         image02: product_01_image_02,
-        categorySlug: 'ao-thun',
+        dressSlug: 'ao-thun',
         colors: ['white', 'red'],
         slug: 'ao-thun-dinosaur-13',
         size: ['s', 'm', 'xl']
@@ -171,7 +171,7 @@ const products = [
         price: 159,
         image01: product_02_image_01,
         image02: product_02_image_02,
-        categorySlug: 'ao-thun',
+        dressSlug: 'ao-thun',
         colors: ['white', 'blue'],
         slug: 'ao-thun-dinosaur-14',
         size: ['s', 'm']
