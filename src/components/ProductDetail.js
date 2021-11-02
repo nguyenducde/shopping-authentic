@@ -10,6 +10,10 @@ export default function ProductDetail(props){
     
     const [quantity, setQuantity] = useState(1)
 
+    const [activeColor, setActiveColor] = useState(undefined)
+
+    const [activeSize, setActiveSize] = useState(undefined)
+
     const updateQuantity = (type) => {
         if(type === 'plus') setQuantity(quantity + 1)
         else setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
@@ -18,8 +22,12 @@ export default function ProductDetail(props){
     useEffect(() => {
         setPreviewImage(image01)
         setQuantity(1)
+        setActiveColor(undefined)
+        setActiveSize(undefined)
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [product])
+
+
     return (
         <div className='product-detail'>
             <div className='product-detail__image'>
@@ -40,7 +48,7 @@ export default function ProductDetail(props){
                             {
                                 colors.map((color, index) => {
                                     return (
-                                        <div className='product-detail__info__group__item' key={index}>
+                                        <div className={`product-detail__info__group__item ${activeColor === color ? 'active' : ''}`} key={index} onClick={() => setActiveColor(color)}>
                                             <div className='product-detail__info__group__item--color' style={{backgroundColor: color}}></div>
                                         </div>
                                     )
@@ -53,7 +61,7 @@ export default function ProductDetail(props){
                         <div className='product-detail__info__group__list'>
                             {
                                 size.map((item, index) => {
-                                    return <div className='product-detail__info__group__item product-detail__info__group__item--size' key={index}>{item}</div>
+                                    return <div className={`product-detail__info__group__item ${activeSize === item ? 'active' : ''} product-detail__info__group__item--size}`} key={index} onClick={() => setActiveSize(item)}>{item}</div>
                                 })
                             }
                         </div>
@@ -70,6 +78,7 @@ export default function ProductDetail(props){
                             </button>
                         </div>
                     </div>
+                    <div className='btn product-detail__info__cart'>Thêm vào giỏ hàng</div>
                 </div>
             </div>
             <div className='product-detail__description'>
