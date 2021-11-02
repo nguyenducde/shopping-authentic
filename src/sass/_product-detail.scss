@@ -49,12 +49,14 @@
                     height: 4rem;
 
                     &--color {
-                        background-color: red;
                         width: 90%;
                         height: 90%;
                         border-radius: 50%;
                     }
 
+                    &--size {
+                        text-transform: uppercase;
+                    }
                     &:hover {
                         border-color: $main-color;
                     }

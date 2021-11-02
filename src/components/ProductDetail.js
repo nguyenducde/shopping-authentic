@@ -3,7 +3,7 @@ import { useState } from "react/cjs/react.development"
 
 export default function ProductDetail(props){
 
-    const { image01, image02, name, price } = props.product
+    const { image01, image02, name, price, colors, size } = props.product
 
     const [previewImage, setPreviewImage] = useState(image01)
     
@@ -25,19 +25,25 @@ export default function ProductDetail(props){
                     <div className='product-detail__info__group'>
                         <p className='product-detail__info__group__title'>Màu sắc</p>
                         <div className='product-detail__info__group__list'>
-                            <div className='product-detail__info__group__item'>
-                                <div className='product-detail__info__group__item--color'></div>
-                            </div>
-                            <div className='product-detail__info__group__item'>
-                                <div className='product-detail__info__group__item--color'></div>
-                            </div>
+                            {
+                                colors.map((color, index) => {
+                                    return (
+                                        <div className='product-detail__info__group__item' key={index}>
+                                            <div className='product-detail__info__group__item--color' style={{backgroundColor: color}}></div>
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                     <div className='product-detail__info__group'>
                         <p className='product-detail__info__group__title'>Kích cỡ</p>
                         <div className='product-detail__info__group__list'>
-                            <div className='product-detail__info__group__item'>L</div>
-                            <div className='product-detail__info__group__item'>XL</div>
+                            {
+                                size.map((item, index) => {
+                                    return <div className='product-detail__info__group__item product-detail__info__group__item--size' key={index}>{item}</div>
+                                })
+                            }
                         </div>
                     </div>
                 </div>
