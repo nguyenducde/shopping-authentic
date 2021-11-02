@@ -34,8 +34,28 @@
 
             &__group {
                 padding-bottom: 2rem;
+                
                 &__list {
-                    display: flex
+                    display: flex;
+                    align-items: center;
+                    font-size: 2rem;
+
+                    &__btn {
+                        border-radius: 0.5rem 0 0 0.5rem;
+                        cursor: pointer;
+                        padding: 0.5rem 1.5rem;
+                        outline: none;
+                        width: 30px;
+                        background-color: white;
+                        border: 1px solid #a5a5a5;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    &__quatity {
+                        width: 4rem;
+                        text-align: center;
+                    }
                 }
                 &__item {
                     @include flex(center, center);

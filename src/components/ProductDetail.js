@@ -1,13 +1,25 @@
+import { useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import { useState } from "react/cjs/react.development"
 
 export default function ProductDetail(props){
 
-    const { image01, image02, name, price, colors, size } = props.product
+    const { image01, image02, name, price, colors, size, product } = props.product
 
     const [previewImage, setPreviewImage] = useState(image01)
     
+    const [quantity, setQuantity] = useState(1)
 
+    const updateQuantity = (type) => {
+        if(type === 'plus') setQuantity(quantity + 1)
+        else setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
+    }
+
+    useEffect(() => {
+        setPreviewImage(image01)
+        setQuantity(1)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [product])
     return (
         <div className='product-detail'>
             <div className='product-detail__image'>
@@ -44,6 +56,18 @@ export default function ProductDetail(props){
                                     return <div className='product-detail__info__group__item product-detail__info__group__item--size' key={index}>{item}</div>
                                 })
                             }
+                        </div>
+                    </div>
+                    <div className='product-detail__info__group'>
+                        <p className='product-detail__info__group__title'>Số lượng</p>
+                        <div className='product-detail__info__group__list'>
+                            <button className='product-detail__info__group__list__btn' disabled={quantity === 1 ? 'disabled' : '' } onClick={() => updateQuantity('minus')}>
+                                <i className="fas fa-minus"></i>
+                            </button>
+                            <div className='product-detail__info__group__list__quatity'>{quantity}</div>
+                            <button className='product-detail__info__group__list__btn' onClick={() => updateQuantity('plus')}>
+                                <i className="fas fa-plus"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
