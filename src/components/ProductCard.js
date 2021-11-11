@@ -6,7 +6,7 @@ export default function ProductCard(props){
 
     return (
         <div to='/policy' className='product-card__item'>
-            <NavLink exact to={`/product/${props.product.slug}`}>
+            <NavLink exact to={`/san-pham/${props.product.slug}`}>
                 <div className='product-card__item__image'>
                     <img src={image01} alt='' />
                 </div>

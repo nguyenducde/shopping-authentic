@@ -29,13 +29,13 @@ export default function Header(){
                                 <NavLink activeClassName="nav__active" exact to='/'>Trang chủ</NavLink>
                             </li>
                             <li className='nav__item'>
-                                <NavLink activeClassName="nav__active" to='/category'>Sản phẩm</NavLink>
+                                <NavLink activeClassName="nav__active" to='/danh-muc'>Sản phẩm</NavLink>
                             </li>
                             <li className='nav__item'>
-                                <NavLink activeClassName="nav__active" to='/accessories'>Phụ kiện</NavLink>
+                                <NavLink activeClassName="nav__active" to='/phu-kien'>Phụ kiện</NavLink>
                             </li>
                             <li className='nav__item'>
-                                <NavLink activeClassName="nav__active" to='/contact'>Liên hệ</NavLink>
+                                <NavLink activeClassName="nav__active" to='/lien-he'>Liên hệ</NavLink>
                             </li>
                         </ul>
                         <div className='header__menu-right'>

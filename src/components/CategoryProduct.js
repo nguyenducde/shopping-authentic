@@ -6,7 +6,7 @@ export default function CategoryProduct(props){
 
     return (
         <div to='/policy' className='category__product__item'>
-            <NavLink exact to={`/category/product/${props.product.slug}`}>
+            <NavLink exact to={`/danh-muc/san-pham/${props.product.slug}`}>
                 <div className='category__product__item__image'>
                     <img src={image01} alt='' />
                 </div>

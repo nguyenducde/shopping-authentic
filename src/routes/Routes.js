@@ -11,16 +11,16 @@ export default function Routes(){
             <Route exact path='/' >
                 <Home />
             </Route>
-            <Route path='/product/:slug'>
+            <Route path='/san-pham/:slug'>
                 <Product />
             </Route>
-            <Route path='/category/product/:slug'>
+            <Route path='/danh-muc/san-pham/:slug'>
                 <Product />
             </Route>
-            <Route path='/category'>
+            <Route path='/danh-muc'>
                 <Category />
             </Route>
-            <Route path='/cart'>
+            <Route path='/gio-hang'>
                 <Cart />
             </Route>
         </Switch>
