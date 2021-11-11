@@ -1,6 +1,5 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { NavLink } from "react-router-dom"
-import { useState } from "react/cjs/react.development"
 
 export default function ProductDetail(props){
 

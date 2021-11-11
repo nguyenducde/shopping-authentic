@@ -17,27 +17,27 @@ export const dress = [
 export const colors = [
     {
         name: 'Trắng',
-        color: 'white'
+        color: 'Trắng'
     },
     {
         name: 'Hồng',
-        color: 'pink'
+        color: 'Hồng'
     },
     {
         name: 'Đen',
-        color: 'Black'
+        color: 'Đen'
     },
     {
         name: 'Vàng',
-        color: 'Yellow'
+        color: 'Vàng'
     },
     {
         name: 'Cam',
-        color: 'orange'
+        color: 'Cam'
     },
     {
-        name: 'Xanh dương',
-        color: 'blue'
+        name: 'Xanh',
+        color: 'Xanh'
     }
 ]
 
