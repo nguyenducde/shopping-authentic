@@ -11,6 +11,9 @@ export default function Routes(){
             <Route exact path='/' >
                 <Home />
             </Route>
+            <Route path='/product/:slug'>
+                <Product />
+            </Route>
             <Route path='/category/product/:slug'>
                 <Product />
             </Route>

@@ -65,19 +65,16 @@
                 &__item {
                     @include flex(center, center);
                     font-size: 1.5rem;
-                    border-radius: 50%;
-                    border: 3px solid #00000066;
+                    border-radius: 2px;
+                    border: 1px solid #00000029;
                     cursor: pointer;
                     font-weight: 500;
                     margin-right: 1rem;
-                    width: 4rem;
-                    height: 4rem;
+                    padding: 1rem;
                     text-transform: uppercase;
                 
                     &--color {
-                        width: 90%;
-                        height: 90%;
-                        border-radius: 50%;
+                        text-transform: capitalize;
                     }
 
                     &--size {
@@ -85,6 +82,7 @@
                     }
                     &:hover {
                         border-color: $main-color;
+                        border-width: 1px;
                     }
 
                     &.active {

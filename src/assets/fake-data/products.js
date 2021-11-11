@@ -42,7 +42,7 @@ const products = [
         image01: product_01_image_01,
         image02: product_01_image_02,
         dressSlug: 'ao-thun',
-        colors: ['white', 'red', 'orange'],
+        colors: ['Trắng', 'Đỏ', 'Cam'],
         slug: 'ao-thun-dinosaur-01',
         size: ['s', 'm', 'l', 'xl'],
         description: '- Áo thun Dinosaur 01 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 01 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
@@ -53,7 +53,7 @@ const products = [
         image01: product_02_image_01,
         image02: product_02_image_02,
         dressSlug: 'ao-thun',
-        colors: ['white', 'black', 'orange'],
+        colors: ['Trắng', 'Đen', 'Cam'],
         slug: 'ao-thun-dinosaur-02',
         size: ['s', 'm', 'xl'],
         description: '- Áo thun Dinosaur 02 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 02 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
@@ -64,7 +64,7 @@ const products = [
         image01: product_03_image_01,
         image02: product_03_image_02,
         dressSlug: 'ao-thun',
-        colors: ['white', 'red', 'orange', 'yellow'],
+        colors: ['Trắng', 'Đỏ', 'Cam', 'Vàng'],
         slug: 'ao-thun-dinosaur-03',
         size: ['m'],
         description: '- Áo thun Dinosaur 03 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 03 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
@@ -75,7 +75,7 @@ const products = [
         image01: product_04_image_01,
         image02: product_04_image_02,
         dressSlug: 'ao-thun',
-        colors: ['white', 'orange', 'blue'],
+        colors: ['Trắng', 'Cam', 'Xanh'],
         slug: 'ao-thun-dinosaur-04',
         size: ['xl'],
         description: '- Áo thun Dinosaur 04 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 04 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
@@ -86,7 +86,7 @@ const products = [
         image01: product_05_image_01,
         image02: product_05_image_02,
         dressSlug: 'ao-thun',
-        colors: ['white', 'pink'],
+        colors: ['Trắng', 'Hồng'],
         slug: 'ao-thun-dinosaur-05',
         size: ['xxl'],
         description: '- Áo thun Dinosaur 05 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 05 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
@@ -97,7 +97,7 @@ const products = [
         image01: product_06_image_01,
         image02: product_06_image_02,
         dressSlug: 'ao-thun',
-        colors: ['black'],
+        colors: ['Đen'],
         slug: 'ao-thun-dinosaur-06',
         size: ['s', 'm', 'xl'],
         description: '- Áo thun Dinosaur 06 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 06 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
@@ -108,7 +108,7 @@ const products = [
         image01: product_07_image_01,
         image02: product_07_image_02,
         dressSlug: 'ao-somi',
-        colors: ['white', 'red', 'orange', 'blue'],
+        colors: ['Trắng', 'Đỏ', 'Cam', 'Xanh'],
         slug: 'ao-somi-caro-07',
         size: ['l', 'xl'],
         description: '- Áo thun Dinosaur 06 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 06 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
@@ -119,7 +119,7 @@ const products = [
         image01: product_08_image_01,
         image02: product_08_image_02,
         dressSlug: 'ao-somi',
-        colors: ['white', 'red', 'black'],
+        colors: ['Trắng', 'Đỏ', 'Đen'],
         slug: 'ao-somi-dai-tay-08',
         size: ['s', 'm', 'xl'],
         description: '- Áo thun Dinosaur 06 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 06 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
@@ -130,7 +130,7 @@ const products = [
         image01: product_09_image_01,
         image02: product_09_image_02,
         dressSlug: 'ao-somi',
-        colors: ['white', 'blue'],
+        colors: ['Trắng', 'Xanh'],
         slug: 'ao-somi-tay-dai-09',
         size: ['m'],
         description: '- Áo somi tay dài 09 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo somi tay dài 09 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
@@ -141,7 +141,7 @@ const products = [
         image01: product_10_image_01,
         image02: product_10_image_02,
         dressSlug: 'quan-jean',
-        colors: ['blue', 'black'],
+        colors: ['Xanh', 'Đen'],
         slug: 'ao-jean-phong-cach-10',
         size: ['l'],
         description: '- Áo somi tay dài 09 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo somi tay dài 09 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
@@ -152,7 +152,7 @@ const products = [
         image01: product_11_image_01,
         image02: product_11_image_02,
         dressSlug: 'quan-jean',
-        colors: ['blue', 'black'],
+        colors: ['Xanh', 'Đen'],
         slug: 'ao-jean-phong-11',
         size: ['s', 'm', 'xl'],
         description: '- Áo jean 11 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo jean 11 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
@@ -163,7 +163,7 @@ const products = [
         image01: product_12_image_01,
         image02: product_12_image_02,
         dressSlug: 'quan-jean',
-        colors: ['blue'],
+        colors: ['Xanh'],
         slug: 'ao-jean-12',
         size: ['s', 'm', 'xl'],
         description: '- Áo jean 12 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo jean 12 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
@@ -174,7 +174,7 @@ const products = [
         image01: product_01_image_01,
         image02: product_01_image_02,
         dressSlug: 'ao-thun',
-        colors: ['white', 'red'],
+        colors: ['Trắng', 'Đỏ'],
         slug: 'ao-thun-dinosaur-13',
         size: ['s', 'm', 'xl'],
         description: '-Áo thun Dinosaur 13 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> -Áo thun Dinosaur 13 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
@@ -185,7 +185,7 @@ const products = [
         image01: product_02_image_01,
         image02: product_02_image_02,
         dressSlug: 'ao-thun',
-        colors: ['white', 'blue'],
+        colors: ['Trắng', 'Xanh'],
         slug: 'ao-thun-dinosaur-14',
         size: ['s', 'm'],
         description: '-Áo thun Dinosaur 14 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> -Áo thun Dinosaur 14 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'

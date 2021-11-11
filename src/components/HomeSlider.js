@@ -21,7 +21,7 @@ export default function HomeSlider(props){
         if(props.autoRunSlide){
             const slideAuto = setInterval(() => {
                 nextSlide()
-            }, 4000)
+            }, 3000)
             return () => {
                 clearInterval(slideAuto)
             }

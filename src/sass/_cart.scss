@@ -1,0 +1,9 @@
+@import './variables';
+
+.cart {
+    margin-top: $header-height;
+    margin-bottom: 100vh;
+    &__btn {
+        font-size: 3rem;
+    }
+}

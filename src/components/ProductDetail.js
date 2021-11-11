@@ -22,8 +22,8 @@ export default function ProductDetail(props){
     useEffect(() => {
         setPreviewImage(image01)
         setQuantity(1)
-        setActiveColor(undefined)
-        setActiveSize(undefined)
+        setActiveColor(colors[0])
+        setActiveSize(size[0])
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [product])
 
@@ -49,7 +49,7 @@ export default function ProductDetail(props){
                                 colors.map((color, index) => {
                                     return (
                                         <div className={`product-detail__info__group__item ${activeColor === color ? 'active' : ''}`} key={index} onClick={() => setActiveColor(color)}>
-                                            <div className='product-detail__info__group__item--color' style={{backgroundColor: color}}></div>
+                                            <div className='product-detail__info__group__item--color'>{color}</div>
                                         </div>
                                     )
                                 })
