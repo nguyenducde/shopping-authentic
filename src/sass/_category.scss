@@ -61,6 +61,7 @@
 
             &__info {
                 text-align: center;
+
                 &__name {
                     font-size: 1.5rem;
                     padding-bottom: 1rem;
@@ -74,10 +75,9 @@
 
             &__buy {
                 position: absolute;
-                bottom: 0;
+                bottom: 20px;
                 left: 50%;
                 transform: translateX(-50%);
-                margin-bottom: 2rem;
                 width: fit-content;
             }
         }

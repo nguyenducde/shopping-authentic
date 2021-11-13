@@ -45,10 +45,22 @@
         &-right {
             margin: 0 -3rem;
             
+            a {
+                padding: 1rem;
+                margin-right: 3rem;
+                transition: 0.3s;
+                border: 1px solid black;
+                border-color: transparent;
+
+                &:last-child {
+                    margin-right: 2rem
+                }
+                &:hover {
+                    border: 1px solid $main-color;
+                }
+            }
             &-icon {
-                padding: 0.5rem 1rem;
-                margin: 0 2rem;
-                cursor: pointer;
+
             }
         }
     }

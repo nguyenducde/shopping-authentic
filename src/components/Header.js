@@ -39,9 +39,9 @@ export default function Header(){
                             </li>
                         </ul>
                         <div className='header__menu-right'>
-                            <i className="fas fa-search header__menu-right-icon"></i>
-                            <i className="fas fa-shopping-bag header__menu-right-icon"></i>
-                            <i className="fas fa-user header__menu-right-icon"></i>
+                            <NavLink to='#1'><i className="fas fa-search header__menu-right-icon"></i></NavLink>
+                            <NavLink to='#1'><i className="fas fa-shopping-bag header__menu-right-icon"></i></NavLink>
+                            <NavLink to='/dang-nhap'><i className="fas fa-user header__menu-right-icon"></i></NavLink>
                         </div>
                     </div>
                 </div>
