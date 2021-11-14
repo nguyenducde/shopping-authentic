@@ -5,6 +5,7 @@ import CategoryProduct from "../components/CategoryProduct"
 import { dress, colors, size } from "../assets/fake-data/category"
 import { useState } from "react"
 import Checkbox from '../components/Checkbox'
+import { NavLink } from 'react-router-dom'
 
 export default function Category(){
 
@@ -13,8 +14,17 @@ export default function Category(){
         color: [],
         size: []
     })
-
+    const [valueSearch, setValueSearch] = useState('')
     const [products, setProduct] = useState(productData.getAllProducts())
+    const [productSearch, setproductSearch] = useState(productData.getAllProducts())
+
+    useEffect(() => {
+        const searchProduct = productSearch.filter((product) => {
+            return product.name.toLowerCase().includes(valueSearch.toLowerCase())
+        })
+        setProduct(searchProduct)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [valueSearch])
 
     const filterSelect = (type, checked, item) => {
         if(checked){
@@ -81,6 +91,18 @@ export default function Category(){
     return (
         <Helmet title='Sản phẩm'>
             <div className='container'>
+                <div className='search'>
+                    <div className='search__group'>
+                        <span>Tìm kiếm</span>
+                        <input 
+                            type='text' 
+                            placeholder='Nhập tên sản phẩm' 
+                            value={valueSearch}
+                            onChange={(e) => setValueSearch(e.target.value)}
+                        />
+                    </div>
+                    <NavLink className='cart__link' to='#1'><i className='bx bx-cart'></i></NavLink>
+                </div>
                 <div className='category'>
                     <div className='category__filter'>
                         <h3 className='category__filter__title'>Danh mục sản phẩm</h3>

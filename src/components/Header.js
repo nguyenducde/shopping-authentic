@@ -38,10 +38,14 @@ export default function Header(){
                                 <NavLink activeClassName="nav__active" to='/lien-he'>Liên hệ</NavLink>
                             </li>
                         </ul>
-                        <div className='header__menu-right'>
+                        {/* <div className='header__menu-right'>
                             <NavLink to='#1'><i className="fas fa-search header__menu-right-icon"></i></NavLink>
                             <NavLink to='#1'><i className="fas fa-shopping-bag header__menu-right-icon"></i></NavLink>
                             <NavLink to='/dang-nhap'><i className="fas fa-user header__menu-right-icon"></i></NavLink>
+                        </div> */}
+                        <div className='header__menu-right'>
+                            <NavLink to='/dang-nhap'>Đăng nhập</NavLink>
+                            <NavLink to='#1'>Đăng ký</NavLink>
                         </div>
                     </div>
                 </div>

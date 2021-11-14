@@ -1,0 +1,39 @@
+@import './variables';
+
+.search {
+    margin-top: calc(#{$header-height} + 3rem);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__group {
+
+        span {
+            font-size: 1.6rem;
+            margin-right: 1rem;
+        }
+
+        input {
+            height: 3.5rem;
+            width: 40rem;
+            border-radius: 25px;
+            outline: none;
+            padding-left: 1rem;
+            font-size: 1.3rem;
+            border: 1px solid $main-color;
+            transition: 0.3s;
+
+            &:focus {
+                box-shadow: 0 0 0 1px $main-color;
+            }
+        }
+    }
+}
+
+.cart__link {
+    font-size: 3.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 7rem;
+}

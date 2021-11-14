@@ -1,7 +1,7 @@
 @import './variables';
 
 .category {
-    margin-top: calc(#{$header-height} + 3rem);
+    margin-top: 4rem;
     display: flex;
 
     &__filter {
