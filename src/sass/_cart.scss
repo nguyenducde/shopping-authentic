@@ -2,8 +2,152 @@
 
 .cart {
     margin-top: $header-height;
-    margin-bottom: 100vh;
-    &__btn {
-        font-size: 3rem;
+    background-color: #fff1f3;
+    padding-top: 2rem;
+
+    &__title {
+        font-size: 2rem;
+        background-color: white;
+        margin-bottom: 2rem;
+        padding: 1.5rem 2rem;
+        border-radius: 6px;
+
+        span {
+            font-size: 1.7rem;
+            color: #000000c7;
+        }
     }
+
+    &__info {
+        display: flex;
+
+        &__product {
+            width: 70%;
+
+            &__heading {
+                display: flex;
+                font-size: 1.5rem;
+                font-weight: 500;
+                background-color: white;
+                margin-bottom: 2rem;
+                padding: 1.5rem 2rem;
+                border-radius: 6px;
+
+                &__product {
+                    flex: 1;
+                }
+
+                &__quantity {
+                    width: 20%;
+                }
+
+                &__price {
+                    width: 20%;
+                }
+
+                &__delete {
+                    width: 10%;
+                }
+            }
+
+            &__item {
+                display: flex;
+                padding: 1.5rem 2rem;
+                background-color: white;
+                margin-bottom: 2rem;
+                border-radius: 6px;
+
+                &__group {
+                    flex: 1;
+                    display: flex;
+
+                    img {
+                        width: 13rem;
+                        height: 13rem;
+                        object-fit: cover;
+                        object-position: top;
+                    }
+
+                    &__info {
+                        padding-left: 1.5rem;
+
+                        p {
+                            font-size: 1.6rem;
+                            padding-bottom: 2rem;
+                        }
+
+                        span {
+                            font-size: 1.3rem;
+                            color: #000000d1;
+                        }
+                    }
+                }
+
+                &__price {
+                    font-size: 1.7rem;
+                    font-weight: 500;
+                }
+
+                &__delete {
+
+                    p {
+                        font-size: 1.5rem;
+                        color: red;
+                        cursor: pointer;
+                        width: fit-content;
+                    }
+                }
+                
+            }
+        }
+
+        &__totoalPrice {
+            flex: 1;
+            padding-left: 2rem;
+            position: -webkit-sticky;
+            position: sticky;
+            top: calc(#{$header-height} + 1rem);
+            height: 18rem;
+
+            &__info {
+                display: flex;
+                margin-bottom: 2rem;
+                background-color: white;
+                border-radius: 6px;
+                padding: 2rem;
+                justify-content: space-between;
+
+                p {
+                    font-size: 1.6rem;
+                    color: #000000c9;
+                }
+
+                &__group {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: right;
+
+                    p {
+                        font-size: 2.4rem;
+                        font-weight: 500;
+                        padding-bottom: 1.3rem;
+                    }
+
+                    span {
+                        font-size: 1.4rem;
+                        color: #000000b0;
+                    }
+                }
+            }
+        }
+    }
+}
+.btn-size {
+    padding: 0.2rem 1rem;
+}
+.text-size {
+    font-size: 1.7rem;
+}
+.btn-full {
+    display: block;
 }

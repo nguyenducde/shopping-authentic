@@ -101,7 +101,7 @@ export default function Category(){
                             onChange={(e) => setValueSearch(e.target.value)}
                         />
                     </div>
-                    <NavLink className='cart__link' to='#1'><i className='bx bx-cart'></i></NavLink>
+                    <NavLink className='cart__link' to='/gio-hang'><i className='bx bx-cart'></i></NavLink>
                 </div>
                 <div className='category'>
                     <div className='category__filter'>
