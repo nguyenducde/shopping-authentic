@@ -5,12 +5,16 @@ import reportWebVitals from './reportWebVitals';
 import './assets/boxicons-2.0.7/css/boxicons.min.css'
 import './sass/app.scss'
 import './assets/css/grid.css'
+import { Provider } from 'react-redux'
+import store from './store-redux/index'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
