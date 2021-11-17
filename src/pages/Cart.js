@@ -1,15 +1,12 @@
-import { useState } from "react"
+import { connect } from "react-redux"
 import { NavLink } from "react-router-dom"
-import img01 from '../assets/images/products/product-01 (1).jpg'
+import CartItem from "../components/CartItem"
+import * as Message from '../constants/Message'
 
-export default function Cart(){
+function Cart(props){
 
-    const [quantity, setQuantity] = useState(1)
+    const { carts } = props
 
-    const updateQuantity = (type) => {
-        if(type === 'plus') setQuantity(quantity + 1)
-        else setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
-    }
 
     return (
         <div className='cart'>
@@ -23,87 +20,13 @@ export default function Cart(){
                             <p className='cart__info__product__heading__price'>Giá tiền</p>
                             <p className='cart__info__product__heading__delete'></p>
                         </div>
-                        <div className='cart__info__product__item'>
-                            <div className='cart__info__product__item__group'>
-                                <img src={img01} alt='' />
-                                <div className='cart__info__product__item__group__info'>
-                                    <p>Áo somi dài tay 08</p>
-                                    <span>Màu: Trắng - Size: XL </span>
-                                </div>
-                            </div>
-                            <div className='product-detail__info__group cart__info__product__heading__quantity'>
-                                <div className='product-detail__info__group__list'>
-                                    <button className='product-detail__info__group__list__btn btn-size' disabled={quantity === 1 ? 'disabled' : '' } onClick={() => updateQuantity('minus')}>
-                                        <i className="fas fa-minus"></i>
-                                    </button>
-                                    <div className='product-detail__info__group__list__quatity text-size'>{quantity}</div>
-                                    <button className='product-detail__info__group__list__btn btn-size' onClick={() => updateQuantity('plus')}>
-                                        <i className="fas fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className='cart__info__product__item__price cart__info__product__heading__price'>
-                                198.000
-                                <span className='vnd'>đ</span>
-                            </div>
-                            <div className='cart__info__product__item__delete cart__info__product__heading__delete'>
-                                <p>Xóa</p>
-                            </div>
-                        </div>
-                        <div className='cart__info__product__item'>
-                            <div className='cart__info__product__item__group'>
-                                <img src={img01} alt='' />
-                                <div className='cart__info__product__item__group__info'>
-                                    <p>Áo somi dài tay 08</p>
-                                    <span>Màu: Trắng - Size: XL </span>
-                                </div>
-                            </div>
-                            <div className='product-detail__info__group cart__info__product__heading__quantity'>
-                                <div className='product-detail__info__group__list'>
-                                    <button className='product-detail__info__group__list__btn btn-size' disabled={quantity === 1 ? 'disabled' : '' } onClick={() => updateQuantity('minus')}>
-                                        <i className="fas fa-minus"></i>
-                                    </button>
-                                    <div className='product-detail__info__group__list__quatity text-size'>{quantity}</div>
-                                    <button className='product-detail__info__group__list__btn btn-size' onClick={() => updateQuantity('plus')}>
-                                        <i className="fas fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className='cart__info__product__item__price cart__info__product__heading__price'>
-                                198.000
-                                <span className='vnd'>đ</span>
-                            </div>
-                            <div className='cart__info__product__item__delete cart__info__product__heading__delete'>
-                                <p>Xóa</p>
-                            </div>
-                        </div>
-                        <div className='cart__info__product__item'>
-                            <div className='cart__info__product__item__group'>
-                                <img src={img01} alt='' />
-                                <div className='cart__info__product__item__group__info'>
-                                    <p>Áo somi dài tay 08</p>
-                                    <span>Màu: Trắng - Size: XL </span>
-                                </div>
-                            </div>
-                            <div className='product-detail__info__group cart__info__product__heading__quantity'>
-                                <div className='product-detail__info__group__list'>
-                                    <button className='product-detail__info__group__list__btn btn-size' disabled={quantity === 1 ? 'disabled' : '' } onClick={() => updateQuantity('minus')}>
-                                        <i className="fas fa-minus"></i>
-                                    </button>
-                                    <div className='product-detail__info__group__list__quatity text-size'>{quantity}</div>
-                                    <button className='product-detail__info__group__list__btn btn-size' onClick={() => updateQuantity('plus')}>
-                                        <i className="fas fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className='cart__info__product__item__price cart__info__product__heading__price'>
-                                198.000
-                                <span className='vnd'>đ</span>
-                            </div>
-                            <div className='cart__info__product__item__delete cart__info__product__heading__delete'>
-                                <p>Xóa</p>
-                            </div>
-                        </div>
+
+                        {
+                            carts.map((cart, index) => {
+                                return <CartItem cart={cart.product} quantityCart={cart.quantity} key={index} />
+                            })
+                        }
+
                     </div>
                     <div className='cart__info__totoalPrice'>
                         <div className='cart__info__totoalPrice__info'>
@@ -122,3 +45,12 @@ export default function Cart(){
         </div>
     )
 }
+
+
+const mapStateToProps = state => {
+    return {
+        carts: state.cartReducer
+    }
+}
+
+export default connect(mapStateToProps, null)(Cart)
