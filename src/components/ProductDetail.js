@@ -86,11 +86,20 @@ export default function ProductDetail(props){
                 </div>
                 <div className='product-detail__description__group'>
                     <span className='product-detail__description__title'>Màu sắc: </span>
-                    <span className='product-detail__description__content'>Trắng, vàng</span>
+                    <span className='product-detail__description__content'>
+                        {
+                            colors.join(', ')
+                        }
+                        
+                    </span>
                 </div>
                 <div className='product-detail__description__group'>
                     <span className='product-detail__description__title'>Size: </span>
-                    <span className='product-detail__description__content'>S, XL</span>
+                    <span className='product-detail__description__content'>
+                        {
+                            size.join(', ').toUpperCase()
+                        }
+                    </span>
                 </div>
             </div>
         </div>

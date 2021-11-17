@@ -109,7 +109,7 @@ export default function Cart(){
                         <div className='cart__info__totoalPrice__info'>
                             <p>Thành tiền</p>
                             <div className='cart__info__totoalPrice__info__group'>
-                                <p>198.000<p className='vnd'>đ</p></p>
+                                <p>198.000<label className='vnd'>đ</label></p>
                                 <span>(Đã bao gồm VAT nếu có)</span>
                             </div>
                         </div>
