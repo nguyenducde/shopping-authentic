@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import numberWithCommas from "../utils/numberWithCommas"
 
 function CartItem(props) {
     const { cart, color, size } = props
@@ -38,7 +38,7 @@ function CartItem(props) {
                 </div>
             </div>
             <div className='cart__info__product__item__price cart__info__product__heading__price'>
-                {`${showSubTotal(cart.price)}.000`}
+                {numberWithCommas(`${showSubTotal(cart.price)}.000`)}
                 <span className='vnd'>đ</span>
             </div>
             <div className='cart__info__product__item__delete cart__info__product__heading__delete'>
