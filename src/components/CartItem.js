@@ -8,16 +8,15 @@ function CartItem(props) {
 
     const [quantity, setQuantity] = useState(quantityCart)
 
-    console.log(quantity);
     const updateQuantity = (type) => {
         if(type === 'plus') setQuantity(quantity + 1)
         else setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
     }
     
     const showSubTotal = (price) => {
-        return price * quantityCart
+        return price * quantity
     }
-
+    
     return (
         <div className='cart__info__product__item'>
             <div className='cart__info__product__item__group'>

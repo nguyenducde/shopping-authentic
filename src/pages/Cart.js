@@ -1,6 +1,6 @@
 import { connect } from "react-redux"
-import { NavLink } from "react-router-dom"
 import CartItem from "../components/CartItem"
+import CartTotal from "../components/CartTotal"
 import * as Message from '../constants/Message'
 
 function Cart(props){
@@ -28,18 +28,7 @@ function Cart(props){
                         }
 
                     </div>
-                    <div className='cart__info__totoalPrice'>
-                        <div className='cart__info__totoalPrice__info'>
-                            <p>Thành tiền</p>
-                            <div className='cart__info__totoalPrice__info__group'>
-                                <p>198.000<label className='vnd'>đ</label></p>
-                                <span>(Đã bao gồm VAT nếu có)</span>
-                            </div>
-                        </div>
-                        <div>
-                            <NavLink to='#1' className='btn btn-full'>Tiến hành đặt hàng</NavLink>
-                        </div>
-                    </div>
+                    <CartTotal carts={carts}/>
                 </div>
             </div>
         </div>

@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react"
+import { connect } from "react-redux"
+import { addToCart } from "../actions"
 
-export default function ProductDetail(props){
+function ProductDetail(props){
 
-    const { image01, image02, name, price, colors, size, product } = props.product
+    const { image01, image02, name, price, colors, size } = props.product
+    const product = props.product
 
     const [previewImage, setPreviewImage] = useState(image01)
     
@@ -25,6 +28,9 @@ export default function ProductDetail(props){
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [product])
 
+    const handleAddToCart = (product, quantity) => {
+        props.onAddToCart(product, quantity);
+    }
 
     return (
         <div className='product-detail'>
@@ -76,13 +82,13 @@ export default function ProductDetail(props){
                             </button>
                         </div>
                     </div>
-                    <div className='btn product-detail__info__cart'>Thêm vào giỏ hàng</div>
+                    <div className='btn product-detail__info__cart' onClick={() => handleAddToCart(product, quantity)}>Thêm vào giỏ hàng</div>
                 </div>
             </div>
             <div className='product-detail__description'>
                 <div className='product-detail__description__group'>
                     <p className='product-detail__description__title'>Chi tiết: </p>
-                    <p className='product-detail__description__content' dangerouslySetInnerHTML={{__html:props.product.description}}></p>
+                    <p className='product-detail__description__content' dangerouslySetInnerHTML={{__html:product.description}}></p>
                 </div>
                 <div className='product-detail__description__group'>
                     <span className='product-detail__description__title'>Màu sắc: </span>
@@ -105,3 +111,13 @@ export default function ProductDetail(props){
         </div>
     )
 }
+
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        onAddToCart: (product, quantity) => {
+            dispatch(addToCart(product, quantity))
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ProductDetail)

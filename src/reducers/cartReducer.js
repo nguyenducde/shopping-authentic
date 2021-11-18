@@ -34,7 +34,10 @@ const initialState = [
 const cartReducer = (state = initialState, action) => {
     switch(action.type){
         case types.ADD_TO_CART:
-            console.log(action);
+            state.push({
+                product: action.product,
+                quantity: action.quantity
+            })
             return [...state]
         default: return [...state]
     }
