@@ -1,9 +1,9 @@
-import img01 from '../assets/images/products/product-01 (1).jpg'
 import { useState } from "react"
 
 
 function CartItem(props) {
-    const cart = props.cart
+    const { cart, color, size } = props
+
     const quantityCart = props.quantityCart
 
     const [quantity, setQuantity] = useState(quantityCart)
@@ -16,14 +16,14 @@ function CartItem(props) {
     const showSubTotal = (price) => {
         return price * quantity
     }
-    
+
     return (
         <div className='cart__info__product__item'>
             <div className='cart__info__product__item__group'>
-                <img src={img01} alt='' />
+                <img src={cart.image01} alt='' />
                 <div className='cart__info__product__item__group__info'>
                     <p>{cart.name}</p>
-                    <span>Màu: Trắng - Size: XL </span>
+                    <span>Màu: {color} - Size: {size.toUpperCase()} </span>
                 </div>
             </div>
             <div className='product-detail__info__group cart__info__product__heading__quantity'>

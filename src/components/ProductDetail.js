@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { connect } from "react-redux"
+import { NavLink } from "react-router-dom"
 import { addToCart } from "../actions"
 
 function ProductDetail(props){
@@ -12,7 +13,6 @@ function ProductDetail(props){
     const [quantity, setQuantity] = useState(1)
 
     const [activeColor, setActiveColor] = useState(undefined)
-
     const [activeSize, setActiveSize] = useState(undefined)
 
     const updateQuantity = (type) => {
@@ -28,8 +28,8 @@ function ProductDetail(props){
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [product])
 
-    const handleAddToCart = (product, quantity) => {
-        props.onAddToCart(product, quantity);
+    const handleAddToCart = (product, quantity, color, size) => {
+        props.onAddToCart(product, quantity, color, size);
     }
 
     return (
@@ -82,7 +82,7 @@ function ProductDetail(props){
                             </button>
                         </div>
                     </div>
-                    <div className='btn product-detail__info__cart' onClick={() => handleAddToCart(product, quantity)}>Thêm vào giỏ hàng</div>
+                    <NavLink to='/gio-hang' className='btn product-detail__info__cart' onClick={() => handleAddToCart(product, quantity, activeColor, activeSize)}>Thêm vào giỏ hàng</NavLink>
                 </div>
             </div>
             <div className='product-detail__description'>
@@ -114,8 +114,8 @@ function ProductDetail(props){
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        onAddToCart: (product, quantity) => {
-            dispatch(addToCart(product, quantity))
+        onAddToCart: (product, quantity, color, size) => {
+            dispatch(addToCart(product, quantity, color, size))
         }
     }
 }

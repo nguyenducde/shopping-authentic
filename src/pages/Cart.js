@@ -7,7 +7,6 @@ function Cart(props){
 
     const { carts } = props
 
-
     return (
         <div className='cart'>
             <div className='container'>
@@ -23,8 +22,8 @@ function Cart(props){
 
                         {
                             carts.map((cart, index) => {
-                                return <CartItem cart={cart.product} quantityCart={cart.quantity} key={index} />
-                            })
+                                return <CartItem cart={cart.product} color={cart.color} size={cart.size} quantityCart={cart.quantity} key={index} />
+                            })  
                         }
 
                     </div>
@@ -34,7 +33,6 @@ function Cart(props){
         </div>
     )
 }
-
 
 const mapStateToProps = state => {
     return {
