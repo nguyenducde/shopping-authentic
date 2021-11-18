@@ -40,6 +40,10 @@
             &__group {
                 padding-bottom: 2rem;
                 
+                &:last-of-type {
+                    margin-bottom: 3rem;
+                }
+
                 &__list {
                     display: flex;
                     align-items: center;

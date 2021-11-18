@@ -20,6 +20,7 @@
             width: calc(25% - 5rem);
             padding-bottom: 5rem;
             transition: box-shadow 0.2s ease;
+            border: 1px solid #0000001f;
 
             &:hover {
                 box-shadow: 0rem 0.8rem 2.4rem rgba(149, 157, 165, 0.5);
