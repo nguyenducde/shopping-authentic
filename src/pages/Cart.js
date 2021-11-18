@@ -21,9 +21,10 @@ function Cart(props){
                         </div>
 
                         {
-                            carts.map((cart, index) => {
-                                return <CartItem cart={cart.product} color={cart.color} size={cart.size} quantityCart={cart.quantity} key={index} />
-                            })  
+                            carts.length === 0 ? <p style={{fontSize: 1.4 + 'rem', textAlign: "center"}}>{Message.MSG_CART_EMPTY}</p> :
+                                carts.map((cart, index) => {
+                                    return <CartItem cart={cart.product} color={cart.color} size={cart.size} quantityCart={cart.quantity} key={index} />
+                                })
                         }
 
                     </div>
