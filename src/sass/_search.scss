@@ -1,7 +1,7 @@
 @import './variables';
 
 .search {
-    margin-top: calc(#{$header-height} + 3rem);
+    margin-top: calc(#{$header-height} + 1.5rem);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -36,4 +36,20 @@
     align-items: center;
     justify-content: center;
     margin: 0 7rem;
+    position: relative;
+
+    &__notification {
+        position: absolute;
+        top: -7px;
+        right: -6px;
+        background-color: #f34747;
+        color: white;
+        font-size: 1.4rem;
+        width: 2.2rem;
+        height: 2.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
 }

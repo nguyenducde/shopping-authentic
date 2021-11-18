@@ -6,9 +6,11 @@ import { dress, colors, size } from "../assets/fake-data/category"
 import { useState } from "react"
 import Checkbox from '../components/Checkbox'
 import { NavLink } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-export default function Category(){
+function Category(props){
 
+    const carts = props.carts
     const [filter, setFilter] = useState({
         dress: [],
         color: [],
@@ -101,7 +103,10 @@ export default function Category(){
                             onChange={(e) => setValueSearch(e.target.value)}
                         />
                     </div>
-                    <NavLink className='cart__link' to='/gio-hang'><i className='bx bx-cart'></i></NavLink>
+                    <NavLink className='cart__link' to='/gio-hang'><i className='bx bx-cart'></i>
+                        {carts.length > 0 ? <span className='cart__link__notification'>{carts.length}</span> : ''}
+                    </NavLink>
+                    
                 </div>
                 <div className='category'>
                     <div className='category__filter'>
@@ -148,3 +153,11 @@ export default function Category(){
         </Helmet>
     )
 }
+
+const mapStateToProps = state => {
+    return {
+        carts: state.cartReducer
+    }
+}
+
+export default connect(mapStateToProps, null)(Category)
