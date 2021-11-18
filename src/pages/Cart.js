@@ -6,11 +6,11 @@ import * as Message from '../constants/Message'
 function Cart(props){
 
     const { carts } = props
-
+    
     return (
         <div className='cart'>
             <div className='container'>
-                <div className='cart__title'>Giỏ hàng <span>( 1 sản phẩm)</span></div>
+                <div className='cart__title'>Giỏ hàng <span>( {carts.length} sản phẩm)</span></div>
                 <div className='cart__info'>
                     <div className='cart__info__product'>
                         <div className='cart__info__product__heading'>

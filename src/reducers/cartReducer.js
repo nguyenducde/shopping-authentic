@@ -7,12 +7,15 @@ const initialState = data ? data : []
 const cartReducer = (state = initialState, action) => {
     switch(action.type){
         case types.ADD_TO_CART:
+
             const product = action.product
             const quantity = action.quantity
             const color = action.color
             const size = action.size
             let index = -1
-            index = findIndexOfProduct(state, product)
+
+            index = state.findIndex(item => item.product.id === product.id)
+            
             if(index > -1){
                 state[index].quantity += quantity
             } else {
@@ -29,17 +32,5 @@ const cartReducer = (state = initialState, action) => {
     }
 }
 
-const findIndexOfProduct = (carts, product) => {
-    let index = -1
-    if(carts.length > 0 ){
-        for(let i = 0; i < carts.length; i++){
-            if(carts[i].product.id === product.id){
-                index = i
-                break
-            }
-        }
-    }
-    return index
-}
 
 export default cartReducer   
