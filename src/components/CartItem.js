@@ -16,6 +16,39 @@ function CartItem(props) {
     const showSubTotal = (price) => {
         return price * quantity
     }
+
+    useEffect(() => {
+        const app = document.querySelector('.App')
+        const btnDelete = document.querySelectorAll('.btn-delete')
+        const btnUnDelete = document.querySelectorAll('.btn-unDelete')
+        const divNotification = document.querySelectorAll('.cart__info__product__item__delete__notification')
+        
+        btnDelete.forEach((item1, index1) => {
+            item1.addEventListener('click', (e) => {
+                e.stopPropagation()
+                divNotification.forEach((item2, index2) => {
+                    if(index1 === index2)
+                    item2.classList.add('show-notification')
+                })
+            })
+        })
+
+        app.addEventListener('click', (e) => {
+            divNotification.forEach((item2, index2) => {
+                item2.classList.remove('show-notification')
+            })
+        })
+        btnUnDelete.forEach((item1, index1) => {
+            item1.addEventListener('click', (e) => {
+                e.stopPropagation()
+                divNotification.forEach((item2, index2) => {
+                    if(index1 === index2)
+                    item2.classList.remove('show-notification')
+                })
+            })
+        })
+        
+    }, [])
     
 
     return (
