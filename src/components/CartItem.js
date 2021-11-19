@@ -1,8 +1,8 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import numberWithCommas from "../utils/numberWithCommas"
 
 function CartItem(props) {
-    const { cart, color, size } = props
+    const { carts, cart, color, size } = props
 
     const quantityCart = props.quantityCart
 
@@ -16,6 +16,7 @@ function CartItem(props) {
     const showSubTotal = (price) => {
         return price * quantity
     }
+    
 
     return (
         <div className='cart__info__product__item'>
@@ -42,7 +43,15 @@ function CartItem(props) {
                 <span className='vnd'>đ</span>
             </div>
             <div className='cart__info__product__item__delete cart__info__product__heading__delete'>
-                <p>Xóa</p>
+                <span className='btn-delete'>Xóa
+                    <div className='cart__info__product__item__delete__notification'>
+                        <p>Bạn có chắc chắn muốn xóa</p>
+                        <div className='cart__info__product__item__delete__notification__group'>
+                            <span className='cart__info__product__item__delete__notification__group__btn btn-unDelete'>Không</span>
+                            <span className='cart__info__product__item__delete__notification__group__btn btn-yes'>Có</span>
+                        </div>
+                    </div>
+                </span>
             </div>
         </div>
     )

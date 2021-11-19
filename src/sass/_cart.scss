@@ -90,11 +90,62 @@
 
                 &__delete {
 
-                    p {
-                        font-size: 1.5rem;
+                    span {
+                        font-size: 1.4rem;
                         color: red;
                         cursor: pointer;
                         width: fit-content;
+                        position: relative;
+                    }
+
+                    &__notification {
+                        position: absolute;
+                        top: 30px;
+                        right: -30px;
+                        background-color: white;
+                        width: 220px;
+                        padding: 1rem 1rem 1.5rem;
+                        cursor: default;
+                        font-size: 1.4rem;
+                        box-shadow: 0 3px 6px -4px #00000073, 
+                                    0 6px 16px 0 #00000014,
+                                    0 9px 28px 8px #0000000d;
+                        border-radius: 5px;
+                        color: black;
+
+                        &::after {
+                            content: "";
+                            border: 7px solid;
+                            position: absolute;
+                            top: -15px;
+                            right: 34px;
+                            cursor: default;
+                            border-color: transparent transparent black transparent;
+                        }
+                        
+                        p {
+                            cursor: default;
+                            text-align: center;
+                            width: 100%;
+                            padding-bottom: 2rem;
+                            color: black;
+                        }
+
+                        &__group {
+                            text-align: right;
+                            font-size: 1.3rem;
+
+                            span {
+                                border: 1px solid #0000004d;
+                                border-radius: 5px;
+                                padding: 0.3rem 0.5rem 0.2rem 0.5rem;
+                                color: black;
+
+                                &:first-child{
+                                    margin-right: 1rem;
+                                }
+                            }
+                        }
                     }
                 }
                 
@@ -145,9 +196,25 @@
 .btn-size {
     padding: 0.2rem 1rem;
 }
+.btn-yes {
+    background-color: #0c3891;
+    color: white !important;
+    border-color: #0c3891 !important;
+}
+.btn-yes:hover {
+    background: #0C2B68;
+    border-color: #0C2B68;
+}
+.btn-unDelete:hover {
+    border-color: #009fff;
+    color: #009fff;
+}
 .text-size {
     font-size: 1.7rem;
 }
 .btn-full {
+    display: block;
+}
+.show-notification {
     display: block;
 }
