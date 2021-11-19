@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react"
 import numberWithCommas from "../utils/numberWithCommas"
+import { deleteCart } from "../actions"
+import { connect } from "react-redux"
 
 function CartItem(props) {
-    const { carts, cart, color, size } = props
+    const { cart, color, size } = props
 
     const quantityCart = props.quantityCart
 
     const [quantity, setQuantity] = useState(quantityCart)
 
     const updateQuantity = (type) => {
-        if(type === 'plus') setQuantity(quantity + 1)
+        if (type === 'plus') setQuantity(quantity + 1)
         else setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
     }
-    
+
     const showSubTotal = (price) => {
         return price * quantity
     }
@@ -22,13 +24,13 @@ function CartItem(props) {
         const btnDelete = document.querySelectorAll('.btn-delete')
         const btnUnDelete = document.querySelectorAll('.btn-unDelete')
         const divNotification = document.querySelectorAll('.cart__info__product__item__delete__notification')
-        
+
         btnDelete.forEach((item1, index1) => {
             item1.addEventListener('click', (e) => {
                 e.stopPropagation()
                 divNotification.forEach((item2, index2) => {
-                    if(index1 === index2)
-                    item2.classList.add('show-notification')
+                    if (index1 === index2)
+                        item2.classList.add('show-notification')
                 })
             })
         })
@@ -42,14 +44,26 @@ function CartItem(props) {
             item1.addEventListener('click', (e) => {
                 e.stopPropagation()
                 divNotification.forEach((item2, index2) => {
-                    if(index1 === index2)
-                    item2.classList.remove('show-notification')
+                    if (index1 === index2)
+                        item2.classList.remove('show-notification')
                 })
             })
         })
-        
+
+
+
     }, [])
-    
+
+
+    useEffect(() => {
+        const acceptDelete = document.querySelectorAll('.btn-yes')
+        acceptDelete.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                props.onDeleteProductInCart(index)
+            })
+        })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     return (
         <div className='cart__info__product__item'>
@@ -62,7 +76,7 @@ function CartItem(props) {
             </div>
             <div className='product-detail__info__group cart__info__product__heading__quantity'>
                 <div className='product-detail__info__group__list'>
-                    <button className='product-detail__info__group__list__btn btn-size' disabled={quantity === 1 ? 'disabled' : '' } onClick={() => updateQuantity('minus')}>
+                    <button className='product-detail__info__group__list__btn btn-size' disabled={quantity === 1 ? 'disabled' : ''} onClick={() => updateQuantity('minus')}>
                         <i className="fas fa-minus"></i>
                     </button>
                     <div className='product-detail__info__group__list__quatity text-size'>{quantity}</div>
@@ -90,4 +104,12 @@ function CartItem(props) {
     )
 }
 
-export default CartItem
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        onDeleteProductInCart: index => {
+            dispatch(deleteCart(index))
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(CartItem)

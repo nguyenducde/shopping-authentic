@@ -10,3 +10,10 @@ export const addToCart = (product, quantity, color, size) => {
         size
     }
 }
+
+export const deleteCart = index => {
+    return {
+        type: types.DELETE_PRODUCT_IN_CART,
+        index
+    }
+}

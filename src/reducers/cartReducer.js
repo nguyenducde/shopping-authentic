@@ -1,5 +1,5 @@
-
 import * as types from '../constants/ActionType'
+
 const data = JSON.parse(localStorage.getItem('CART'))
 
 const initialState = data ? data : []
@@ -28,6 +28,14 @@ const cartReducer = (state = initialState, action) => {
             }
             localStorage.setItem('CART', JSON.stringify(state))
             return [...state]
+
+        case types.DELETE_PRODUCT_IN_CART:
+            const newCart = [...state]
+            newCart.splice(action.index, 1)
+
+            localStorage.setItem('CART', JSON.stringify(state))
+            return [...newCart]
+
         default: return [...state]
     }
 }
