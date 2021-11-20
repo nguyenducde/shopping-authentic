@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { connect } from "react-redux"
 import { NavLink } from "react-router-dom"
 import { addToCart } from "../actions"
+import numberWithCommas from "../utils/numberWithCommas"
 // import productData from "../assets/fake-data/products"
 
 function ProductDetail(props){
@@ -69,8 +70,8 @@ function ProductDetail(props){
                     <div className='product-detail__info'>
                         <p className='product-detail__info__name'>{name}</p>
                         <p className='product-detail__info__price'>
-                            Giá: 
-                            <span>{` ${price}.000`}</span>
+                            Giá:
+                            <span>{numberWithCommas(price)}<label className='vnd'>đ</label></span>
                         </p>
                         <div className='product-detail__info__group'>
                             <p className='product-detail__info__group__title'>Màu sắc</p>

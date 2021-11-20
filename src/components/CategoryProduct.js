@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom"
+import numberWithCommas from "../utils/numberWithCommas"
 
 export default function CategoryProduct(props){
 
@@ -13,7 +14,8 @@ export default function CategoryProduct(props){
                 <div className='category__product__item__info'>
                     <h3 className='category__product__item__info__name'>{name}</h3>
                     <div className='category__product__item__info__price'>
-                        {`${price}.000`}
+                        {numberWithCommas(price)}
+                        <label className='vnd'>đ</label>
                     </div>
                 </div>
                 <div className='btn category__product__item__buy'>Chọn mua</div>

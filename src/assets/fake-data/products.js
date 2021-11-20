@@ -39,7 +39,7 @@ const products = [
     {
         id: 1,
         name: 'Áo thun Dinosaur 01',
-        price: 189,
+        price: 189000,
         image01: product_01_image_01,
         image02: product_01_image_02,
         dressSlug: 'ao-thun',
@@ -51,7 +51,7 @@ const products = [
     {
         id: 2,
         name: 'Áo thun Dinosaur 02',
-        price: 189,
+        price: 189000,
         image01: product_02_image_01,
         image02: product_02_image_02,
         dressSlug: 'ao-thun',
@@ -63,7 +63,7 @@ const products = [
     {
         id: 3,
         name: 'Áo thun Dinosaur 03',
-        price: 190,
+        price: 190000,
         image01: product_03_image_01,
         image02: product_03_image_02,
         dressSlug: 'ao-thun',
@@ -75,7 +75,7 @@ const products = [
     {
         id: 4,
         name: 'Áo thun Dinosaur 04',
-        price: 194,
+        price: 194000,
         image01: product_04_image_01,
         image02: product_04_image_02,
         dressSlug: 'ao-thun',
@@ -87,7 +87,7 @@ const products = [
     {
         id: 5,
         name: 'Áo thun Dinosaur 05',
-        price: 159,
+        price: 159000,
         image01: product_05_image_01,
         image02: product_05_image_02,
         dressSlug: 'ao-thun',
@@ -99,7 +99,7 @@ const products = [
     {
         id: 6,
         name: 'Áo thun Dinosaur 06',
-        price: 159,
+        price: 159000,
         image01: product_06_image_01,
         image02: product_06_image_02,
         dressSlug: 'ao-thun',
@@ -111,7 +111,7 @@ const products = [
     {
         id: 7,
         name: 'Áo somi caro 07',
-        price: 159,
+        price: 159000,
         image01: product_07_image_01,
         image02: product_07_image_02,
         dressSlug: 'ao-somi',
@@ -123,7 +123,7 @@ const products = [
     {
         id: 8,
         name: 'Áo somi dài tay 08',
-        price: 194,
+        price: 194000,
         image01: product_08_image_01,
         image02: product_08_image_02,
         dressSlug: 'ao-somi',
@@ -135,7 +135,7 @@ const products = [
     {
         id: 9,
         name: 'Áo somi tay dài 09',
-        price: 194,
+        price: 194000,
         image01: product_09_image_01,
         image02: product_09_image_02,
         dressSlug: 'ao-somi',
@@ -147,7 +147,7 @@ const products = [
     {
         id: 10,
         name: 'Quần jean phong cách 10',
-        price: 194,
+        price: 194000,
         image01: product_10_image_01,
         image02: product_10_image_02,
         dressSlug: 'quan-jean',
@@ -159,7 +159,7 @@ const products = [
     {
         id: 11,
         name: 'Quần jean 11',
-        price: 194,
+        price: 194000,
         image01: product_11_image_01,
         image02: product_11_image_02,
         dressSlug: 'quan-jean',
@@ -171,7 +171,7 @@ const products = [
     {
         id: 12,
         name: 'Quần jean 12',
-        price: 194,
+        price: 194000,
         image01: product_12_image_01,
         image02: product_12_image_02,
         dressSlug: 'quan-jean',
@@ -183,7 +183,7 @@ const products = [
     {
         id: 13,
         name: 'Áo thun Dinosaur 13',
-        price: 184,
+        price: 184000,
         image01: product_01_image_01,
         image02: product_01_image_02,
         dressSlug: 'ao-thun',
@@ -195,7 +195,7 @@ const products = [
     {
         id: 14,
         name: 'Áo thun Dinosaur 14',
-        price: 159,
+        price: 159000,
         image01: product_02_image_01,
         image02: product_02_image_02,
         dressSlug: 'ao-thun',

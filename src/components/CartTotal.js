@@ -18,7 +18,7 @@ function CartTotal(props) {
             <div className='cart__info__totoalPrice__info'>
                 <p>Thành tiền</p>
                 <div className='cart__info__totoalPrice__info__group'>
-                    <p>{numberWithCommas(`${totalPrice(carts)}.000`)}<label className='vnd'>đ</label></p>
+                    <p>{numberWithCommas(totalPrice(carts))}<label className='vnd'>đ</label></p>
                     <span>(Đã bao gồm VAT nếu có)</span>
                 </div>
             </div>
