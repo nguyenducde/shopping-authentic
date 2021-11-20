@@ -31,10 +31,13 @@ const cartReducer = (state = initialState, action) => {
 
         case types.DELETE_PRODUCT_IN_CART:
             const newCart = [...state]
-            newCart.splice(action.index, 1)
 
-            localStorage.setItem('CART', JSON.stringify(state))
-            return [...newCart]
+           const result = newCart.filter((item, index) => {
+               return item.product.id !== action.index
+            })
+
+            localStorage.setItem('CART', JSON.stringify(result))
+            return result
 
         default: return [...state]
     }

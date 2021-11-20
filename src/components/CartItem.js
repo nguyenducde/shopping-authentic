@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import numberWithCommas from "../utils/numberWithCommas"
 import { deleteCart } from "../actions"
 import { connect } from "react-redux"
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 function CartItem(props) {
     const { cart, color, size } = props
@@ -19,51 +21,41 @@ function CartItem(props) {
         return price * quantity
     }
 
-    useEffect(() => {
-        const app = document.querySelector('.App')
-        const btnDelete = document.querySelectorAll('.btn-delete')
-        const btnUnDelete = document.querySelectorAll('.btn-unDelete')
-        const divNotification = document.querySelectorAll('.cart__info__product__item__delete__notification')
+    // useEffect(() => {
+    //     const app = document.querySelector('.App')
+    //     const btnDelete = document.querySelectorAll('.btn-delete')
+    //     const btnUnDelete = document.querySelectorAll('.btn-unDelete')
+    //     const divNotification = document.querySelectorAll('.cart__info__product__item__delete__notification')
 
-        btnDelete.forEach((item1, index1) => {
-            item1.addEventListener('click', (e) => {
-                e.stopPropagation()
-                divNotification.forEach((item2, index2) => {
-                    if (index1 === index2)
-                        item2.classList.add('show-notification')
-                })
-            })
-        })
+    //     btnDelete.forEach((item1, index1) => {
+    //         item1.addEventListener('click', (e) => {
+    //             e.stopPropagation()
+    //             divNotification.forEach((item2, index2) => {
+    //                 if (index1 === index2)
+    //                     item2.classList.add('show-notification')
+    //             })
+    //         })
+    //     })
 
-        app.addEventListener('click', (e) => {
-            divNotification.forEach((item2, index2) => {
-                item2.classList.remove('show-notification')
-            })
-        })
-        btnUnDelete.forEach((item1, index1) => {
-            item1.addEventListener('click', (e) => {
-                e.stopPropagation()
-                divNotification.forEach((item2, index2) => {
-                    if (index1 === index2)
-                        item2.classList.remove('show-notification')
-                })
-            })
-        })
+    //     app.addEventListener('click', (e) => {
+    //         divNotification.forEach((item2, index2) => {
+    //             item2.classList.remove('show-notification')
+    //         })
+    //     })
+    //     btnUnDelete.forEach((item1, index1) => {
+    //         item1.addEventListener('click', (e) => {
+    //             e.stopPropagation()
+    //             divNotification.forEach((item2, index2) => {
+    //                 if (index1 === index2)
+    //                     item2.classList.remove('show-notification')
+    //             })
+    //         })
+    //     })
+    // }, [])
 
-
-
-    }, [])
-
-
-    useEffect(() => {
-        const acceptDelete = document.querySelectorAll('.btn-yes')
-        acceptDelete.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                props.onDeleteProductInCart(index)
-            })
-        })
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    const handleDelete=(param)=>{
+        props.onDeleteProductInCart(param)
+    }
 
     return (
         <div className='cart__info__product__item'>
@@ -74,6 +66,7 @@ function CartItem(props) {
                     <span>Màu: {color} - Size: {size.toUpperCase()} </span>
                 </div>
             </div>
+            
             <div className='product-detail__info__group cart__info__product__heading__quantity'>
                 <div className='product-detail__info__group__list'>
                     <button className='product-detail__info__group__list__btn btn-size' disabled={quantity === 1 ? 'disabled' : ''} onClick={() => updateQuantity('minus')}>
@@ -90,14 +83,14 @@ function CartItem(props) {
                 <span className='vnd'>đ</span>
             </div>
             <div className='cart__info__product__item__delete cart__info__product__heading__delete'>
-                <span className='btn-delete'>Xóa
-                    <div className='cart__info__product__item__delete__notification'>
-                        <p>Bạn có chắc chắn muốn xóa</p>
-                        <div className='cart__info__product__item__delete__notification__group'>
+                <span className='btn-delete' onClick={() => handleDelete(cart.id)}>Xóa
+                     <div className='cart__info__product__item__delete__notification'>
+                         <p>Bạn có chắc chắn muốn xóa</p>
+                         {/* <div className='cart__info__product__item__delete__notification__group'>
                             <span className='cart__info__product__item__delete__notification__group__btn btn-unDelete'>Không</span>
-                            <span className='cart__info__product__item__delete__notification__group__btn btn-yes'>Có</span>
-                        </div>
-                    </div>
+                            <span className='cart__info__product__item__delete__notification__group__btn btn-yes' onClick={() => handleDelete(cart.id)}>Có</span>
+                        </div> */}
+                     </div>
                 </span>
             </div>
         </div>
@@ -106,10 +99,10 @@ function CartItem(props) {
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        onDeleteProductInCart: index => {
-            dispatch(deleteCart(index))
+        onDeleteProductInCart: id => {
+            dispatch(deleteCart(id))
         }
     }
 }
 
-export default connect(null, mapDispatchToProps)(CartItem)
+export default connect(null, mapDispatchToProps)(React.memo(CartItem))
