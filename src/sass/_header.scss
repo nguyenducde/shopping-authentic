@@ -44,9 +44,12 @@
 
         &-right {
             margin: 0 -3rem;
+            display: flex;
+            align-items: center;
             
             a {
-                padding: 1rem;
+                padding: 0 1rem;
+                height: 4rem;
                 margin-right: 3rem;
                 transition: 0.3s;
                 border: 1px solid black;
@@ -59,8 +62,10 @@
                     border: 1px solid $main-color;
                 }
             }
-            &-icon {
-
+            &--center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }

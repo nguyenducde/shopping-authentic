@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { connect } from 'react-redux'
 import logo from '../assets/images/Logo-2.png'
 
-export default function Header(){
+function Header({carts}){
 
     useEffect(() => {
         const header = document.querySelector('.header')
@@ -41,11 +42,13 @@ export default function Header(){
                         {/* <div className='header__menu-right'>
                             <NavLink to='#1'><i className="fas fa-search header__menu-right-icon"></i></NavLink>
                             <NavLink to='#1'><i className="fas fa-shopping-bag header__menu-right-icon"></i></NavLink>
-                            <NavLink to='/dang-nhap'><i className="fas fa-user header__menu-right-icon"></i></NavLink>
                         </div> */}
                         <div className='header__menu-right'>
-                            <NavLink to='/dang-nhap'>Đăng nhập</NavLink>
-                            <NavLink to='#1'>Đăng ký</NavLink>
+                            <NavLink className='cart__link' to='/gio-hang'><i className='bx bx-cart'></i>
+                                {carts.length > 0 ? <span className='cart__link__notification'>{carts.length}</span> : ''}
+                            </NavLink>
+                            <NavLink to='/dang-nhap' className='header__menu-right--center'>Đăng nhập</NavLink>
+                            {/* <NavLink to='#1'>Đăng ký</NavLink> */}
                         </div>
                     </div>
                 </div>
@@ -53,3 +56,11 @@ export default function Header(){
         </header>
     )
 }
+
+const mapStateToProps = state => {
+    return {
+        carts: state.cartReducer
+    }
+}
+
+export default connect(mapStateToProps, null)(Header)

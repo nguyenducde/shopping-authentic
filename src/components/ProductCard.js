@@ -18,7 +18,7 @@ export default function ProductCard(props){
                         <label className='vnd'>đ</label>
                     </div>
                 </div>
-                <div className='btn product-card__item__buy'>Chọn mua</div>
+                <div className='btn product-card__item__buy'>Xem chi tiết</div>
             </NavLink>
         </div>
     )

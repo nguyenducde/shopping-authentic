@@ -1,7 +1,7 @@
 @import './variables';
 
 .category {
-    margin-top: 4rem;
+    margin-top: 3rem;
     display: flex;
 
     &__filter {
@@ -48,6 +48,7 @@
             transition: box-shadow 0.2s ease;
             border: 1px solid #0000001f;
             border-radius: 0 0 5px 5px;
+            height: 45.8rem;
 
             &:hover {
                 box-shadow: 0rem 0.8rem 2.4rem rgba(149, 157, 165, 0.5);

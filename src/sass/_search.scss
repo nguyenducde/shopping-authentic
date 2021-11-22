@@ -31,25 +31,28 @@
 }
 
 .cart__link {
-    font-size: 3.3rem;
+    font-size: 2.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 7rem;
     position: relative;
 
     &__notification {
         position: absolute;
-        top: -7px;
-        right: -6px;
+        top: 0;
+        right: 0;
         background-color: #f34747;
         color: white;
-        font-size: 1.4rem;
-        width: 2.2rem;
-        height: 2.2rem;
+        font-size: 1.2rem;
+        width: 1.8rem;
+        height: 1.8rem;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
+    }
+
+    &:hover {
+        border: 1px solid transparent !important;
     }
 }
