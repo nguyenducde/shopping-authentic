@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react"
 import numberWithCommas from "../utils/numberWithCommas"
 import { deleteCart } from "../actions"
 import { connect } from "react-redux"
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { toastSuccess } from "../utils/toastify"
 
 function CartItem(props) {
     const { cart, color, size } = props
@@ -55,6 +54,7 @@ function CartItem(props) {
 
     const handleDelete=(param)=>{
         props.onDeleteProductInCart(param)
+        toastSuccess('Xóa thành công !', 2000)
     }
 
     return (

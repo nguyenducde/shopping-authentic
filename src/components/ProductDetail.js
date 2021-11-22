@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import { NavLink } from "react-router-dom"
 import { addToCart } from "../actions"
 import numberWithCommas from "../utils/numberWithCommas"
+import { toastSuccess } from "../utils/toastify"
 // import productData from "../assets/fake-data/products"
 
 function ProductDetail(props){
@@ -44,6 +45,7 @@ function ProductDetail(props){
 
     const handleAddToCart = (product, quantity, color, size) => {
         props.onAddToCart(product, quantity, color, size);
+        toastSuccess('Thêm vào giỏ hàng thành công !', 2500)
     }
 
     return (
@@ -109,7 +111,7 @@ function ProductDetail(props){
                                 </button>
                             </div>
                         </div>
-                        <NavLink to='/gio-hang' className='btn product-detail__info__cart' onClick={() => handleAddToCart(product, quantity, activeColor, activeSize)}>Thêm vào giỏ hàng</NavLink>
+                        <div className='btn product-detail__info__cart' onClick={() => handleAddToCart(product, quantity, activeColor, activeSize)}>Thêm vào giỏ hàng</div>
                     </div>
                 </div>
                 <div className='product-detail__description'>
