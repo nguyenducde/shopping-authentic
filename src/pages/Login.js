@@ -36,7 +36,7 @@ export default function Login(){
                     <img className='login__image__logo' src={avatar_login} alt='' />
                 </div>
                 <div className='login__info'>
-                    <form action='index.html'>
+                    <form action='/'>
                         <h2 className='login__info__title'>ĐĂNG NHẬP</h2>
                         <div className='login__info__group'>
                             <i className='fas fa-user login__info__group__content__icon'></i>

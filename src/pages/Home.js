@@ -6,6 +6,8 @@ import policyCard from "../assets/fake-data/policy-card"
 import productData from "../assets/fake-data/products"
 import ProductCard from "../components/ProductCard"
 import Banner from "../components/Banner"
+import BackToTop from "../components/BackToTop"
+
 
 export default function Home(){
     return (
@@ -64,7 +66,8 @@ export default function Home(){
                     </div>
                 </section>
             </div>
-
+            
+            <BackToTop />
         </Helmet>
     )
 }

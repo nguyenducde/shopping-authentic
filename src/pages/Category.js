@@ -5,6 +5,8 @@ import CategoryProduct from "../components/CategoryProduct"
 import { dress, colors, size } from "../assets/fake-data/category"
 import { useState } from "react"
 import Checkbox from '../components/Checkbox'
+import BackToTop from "../components/BackToTop"
+
 
 function Category(){
 
@@ -144,6 +146,8 @@ function Category(){
                     </div>
                 </div>
             </div>
+            
+            <BackToTop />
         </Helmet>
     )
 }
