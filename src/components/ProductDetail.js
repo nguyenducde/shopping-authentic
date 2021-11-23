@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import { addProductToCart } from "../actions"
 import numberWithCommas from "../utils/numberWithCommas"
 import { toastSuccess } from "../utils/toastify"
+import { imageManify } from "./ImageManify"
 
 function ProductDetail(props){
 
@@ -40,7 +41,8 @@ function ProductDetail(props){
                         <img className='product-detail__image__list__item' onClick={() => setPreviewImage(image01)} src={image01} alt='' />
                         <img className='product-detail__image__list__item' onClick={() => setPreviewImage(image02)} src={image02} alt='' />
                     </div>
-                    <img className='product-detail__image__main' src={previewImage} alt='' />
+                    {/* <img className='product-detail__image__main' src={previewImage} alt='' /> */}
+                    {imageManify(previewImage, previewImage)}
                     <div className='product-detail__info'>
                         <p className='product-detail__info__name'>{name}</p>
                         <p className='product-detail__info__price'>
