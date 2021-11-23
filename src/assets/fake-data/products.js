@@ -110,7 +110,7 @@ const products = [
     },
     {
         id: 7,
-        name: 'Áo somi caro 07',
+        name: 'Áo Sơ Mi Nữ Tay Dài Kẻ Sọc Caro',
         price: 159000,
         image01: product_07_image_01,
         image02: product_07_image_02,
@@ -118,11 +118,11 @@ const products = [
         colors: ['Trắng', 'Đỏ', 'Cam', 'Xanh'],
         slug: 'ao-somi-caro-07',
         size: ['l', 'xl'],
-        description: '- Áo thun Dinosaur 06 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 06 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
+        description: '- Áo Sơ Mi Nữ Tay Dài Kẻ Sọc Caro Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo Sơ Mi Nữ Tay Dài Kẻ Sọc Caro Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
     },
     {
         id: 8,
-        name: 'Áo somi dài tay 08',
+        name: 'Áo Sơ Mi Nữ Tay Dài Công Sở',
         price: 194000,
         image01: product_08_image_01,
         image02: product_08_image_02,
@@ -130,11 +130,11 @@ const products = [
         colors: ['Trắng', 'Đỏ', 'Đen'],
         slug: 'ao-somi-dai-tay-08',
         size: ['s', 'm', 'xl'],
-        description: '- Áo thun Dinosaur 06 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 06 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
+        description: '- Áo Sơ Mi Nữ Tay Dài Công Sở Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo Sơ Mi Nữ Tay Dài Công Sở Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
     },
     {
         id: 9,
-        name: 'Áo somi tay dài 09',
+        name: 'Áo Sơ Mi Nữ Tay Dài Dáng Suông',
         price: 194000,
         image01: product_09_image_01,
         image02: product_09_image_02,
@@ -142,11 +142,11 @@ const products = [
         colors: ['Trắng', 'Xanh'],
         slug: 'ao-somi-tay-dai-09',
         size: ['m'],
-        description: '- Áo somi tay dài 09 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo somi tay dài 09 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
+        description: '- Áo Sơ Mi Nữ Tay Dài Dáng Suông Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo Sơ Mi Nữ Tay Dài Dáng Suông Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
     },
     {
         id: 10,
-        name: 'Quần jean phong cách 10',
+        name: 'Quần Jean Nữ Dáng Skinny Trơn',
         price: 194000,
         image01: product_10_image_01,
         image02: product_10_image_02,
@@ -154,11 +154,11 @@ const products = [
         colors: ['Xanh', 'Đen'],
         slug: 'ao-jean-phong-cach-10',
         size: ['l'],
-        description: '- Áo somi tay dài 09 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo somi tay dài 09 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
+        description: '- Quần Jean Nữ Dáng Skinny Trơn Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Quần Jean Nữ Dáng Skinny Trơn Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
     },
     {
         id: 11,
-        name: 'Quần jean 11',
+        name: 'Quần Jean Baggy Nữ',
         price: 194000,
         image01: product_11_image_01,
         image02: product_11_image_02,
@@ -166,11 +166,11 @@ const products = [
         colors: ['Xanh', 'Đen'],
         slug: 'ao-jean-phong-11',
         size: ['s', 'm', 'xl'],
-        description: '- Áo jean 11 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo jean 11 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
+        description: '- Quần Jean Baggy Nữ Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Quần Jean Baggy Nữ Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
     },
     {
         id: 12,
-        name: 'Quần jean 12',
+        name: 'Quần Jean Nữ Lưng Cao Xước Nhẹ',
         price: 194000,
         image01: product_12_image_01,
         image02: product_12_image_02,
@@ -178,7 +178,7 @@ const products = [
         colors: ['Xanh'],
         slug: 'ao-jean-12',
         size: ['s', 'm', 'xl'],
-        description: '- Áo jean 12 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo jean 12 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
+        description: '- Quần Jean Nữ Lưng Cao Xước Nhẹ Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Quần Jean Nữ Lưng Cao Xước Nhẹ Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
     },
     {
         id: 13,

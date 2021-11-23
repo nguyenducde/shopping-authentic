@@ -33,8 +33,8 @@ const cartReducer = (state = initialState, action) => {
         case types.DELETE_PRODUCT_IN_CART:
             const newCart = [...state]
 
-           const result = newCart.filter((item, index) => {
-               return item.product.id !== action.index
+           const result = newCart.filter(item => {
+               return item.product.id !== action.id
             })
 
             localStorage.setItem('CART', JSON.stringify(result))

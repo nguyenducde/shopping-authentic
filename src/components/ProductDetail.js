@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { connect } from "react-redux"
-import { addToCart } from "../actions"
+import { addProductToCart } from "../actions"
 import numberWithCommas from "../utils/numberWithCommas"
 import { toastSuccess } from "../utils/toastify"
 
@@ -28,7 +28,7 @@ function ProductDetail(props){
     }, [product])
 
     const handleAddToCart = (product, quantity, color, size) => {
-        props.onAddToCart(product, quantity, color, size);
+        props.onAddProductToCart(product, quantity, color, size);
         toastSuccess('Thêm vào giỏ hàng thành công !', 2500)
     }
 
@@ -116,8 +116,8 @@ function ProductDetail(props){
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        onAddToCart: (product, quantity, color, size) => {
-            dispatch(addToCart(product, quantity, color, size))
+        onAddProductToCart: (product, quantity, color, size) => {
+            dispatch(addProductToCart(product, quantity, color, size))
         }
     }
 }

@@ -74,6 +74,12 @@
                         p {
                             font-size: 1.6rem;
                             padding-bottom: 2rem;
+                            font-weight: 500;
+
+                            &.color {
+                                font-size: 1.4rem;
+                                font-weight: unset;
+                            }
                         }
 
                         span {

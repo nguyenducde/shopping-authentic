@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import numberWithCommas from "../utils/numberWithCommas"
-import { deleteCart, updateProductInCart } from "../actions"
+import { deleteProductInCart, updateProductInCart } from "../actions"
 import { connect } from "react-redux"
 import { toastSuccess } from "../utils/toastify"
 
@@ -52,8 +52,8 @@ function CartItem(props) {
     //     })
     // }, [])
 
-    const handleDelete=(param)=>{
-        props.onDeleteProductInCart(param)
+    const handleDeleteProductInCart=(id)=>{
+        props.onDeleteProductInCart(id)
         toastSuccess('Xóa thành công !', 2000)
     }
 
@@ -68,7 +68,8 @@ function CartItem(props) {
                 <img src={cart.image01} alt='' />
                 <div className='cart__info__product__item__group__info'>
                     <p>{cart.name}</p>
-                    <span>Màu: {color} - Size: {size.toUpperCase()} </span>
+                    <p className='color'>Màu: {color}</p>
+                    <p className='color'>Size: {size.toUpperCase()}</p>
                 </div>
             </div>
             
@@ -88,12 +89,12 @@ function CartItem(props) {
                 <span className='vnd'>đ</span>
             </div>
             <div className='cart__info__product__item__delete cart__info__product__heading__delete'>
-                <span className='btn-delete' onClick={() => handleDelete(cart.id)}>Xóa
+                <span className='btn-delete' onClick={() => handleDeleteProductInCart(cart.id)}>Xóa
                      <div className='cart__info__product__item__delete__notification'>
                          <p>Bạn có chắc chắn muốn xóa</p>
                          {/* <div className='cart__info__product__item__delete__notification__group'>
                             <span className='cart__info__product__item__delete__notification__group__btn btn-unDelete'>Không</span>
-                            <span className='cart__info__product__item__delete__notification__group__btn btn-yes' onClick={() => handleDelete(cart.id)}>Có</span>
+                            <span className='cart__info__product__item__delete__notification__group__btn btn-yes' onClick={() => handleDeleteProductInCart(cart.id)}>Có</span>
                         </div> */}
                      </div>
                 </span>
@@ -105,7 +106,7 @@ function CartItem(props) {
 const mapDispatchToProps = (dispatch, props) => {
     return {
         onDeleteProductInCart: id => {
-            dispatch(deleteCart(id))
+            dispatch(deleteProductInCart(id))
         },
         onUpdateProductInCart: (cart, quantity) => {
             dispatch(updateProductInCart(cart, quantity))
