@@ -7,15 +7,23 @@ function BackToTop() {
 
     useEffect(() => {
         const backTop = document.querySelector('.back-top')
-        window.addEventListener('scroll', function(){
+
+        const handleScroll = () => {
+            backTop.classList.toggle('back-top', window.scrollY > 500)
             backTop.style.display = 'block'
-            backTop.classList.toggle('back-top', window.scrollY > 400)
-        })
+        }
+
+        const handleScrollToTop = () => {
+            $('html,body').animate({scrollTop:0}, "slow")
+        }
         
-        backTop.addEventListener('click', function(){
-            // event.preventDefault();
-            $('html,body').animate({scrollTop:0}, "slow");
-        })
+        window.addEventListener('scroll',handleScroll)
+        backTop.addEventListener('click', handleScrollToTop)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+            backTop.removeEventListener('click', handleScrollToTop)
+        }
     }, [])
 
     return (

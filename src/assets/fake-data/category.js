@@ -63,3 +63,14 @@ export const size = [
         size: 'xxl'
     },
 ]
+
+export const sex = [
+    {
+        name: 'Nam',
+        sex: 'male'
+    },
+    {
+        name: 'Nữ',
+        sex: 'female'
+    }
+]

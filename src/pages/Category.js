@@ -2,16 +2,15 @@ import React, { useCallback, useEffect } from "react"
 import Helmet from "../components/Helmet"
 import productData from "../assets/fake-data/products"
 import CategoryProduct from "../components/CategoryProduct"
-import { dress, colors, size } from "../assets/fake-data/category"
+import { dress, sex, colors, size } from "../assets/fake-data/category"
 import { useState } from "react"
 import Checkbox from "../components/Checkbox"
-import BackToTop from "../components/BackToTop"
-
 
 function Category(){
 
     const [filter, setFilter] = useState({
         dress: [],
+        initialSex: [],
         color: [],
         size: []
     })
@@ -33,6 +32,9 @@ function Category(){
                 case 'DRESS':
                     setFilter({...filter, dress: [...filter.dress, item.dressSlug]})
                     break
+                case 'SEX':
+                    setFilter({...filter, initialSex: [...filter.initialSex, item.sex]})
+                    break
                 case 'COLOR':
                     setFilter({...filter, color: [...filter.color, item.color]})
                     break
@@ -46,6 +48,10 @@ function Category(){
                 case 'DRESS':
                     const newDress = filter.dress.filter(e => e !== item.dressSlug)
                     setFilter({...filter, dress: newDress})
+                    break
+                case 'SEX':
+                    const newSex = filter.initialSex.filter(e => e !== item.sex)
+                    setFilter({...filter, initialSex: newSex})
                     break
                 case 'COLOR':
                     const newColor = filter.color.filter(e => e !== item.color)
@@ -65,6 +71,9 @@ function Category(){
 
         if(filter.dress.length > 0) {
             allProduct = allProduct.filter(e => filter.dress.includes(e.dressSlug))
+        }
+        if(filter.initialSex.length > 0) {
+            allProduct = allProduct.filter(e => filter.initialSex.includes(e.sex))
         }
         if(filter.color.length > 0) {
             allProduct = allProduct.filter(e => {
@@ -116,6 +125,16 @@ function Category(){
                                 })
                             }
                         </div>
+                        <h3 className='category__filter__title'>Giới tính</h3>
+                        <div className='category__filter__list'>
+                            {
+                                sex.map((item, index) => {
+                                    return (
+                                        <Checkbox label={item.name} onChange={(input) => filterSelect('SEX', input.checked, item)} key={index} /> 
+                                    )
+                                })
+                            }
+                        </div>
                         <h3 className='category__filter__title'>Màu sắc</h3>
                         <div className='category__filter__list'>
                             {
@@ -146,8 +165,6 @@ function Category(){
                     </div>
                 </div>
             </div>
-            
-            <BackToTop />
         </Helmet>
     )
 }
