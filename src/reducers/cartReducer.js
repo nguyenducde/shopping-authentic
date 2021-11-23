@@ -5,14 +5,15 @@ const data = JSON.parse(localStorage.getItem('CART'))
 const initialState = data ? data : []
 
 const cartReducer = (state = initialState, action) => {
+    const product = action.product
+    const quantity = action.quantity
+    let index = -1
+
     switch(action.type){
         case types.ADD_TO_CART:
 
-            const product = action.product
-            const quantity = action.quantity
             const color = action.color
             const size = action.size
-            let index = -1
 
             index = state.findIndex(item => item.product.id === product.id)
             
@@ -38,6 +39,14 @@ const cartReducer = (state = initialState, action) => {
 
             localStorage.setItem('CART', JSON.stringify(result))
             return result
+
+        case types.UPDATE_PRODUCT_IN_CART:
+            index = state.findIndex(item => item.product.id === product.id)
+            if(index > -1) {
+                state[index].quantity = quantity
+            }
+            localStorage.setItem('CART', JSON.stringify(state))
+            return [...state]
 
         default: return [...state]
     }

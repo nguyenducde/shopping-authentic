@@ -1,10 +1,10 @@
-import React, { useCallback, useEffect } from 'react'
+import React, { useCallback, useEffect } from "react"
 import Helmet from "../components/Helmet"
 import productData from "../assets/fake-data/products"
 import CategoryProduct from "../components/CategoryProduct"
 import { dress, colors, size } from "../assets/fake-data/category"
 import { useState } from "react"
-import Checkbox from '../components/Checkbox'
+import Checkbox from "../components/Checkbox"
 import BackToTop from "../components/BackToTop"
 
 
@@ -17,7 +17,7 @@ function Category(){
     })
     const [valueSearch, setValueSearch] = useState('')
     const [products, setProduct] = useState(productData.getAllProducts())
-    const [productSearch, setproductSearch] = useState(productData.getAllProducts())
+    const productSearch = productData.getAllProducts()
 
     useEffect(() => {
         const searchProduct = productSearch.filter((product) => {

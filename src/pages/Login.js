@@ -2,7 +2,6 @@ import Helmet from '../components/Helmet'
 import avatar_login from '../assets/images/login.png'
 import avatar__wave from '../assets/images/login_wave.png'
 import { useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
 
 export default function Login(){
 

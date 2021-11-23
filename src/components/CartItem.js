@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import numberWithCommas from "../utils/numberWithCommas"
-import { deleteCart } from "../actions"
+import { deleteCart, updateProductInCart } from "../actions"
 import { connect } from "react-redux"
 import { toastSuccess } from "../utils/toastify"
 
@@ -11,10 +11,10 @@ function CartItem(props) {
 
     const [quantity, setQuantity] = useState(quantityCart)
 
-    const updateQuantity = (type) => {
-        if (type === 'plus') setQuantity(quantity + 1)
-        else setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
-    }
+    // const updateQuantity = (type) => {
+    //     if (type === 'plus') setQuantity(quantity + 1)
+    //     else setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
+    // }
 
     const showSubTotal = (price) => {
         return price * quantity
@@ -57,6 +57,11 @@ function CartItem(props) {
         toastSuccess('Xóa thành công !', 2000)
     }
 
+    const handleUpdateProductInCart = (cart, quantity) => {
+        setQuantity(quantity)
+        props.onUpdateProductInCart(cart, quantity)
+    }
+
     return (
         <div className='cart__info__product__item'>
             <div className='cart__info__product__item__group'>
@@ -69,11 +74,11 @@ function CartItem(props) {
             
             <div className='product-detail__info__group cart__info__product__heading__quantity'>
                 <div className='product-detail__info__group__list'>
-                    <button className='product-detail__info__group__list__btn btn-size' disabled={quantity === 1 ? 'disabled' : ''} onClick={() => updateQuantity('minus')}>
+                    <button className='product-detail__info__group__list__btn btn-size' disabled={quantity === 1 ? 'disabled' : ''} onClick={() => handleUpdateProductInCart(cart, quantity - 1)}>
                         <i className="fas fa-minus"></i>
                     </button>
                     <div className='product-detail__info__group__list__quatity text-size'>{quantity}</div>
-                    <button className='product-detail__info__group__list__btn btn-size' onClick={() => updateQuantity('plus')}>
+                    <button className='product-detail__info__group__list__btn btn-size' onClick={() => handleUpdateProductInCart(cart, quantity + 1)}>
                         <i className="fas fa-plus"></i>
                     </button>
                 </div>
@@ -101,7 +106,12 @@ const mapDispatchToProps = (dispatch, props) => {
     return {
         onDeleteProductInCart: id => {
             dispatch(deleteCart(id))
+        },
+        onUpdateProductInCart: (cart, quantity) => {
+            dispatch(updateProductInCart(cart, quantity))
         }
+        
+
     }
 }
 

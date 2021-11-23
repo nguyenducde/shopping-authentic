@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react"
 import { connect } from "react-redux"
-import { NavLink } from "react-router-dom"
 import { addToCart } from "../actions"
 import numberWithCommas from "../utils/numberWithCommas"
 import { toastSuccess } from "../utils/toastify"
-// import productData from "../assets/fake-data/products"
 
 function ProductDetail(props){
 
@@ -12,28 +10,14 @@ function ProductDetail(props){
     const product = props.product
 
     const [previewImage, setPreviewImage] = useState(image01)
-    
     const [quantity, setQuantity] = useState(1)
-
     const [activeColor, setActiveColor] = useState(undefined)
     const [activeSize, setActiveSize] = useState(undefined)
-
-    // const [valueSearch, setValueSearch] = useState('')
-    // const [products, setProduct] = useState(productData.getAllProducts())
-    // const [productSearch, setproductSearch] = useState(productData.getAllProducts())
 
     const updateQuantity = (type) => {
         if(type === 'plus') setQuantity(quantity + 1)
         else setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
     }
-
-    // useEffect(() => {
-    //     const searchProduct = productSearch.filter((product) => {
-    //         return product.name.toLowerCase().includes(valueSearch.toLowerCase())
-    //     })
-    //     setProduct(searchProduct)
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [valueSearch])
 
     useEffect(() => {
         setPreviewImage(image01)
@@ -50,18 +34,6 @@ function ProductDetail(props){
 
     return (
         <>
-            {/* <div className='search'>
-                <div className='search__group'>
-                    <span>Tìm kiếm</span>
-                    <input 
-                        type='text' 
-                        placeholder='Nhập tên sản phẩm' 
-                        value={valueSearch}
-                        onChange={(e) => setValueSearch(e.target.value)}
-                    />
-                </div>
-                <NavLink className='cart__link' to='/gio-hang'><i className='bx bx-cart'></i></NavLink>
-            </div> */}
             <div className='product-detail'>
                 <div className='product-detail__image'>
                     <div className='product-detail__image__list'>
