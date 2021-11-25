@@ -18,6 +18,9 @@ export const imageManify = (img1, img2) => {
                 hoverDelayInMs: 100,
                 hoverOffDelayInMs: 100,
                 fadeDurationInMs: 100,
+                enlargedImageContainerDimensions: {
+                    width: '150%', height: '100%'
+                }
             }} />
         </div>
     )

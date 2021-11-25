@@ -4,6 +4,7 @@ import { deleteProductInCart, updateProductInCart } from "../actions"
 import { connect } from "react-redux"
 import { toastSuccess } from "../utils/toastify"
 
+
 function CartItem(props) {
     const { cart, color, size } = props
 
@@ -11,47 +12,10 @@ function CartItem(props) {
 
     const [quantity, setQuantity] = useState(quantityCart)
 
-    // const updateQuantity = (type) => {
-    //     if (type === 'plus') setQuantity(quantity + 1)
-    //     else setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
-    // }
-
     const showSubTotal = (price) => {
         return price * quantity
     }
-
-    // useEffect(() => {
-    //     const app = document.querySelector('.App')
-    //     const btnDelete = document.querySelectorAll('.btn-delete')
-    //     const btnUnDelete = document.querySelectorAll('.btn-unDelete')
-    //     const divNotification = document.querySelectorAll('.cart__info__product__item__delete__notification')
-
-    //     btnDelete.forEach((item1, index1) => {
-    //         item1.addEventListener('click', (e) => {
-    //             e.stopPropagation()
-    //             divNotification.forEach((item2, index2) => {
-    //                 if (index1 === index2)
-    //                     item2.classList.add('show-notification')
-    //             })
-    //         })
-    //     })
-
-    //     app.addEventListener('click', (e) => {
-    //         divNotification.forEach((item2, index2) => {
-    //             item2.classList.remove('show-notification')
-    //         })
-    //     })
-    //     btnUnDelete.forEach((item1, index1) => {
-    //         item1.addEventListener('click', (e) => {
-    //             e.stopPropagation()
-    //             divNotification.forEach((item2, index2) => {
-    //                 if (index1 === index2)
-    //                     item2.classList.remove('show-notification')
-    //             })
-    //         })
-    //     })
-    // }, [])
-
+ 
     const handleDeleteProductInCart=(id)=>{
         props.onDeleteProductInCart(id)
         toastSuccess('Xóa thành công !', 2000)
@@ -61,6 +25,7 @@ function CartItem(props) {
         setQuantity(quantity)
         props.onUpdateProductInCart(cart, quantity)
     }
+
 
     return (
         <div className='cart__info__product__item'>
@@ -90,13 +55,13 @@ function CartItem(props) {
             </div>
             <div className='cart__info__product__item__delete cart__info__product__heading__delete'>
                 <span className='btn-delete' onClick={() => handleDeleteProductInCart(cart.id)}>Xóa
-                     <div className='cart__info__product__item__delete__notification'>
+                     {/* <div className='cart__info__product__item__delete__notification'>
                          <p>Bạn có chắc chắn muốn xóa</p>
-                         {/* <div className='cart__info__product__item__delete__notification__group'>
+                         <div className='cart__info__product__item__delete__notification__group'>
                             <span className='cart__info__product__item__delete__notification__group__btn btn-unDelete'>Không</span>
                             <span className='cart__info__product__item__delete__notification__group__btn btn-yes' onClick={() => handleDeleteProductInCart(cart.id)}>Có</span>
-                        </div> */}
-                     </div>
+                        </div>
+                     </div> */}
                 </span>
             </div>
         </div>

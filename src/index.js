@@ -4,7 +4,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './assets/boxicons-2.0.7/css/boxicons.min.css'
 import './sass/app.scss'
-import './assets/css/grid.css'
 import { Provider } from 'react-redux'
 import store from './store-redux/index'
 

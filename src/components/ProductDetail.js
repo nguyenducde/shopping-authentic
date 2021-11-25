@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import { addProductToCart } from "../actions"
 import numberWithCommas from "../utils/numberWithCommas"
 import { toastSuccess } from "../utils/toastify"
-import { imageManify } from "./ImageManify"
+import { imageManify } from "../utils/imageManify"
 
 function ProductDetail(props){
 

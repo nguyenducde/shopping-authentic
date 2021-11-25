@@ -147,6 +147,7 @@
                                 border-radius: 5px;
                                 padding: 0.3rem 0.5rem 0.2rem 0.5rem;
                                 color: black;
+                                cursor: pointer;
 
                                 &:first-child{
                                     margin-right: 1rem;
@@ -207,6 +208,8 @@
     background-color: #0c3891;
     color: white !important;
     border-color: #0c3891 !important;
+    padding: 0 1rem;
+    margin: 0 -1rem;
 }
 .btn-yes:hover {
     background: #0C2B68;

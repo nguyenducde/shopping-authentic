@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 
@@ -21,7 +21,7 @@ export default function HomeSlider(props){
         if(props.autoRunSlide){
             const slideAuto = setInterval(() => {
                 nextSlide()
-            }, 3000)
+            }, 4000)
             return () => {
                 clearInterval(slideAuto)
             }
