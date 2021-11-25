@@ -78,12 +78,14 @@
         }
 
         &__icon-open {
-            left: 1rem;
             top: 1rem;
+            left: 0;
         }
+        
         &__icon-close {
-            right: 0;
-            top: 0;
+            left: 12px;
+            top: 10px;
+            z-index: 399;
         }
     }
 
@@ -95,6 +97,7 @@
 .nav {
     display: flex;
     margin: 0 -2rem;
+    transition: 0.4s;
 
     &__icon {
         display: none;
@@ -171,27 +174,20 @@
 }
 
 @media only screen and (max-width: 768px){
-    // .overlay {
-    //     background-color: #0000003d;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     height: 100vh;
-    //     width: 100%;
-    // }
-
     .nav {
-        position: relative;
+        position: fixed;
         top: 0;
         left: 0;
         bottom: 0;
         background-color: white;
         height: 100vh;
-        width: 65%;
+        width: 80%;
         flex-direction: column;
-        padding: 5rem 1rem 0 2rem;
+        padding: 6rem 1rem 0 2rem;
         font-size: 1.7rem;
-        display: none;
+        transform: translateX(-100%);
+        box-shadow: 2px 0px 6px 0px #0000006b;
+        z-index: 299;
 
         &__icon {
             display: block;
@@ -224,6 +220,10 @@
                 display: none;
             }
         }
+
+        &-active {
+            transform: translateX(0%);
+        }
     }
     .header {
         height: $header-mobile-height;
@@ -240,6 +240,7 @@
         &__logo {
             img {
                 height: 2rem;
+                display: none;
             }
         }
 
@@ -258,6 +259,7 @@
                 &--center {
                     font-size: 1.4rem;
                     margin-right: auto;
+                    margin-left: 1rem;
                     width: 7.5rem;
                 }
             }
