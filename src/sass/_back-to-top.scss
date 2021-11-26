@@ -16,3 +16,10 @@
         cursor: pointer;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .back-top {
+        top: 85%;
+        right: 2%;
+    }
+}
