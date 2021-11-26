@@ -115,45 +115,53 @@ function Category(){
                 </div>
                 <div className='category'>
                     <div className='category__filter'>
-                        <h3 className='category__filter__title'>Danh mục sản phẩm</h3>
-                        <div className='category__filter__list'>
-                            {
-                                dress.map((item, index) => {
-                                    return (
-                                        <Checkbox label={item.name} onChange={(input) => filterSelect('DRESS', input.checked, item)} key={index} />
-                                    )
-                                })
-                            }
+                        <div className='category__filter__group'>
+                            <h3 className='category__filter__title'>Danh mục sản phẩm</h3>
+                            <div className='category__filter__list'>
+                                {
+                                    dress.map((item, index) => {
+                                        return (
+                                            <Checkbox label={item.name} onChange={(input) => filterSelect('DRESS', input.checked, item)} key={index} />
+                                        )
+                                    })
+                                }
+                            </div>
                         </div>
-                        <h3 className='category__filter__title'>Giới tính</h3>
-                        <div className='category__filter__list'>
-                            {
-                                sex.map((item, index) => {
-                                    return (
-                                        <Checkbox label={item.name} onChange={(input) => filterSelect('SEX', input.checked, item)} key={index} /> 
-                                    )
-                                })
-                            }
+                        <div className='category__filter__group'>
+                            <h3 className='category__filter__title'>Giới tính</h3>
+                            <div className='category__filter__list'>
+                                {
+                                    sex.map((item, index) => {
+                                        return (
+                                            <Checkbox label={item.name} onChange={(input) => filterSelect('SEX', input.checked, item)} key={index} /> 
+                                        )
+                                    })
+                                }
+                            </div>
                         </div>
-                        <h3 className='category__filter__title'>Màu sắc</h3>
-                        <div className='category__filter__list'>
-                            {
-                                colors.map((item, index) => {
-                                    return (
-                                        <Checkbox label={item.name} onChange={(input) => filterSelect('COLOR', input.checked, item)} key={index} /> 
-                                    )
-                                })
-                            }
+                        <div className='category__filter__group'>
+                            <h3 className='category__filter__title'>Màu sắc</h3>
+                            <div className='category__filter__list'>
+                                {
+                                    colors.map((item, index) => {
+                                        return (
+                                            <Checkbox label={item.name} onChange={(input) => filterSelect('COLOR', input.checked, item)} key={index} /> 
+                                        )
+                                    })
+                                }
+                            </div>
                         </div>
-                        <h3 className='category__filter__title'>Kích cỡ</h3>
-                        <div className='category__filter__list'>
-                            {
-                                size.map((item, index) => {
-                                    return (
-                                        <Checkbox label={item.name} onChange={(input) => filterSelect('SIZE', input.checked, item)} key={index} /> 
-                                    )
-                                })
-                            }
+                        <div className='category__filter__group'>
+                            <h3 className='category__filter__title'>Kích cỡ</h3>
+                            <div className='category__filter__list'>
+                                {
+                                    size.map((item, index) => {
+                                        return (
+                                            <Checkbox label={item.name} onChange={(input) => filterSelect('SIZE', input.checked, item)} key={index} /> 
+                                        )
+                                    })
+                                }
+                            </div>
                         </div>
                     </div>
                     <div className='category__product'>
