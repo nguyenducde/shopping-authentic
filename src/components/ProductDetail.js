@@ -35,81 +35,81 @@ function ProductDetail(props){
 
     return (
         <>
-            <div className='product-detail'>
-                <div className='product-detail__image'>
+            <div className='product-detail__image'>
+                <div className='product-detail__image__group'>
                     <div className='product-detail__image__list'>
                         <img className='product-detail__image__list__item' onClick={() => setPreviewImage(image01)} src={image01} alt='' />
                         <img className='product-detail__image__list__item' onClick={() => setPreviewImage(image02)} src={image02} alt='' />
                     </div>
                     {/* <img className='product-detail__image__main' src={previewImage} alt='' /> */}
                     {imageManify(previewImage, previewImage)}
-                    <div className='product-detail__info'>
-                        <p className='product-detail__info__name'>{name}</p>
-                        <p className='product-detail__info__price'>
-                            Giá:
-                            <span>{numberWithCommas(price)}<label className='vnd'>đ</label></span>
-                        </p>
-                        <div className='product-detail__info__group'>
-                            <p className='product-detail__info__group__title'>Màu sắc</p>
-                            <div className='product-detail__info__group__list'>
-                                {
-                                    colors.map((color, index) => {
-                                        return (
-                                            <div className={`product-detail__info__group__item ${activeColor === color ? 'active' : ''}`} key={index} onClick={() => setActiveColor(color)}>
-                                                <div className='product-detail__info__group__item--color'>{color}</div>
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </div>
-                        </div>
-                        <div className='product-detail__info__group'>
-                            <p className='product-detail__info__group__title'>Kích cỡ</p>
-                            <div className='product-detail__info__group__list'>
-                                {
-                                    size.map((item, index) => {
-                                        return <div className={`product-detail__info__group__item ${activeSize === item ? 'active' : ''} product-detail__info__group__item--size}`} key={index} onClick={() => setActiveSize(item)}>{item}</div>
-                                    })
-                                }
-                            </div>
-                        </div>
-                        <div className='product-detail__info__group'>
-                            <p className='product-detail__info__group__title'>Số lượng</p>
-                            <div className='product-detail__info__group__list'>
-                                <button className='product-detail__info__group__list__btn' disabled={quantity === 1 ? 'disabled' : '' } onClick={() => updateQuantity('minus')}>
-                                    <i className="fas fa-minus"></i>
-                                </button>
-                                <div className='product-detail__info__group__list__quatity'>{quantity}</div>
-                                <button className='product-detail__info__group__list__btn' onClick={() => updateQuantity('plus')}>
-                                    <i className="fas fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div className='btn product-detail__info__cart' onClick={() => handleAddToCart(product, quantity, activeColor, activeSize)}>Thêm vào giỏ hàng</div>
-                    </div>
                 </div>
-                <div className='product-detail__description'>
-                    <div className='product-detail__description__group'>
-                        <p className='product-detail__description__title'>Chi tiết: </p>
-                        <p className='product-detail__description__content' dangerouslySetInnerHTML={{__html:product.description}}></p>
-                    </div>
-                    <div className='product-detail__description__group'>
-                        <span className='product-detail__description__title'>Màu sắc: </span>
-                        <span className='product-detail__description__content'>
+                <div className='product-detail__info'>
+                    <p className='product-detail__info__name'>{name}</p>
+                    <p className='product-detail__info__price'>
+                        Giá:
+                        <span>{numberWithCommas(price)}<label className='vnd'>đ</label></span>
+                    </p>
+                    <div className='product-detail__info__group'>
+                        <p className='product-detail__info__group__title'>Màu sắc</p>
+                        <div className='product-detail__info__group__list'>
                             {
-                                colors.join(', ')
+                                colors.map((color, index) => {
+                                    return (
+                                        <div className={`product-detail__info__group__item ${activeColor === color ? 'active' : ''}`} key={index} onClick={() => setActiveColor(color)}>
+                                            <div className='product-detail__info__group__item--color'>{color}</div>
+                                        </div>
+                                    )
+                                })
                             }
-                            
-                        </span>
+                        </div>
                     </div>
-                    <div className='product-detail__description__group'>
-                        <span className='product-detail__description__title'>Size: </span>
-                        <span className='product-detail__description__content'>
+                    <div className='product-detail__info__group'>
+                        <p className='product-detail__info__group__title'>Kích cỡ</p>
+                        <div className='product-detail__info__group__list'>
                             {
-                                size.join(', ').toUpperCase()
+                                size.map((item, index) => {
+                                    return <div className={`product-detail__info__group__item ${activeSize === item ? 'active' : ''} product-detail__info__group__item--size}`} key={index} onClick={() => setActiveSize(item)}>{item}</div>
+                                })
                             }
-                        </span>
+                        </div>
                     </div>
+                    <div className='product-detail__info__group'>
+                        <p className='product-detail__info__group__title'>Số lượng</p>
+                        <div className='product-detail__info__group__list'>
+                            <button className='product-detail__info__group__list__btn' disabled={quantity === 1 ? 'disabled' : '' } onClick={() => updateQuantity('minus')}>
+                                <i className="fas fa-minus"></i>
+                            </button>
+                            <div className='product-detail__info__group__list__quatity'>{quantity}</div>
+                            <button className='product-detail__info__group__list__btn' onClick={() => updateQuantity('plus')}>
+                                <i className="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div className='btn product-detail__info__cart' onClick={() => handleAddToCart(product, quantity, activeColor, activeSize)}>Thêm vào giỏ hàng</div>
+                </div>
+            </div>
+            <div className='product-detail__description'>
+                <div className='product-detail__description__group'>
+                    <p className='product-detail__description__title'>Chi tiết: </p>
+                    <p className='product-detail__description__content' dangerouslySetInnerHTML={{__html:product.description}}></p>
+                </div>
+                <div className='product-detail__description__group'>
+                    <span className='product-detail__description__title'>Màu sắc: </span>
+                    <span className='product-detail__description__content'>
+                        {
+                            colors.join(', ')
+                        }
+                        
+                    </span>
+                </div>
+                <div className='product-detail__description__group'>
+                    <span className='product-detail__description__title'>Size: </span>
+                    <span className='product-detail__description__content'>
+                        {
+                            size.join(', ').toUpperCase()
+                        }
+                    </span>
                 </div>
             </div>
         </>

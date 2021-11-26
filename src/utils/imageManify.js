@@ -2,7 +2,7 @@ import ReactImageMagnify from 'react-image-magnify';
 
 export const imageManify = (img1, img2) => {
     return (
-        <div style={{width: 36 + 'rem', height: 54 + 'rem'}}>
+        <div className='image-magnify'>
             <ReactImageMagnify {...{
                 smallImage: {
                     alt: 'Wristwatch by Ted Baker London',
