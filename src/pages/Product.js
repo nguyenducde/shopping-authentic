@@ -19,7 +19,7 @@ export default function Product(){
     return (
         <Helmet title={product.name}>
             <div className='container'>
-                <div className='product'>
+                <div className='product-detail'>
                     <ProductDetail product={product} />
                     <div className='product__more'>
                         <h3 className='product__more__title'>Khám phá thêm</h3>

@@ -26,7 +26,7 @@ export default function Home(){
             
             <div className='container'>
                 <section className='product'>
-                    <h3 className='product__heading'>Top sản phẩm bán chạy trong tuần</h3>
+                    <h3 className='product__heading product__heading--top'>Top sản phẩm bán chạy trong tuần</h3>
                     <div className='product-card'>
                         {
                             productData.getProducts(4).map((product, index) => {
@@ -55,7 +55,7 @@ export default function Home(){
             </div>
 
             <div className='container'>
-                <section className='product'>
+                <section className='product product--unset-border'>
                     <h3 className='product__heading'>Sản phẩm phổ biến</h3>
                     <div className='product-card'>
                         {

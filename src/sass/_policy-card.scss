@@ -58,6 +58,7 @@
 @media only screen and (max-width: 768px) {
     .policy {
         flex-direction: column;
+        margin-bottom: 0;
 
         &-card {
             width: 100%;
