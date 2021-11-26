@@ -228,3 +228,113 @@
 .show-notification {
     display: block;
 }
+
+@media only screen and (min-width: 1300px){
+    
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1299px){
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+
+}
+
+@media only screen and (max-width: 768px){
+    .cart {
+        margin-top: $header-mobile-height;
+
+        &__title {
+            font-size: 1.7rem;
+
+            span {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__info {
+            flex-direction: column;
+
+            &--quantity-flex {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &__product {
+                width: 100%;
+
+                &__heading {
+                    display: none;
+
+                    &__quantity {
+                        width: 10%;
+                    }
+
+                    &__price {
+                        width: 30%;
+                        text-align: center;
+                    }
+                }
+                
+                &__item {
+                    padding: 1rem;
+
+                    &__price {
+                        font-size: 1.5rem;
+                    }
+
+                    &__group {
+
+                        img {
+                            width: 8rem;
+                            height: 10rem;
+                        }
+
+                        &__info {
+
+                            p {
+                                font-size: 1.3rem;
+
+                                &.color {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__totoalPrice {
+                padding-left: 0;
+                margin-bottom: 3rem;
+
+                &__info {
+
+                    p {
+                        font-size: 1.5rem;
+                    }
+
+                    &__group {
+                        p {
+                            font-size: 2rem;
+                        }
+
+                        span {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn-size {
+        padding: 0.1rem 0.4rem;
+        font-size: 1rem;
+    }
+    .text-size {
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
+    }
+}
