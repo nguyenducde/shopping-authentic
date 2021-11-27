@@ -24,7 +24,7 @@ export default function Home(){
                 </section>
             </div>
             
-            <div className='container'>
+            <div className='container container--850'>
                 <section className='product'>
                     <h3 className='product__heading product__heading--top'>Top sản phẩm bán chạy trong tuần</h3>
                     <div className='product-card'>
@@ -37,7 +37,7 @@ export default function Home(){
                 </section>
             </div>
 
-            <div className='container'>
+            <div className='container container--850'>
                 <section className='product'>
                     <h3 className='product__heading'>Sản phẩm mới</h3>
                     <div className='product-card'>
@@ -54,7 +54,7 @@ export default function Home(){
                 <Banner />
             </div>
 
-            <div className='container'>
+            <div className='container container--850'>
                 <section className='product product--unset-border'>
                     <h3 className='product__heading'>Sản phẩm phổ biến</h3>
                     <div className='product-card'>
