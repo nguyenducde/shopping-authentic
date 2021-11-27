@@ -17,7 +17,13 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .back-top {
+        top: 85%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
     .back-top {
         top: 85%;
         right: 2%;

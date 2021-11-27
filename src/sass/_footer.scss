@@ -52,10 +52,20 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
+    .footer {
+        padding-bottom: 1rem;
+        &-group {
+            flex-wrap: wrap;
 
+            &__item {
+                width: 50%;
+                margin-bottom: 2rem;
+            }
+        }
+    }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .footer {
         padding-bottom: 0;
         padding-top: 3rem;
