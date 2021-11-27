@@ -244,4 +244,7 @@
         width: 28rem;
         margin: 0 auto;
     }
+    .Toastify__toast {
+        top: $header-mobile-height !important;
+    }
 }
