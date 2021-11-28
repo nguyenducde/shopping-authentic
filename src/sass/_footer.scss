@@ -60,6 +60,10 @@
             &__item {
                 width: 50%;
                 margin-bottom: 2rem;
+
+                &-content {
+                    font-size: 1.3rem;
+                }
             }
         }
     }

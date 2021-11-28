@@ -226,10 +226,25 @@ $color-main-login: #429076;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
-
+    .login {
+        &__image {
+            &__logo {
+                width: 40rem;
+            }
+        }
+        &__info {
+            align-items: center;
+            form {
+                width: 30rem;
+            }
+            &__submit {
+                height: 4rem;
+            }
+        }
+    }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 767px){
     .login {
         &__image {
             display: none;
@@ -241,6 +256,9 @@ $color-main-login: #429076;
 
             form {
                 width: 32rem;
+            }
+            &__submit {
+                height: 4rem;
             }
         }
     }

@@ -237,11 +237,7 @@
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px){
-
-}
-
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1023px) {
     .cart {
         margin-top: $header-mobile-height;
 
@@ -337,4 +333,30 @@
         font-size: 1.5rem;
         padding: 0.5rem 0;
     }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    .cart {
+        &__info {
+            &__product {
+                &__heading {
+                    display: flex;
+                    padding: 1.5rem 1rem;
+                }
+            }
+            &--quantity-flex {
+                flex-direction: row;
+            }
+        }
+    }
+    .text-size {
+        padding: 0;
+    }
+    .btn-size {
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    
 }
