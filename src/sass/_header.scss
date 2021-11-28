@@ -166,7 +166,11 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1299px){
-
+    .header {
+        &__container {
+            width: 95%;
+        }
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
