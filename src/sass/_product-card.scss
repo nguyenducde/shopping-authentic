@@ -42,6 +42,10 @@
                 &__name {
                     font-size: 1.5rem;
                     padding-bottom: 1rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding: 0 1rem 1rem;
                 }
                 &__price {
                     padding-bottom: 2rem;
@@ -66,7 +70,20 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1299px){
+    .product {
+        margin-top: 2rem !important;
 
+        &-card {
+            &__item {
+                width: calc(25% - 4rem);
+                &__buy {
+                    font-size: 1.4rem;
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+    
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
