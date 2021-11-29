@@ -234,7 +234,12 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1299px){
-
+    .cart__info__product__item__group img {
+        max-width: 11rem;
+    }
+    .cart__info__totoalPrice__info__group span {
+        font-size: 1.3rem; 
+    }
 }
 
 @media only screen and (max-width: 1023px) {
