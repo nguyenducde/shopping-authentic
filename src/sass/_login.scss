@@ -3,14 +3,9 @@
 $color-main-login: #429076;
 
 .login {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    height: calc(100vh - #{$header-height});
     display: flex;
-    z-index: 110;
-    background-color: white;
+    margin-top: $header-height;
 
     &__image {
         flex-basis: 50%;
@@ -114,6 +109,7 @@ $color-main-login: #429076;
                     left: 3rem;
                     outline: none;
                     border: none;
+                    font-size: 1.5rem;
                 }
             }
         }

@@ -4,9 +4,11 @@ import avatar__wave from '../assets/images/login_wave.png'
 import { useEffect } from 'react'
 import { facebookProvider, googleProvider } from '../config/authMethod'
 import socialMediaAuth from '../services/auth'
+import { connect } from 'react-redux'
+import { saveAccountUser } from '../actions'
 // import { firebase } from '../config/firebase'
 
-export default function Login(){
+function Login(props){
 
 
     useEffect(() => {
@@ -41,6 +43,7 @@ export default function Login(){
 
     const handleAuth = async(provider) => {
         const res = await socialMediaAuth(provider)
+        props.onAddProductToCart(res)
         // const uiConfig = {
         //     signInFlow: 'redirect',
         //     signInSuccessUrl: '/gio-hang',
@@ -49,7 +52,6 @@ export default function Login(){
         //     // //   firebase.auth.FacebookAuthProvider.PROVIDER_ID,
         //     // ],
         //   };
-        console.log(res);
     }
 
 
@@ -111,3 +113,13 @@ export default function Login(){
         </Helmet>
     )
 }
+
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        onAddProductToCart: (user) => {
+            dispatch(saveAccountUser(user))
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Login)

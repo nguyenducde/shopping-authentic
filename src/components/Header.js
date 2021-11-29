@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { connect } from 'react-redux'
 import logo from '../assets/images/Logo-2.png'
 
-function Header({carts}){
+function Header({carts, user}){
 
     const headerMobile = useCallback(() => {
         const app = document.querySelector('.App')
@@ -46,6 +46,7 @@ function Header({carts}){
         })
     },[])
 
+
     return (
         <header>
             <div className='header'>
@@ -81,7 +82,7 @@ function Header({carts}){
                         <NavLink className='cart__link' to='/gio-hang'><i className='bx bx-cart'></i>
                             {carts.length > 0 ? <span className='cart__link__notification'>{carts.length}</span> : ''}
                         </NavLink>
-                        <NavLink to='/dang-nhap' className='header__menu-right--center'>Đăng nhập</NavLink>
+                        <NavLink to='/dang-nhap' className='header__menu-right--center'>{user.length > 0 ? user.displayName : 'Đăng nhập'}</NavLink>
                         {/* <NavLink to='#1'>Đăng ký</NavLink> */}
                     </div>
                 </div>
@@ -92,7 +93,8 @@ function Header({carts}){
 
 const mapStateToProps = state => {
     return {
-        carts: state.cartReducer
+        carts: state.cartReducer,
+        user: state.userReducer
     }
 }
 
