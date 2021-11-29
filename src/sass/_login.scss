@@ -218,11 +218,13 @@ $color-main-login: #429076;
 }
 
 @media only screen and (min-width: 1300px){
-    
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1299px){
-
+    .login {
+        &__image {
+            &__wave {
+                width: 75%;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
