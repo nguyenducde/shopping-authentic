@@ -142,7 +142,7 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
     .home-slider {
-        height: 80vh;
+        height: 70vh;
         margin-top: $header-tablet-height;
         margin-bottom: 0;
 
@@ -156,22 +156,23 @@
                 position: relative;
 
                 img {
-                    height: 80%;
+                    height: 75%;
                     position: absolute;
                     top: 0;
                 }
 
                 .shape {
-                    width: 30rem;
-                    height: 30rem;
+                    width: 35rem;
+                    height: 35rem;
                     right: 45%;
-                    top: 50%;
+                    top: 42%;
                     transform: translate(35%, -80%);
                 }
             }
 
             &__info {
                 padding-right: 3rem;
+                margin-top: 10%;
 
                 &__title {
                     font-size: 2.5rem;
@@ -185,7 +186,7 @@
         }
 
         &__control {
-            bottom: 8rem;
+            bottom: 10rem;
         }
     }
 }

@@ -95,11 +95,11 @@ export default function Login(){
                         </div>
                         <button className='login__info__submit'>ĐĂNG NHẬP</button>
                         <div className='login__info__forgetPass'>
-                            <a href='#1' className='login__info__forgetPass__link'>Quên mật khẩu</a>
+                            {/* <a href='#1' className='login__info__forgetPass__link'>Quên mật khẩu</a> */}
                         </div>
                         <h3 className='login__info__or'>HOẶC</h3>
                         <div className='login__info__social'>
-                            <i className='fab fa-facebook-f' onClick={() => handleAuth(facebookProvider)}></i>
+                            {/* <i className='fab fa-facebook-f' onClick={() => handleAuth(facebookProvider)}></i> */}
                             <i className='fab fa-google' onClick={() => handleAuth(googleProvider)}></i>
                         </div>
                         <div className='login__info__register'>

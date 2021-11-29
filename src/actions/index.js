@@ -25,3 +25,10 @@ export const deleteProductInCart = id => {
         id
     }
 }
+
+export const saveAccountUser = user => {
+    return {
+        type: types.SAVE_ACCOUNT_USER,
+        user
+    }
+}

@@ -165,7 +165,13 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1299px){
-
+    .product-detail {
+        &__info {
+            &__cart {
+                margin-top: 2rem;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){

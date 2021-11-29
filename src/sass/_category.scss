@@ -97,7 +97,16 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1299px){
-
+    .category {
+        &__product {
+            &__item {
+                width: 208px;
+                &__buy {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
