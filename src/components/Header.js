@@ -2,8 +2,13 @@ import { useEffect, useCallback } from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from 'react-redux'
 import logo from '../assets/images/Logo-2.png'
+import { logoutAccountUser } from "../actions";
 
-function Header({carts, user}){
+function Header({carts, user, onLogoutUser}){
+
+    const isLogin = user.isLogin
+    const name = user.name
+    const photo = user.photo
 
     const headerMobile = useCallback(() => {
         const app = document.querySelector('.App')
@@ -40,15 +45,26 @@ function Header({carts, user}){
         const header = document.querySelector('.header')
         const userName = document.querySelector('.header__menu__user')
         const modalUser = document.querySelector('.header__menu__user__info')
+        const logoutUser = document.querySelector('.header__menu__user__logout')
 
-        userName.addEventListener('click', () => {
-            modalUser.classList.toggle('modal-user--open')
-        })
-
-        function removeModalUser() {
-            modalUser.classList.remove('modal-user--open')
+        if(isLogin) {
+            userName.addEventListener('click', () => {
+                modalUser.classList.toggle('modal-user--open')
+            })
         }
 
+        function removeModalUser() {
+            if(isLogin) {
+            modalUser.classList.remove('modal-user--open')
+
+            }
+        }
+
+        if(isLogin) {
+            logoutUser.addEventListener('click', () => {
+                onLogoutUser(false)
+            })
+        }
         function handleStopPropagation(e) {
             e.stopPropagation()
         }
@@ -56,10 +72,11 @@ function Header({carts, user}){
         app.addEventListener('click', removeModalUser)
         header.addEventListener('click', removeModalUser)
 
-        userName.addEventListener('click', handleStopPropagation)
-        modalUser.addEventListener('click', handleStopPropagation)
-
-    }, [])
+        if(isLogin) {
+            userName.addEventListener('click', handleStopPropagation)
+            modalUser.addEventListener('click', handleStopPropagation)
+        }
+    }, [isLogin, onLogoutUser])
 
     useEffect(() => {
         handleClickUser()
@@ -68,6 +85,7 @@ function Header({carts, user}){
     useEffect(() => {
         headerMobile()
     },[headerMobile])
+
 
     useEffect(() => {
         const header = document.querySelector('.header')
@@ -112,18 +130,22 @@ function Header({carts, user}){
                         <NavLink className='cart__link' to='/gio-hang'><i className='bx bx-cart'></i>
                             {carts.length > 0 ? <span className='cart__link__notification'>{carts.length}</span> : ''}
                         </NavLink>
-                        {/* <NavLink to='/dang-nhap' className='header__menu-right--center'>{user.length > 0 ? user[0].displayName : 'Đăng nhập'}</NavLink> */}
-                        {/* <NavLink to='#1'>Đăng ký</NavLink> */}
-                        <div className='header__menu__user'>
-                            <img src={logo} alt='' />
-                            <p className='header__menu__user'>Lương Tuyên Quang</p>
-                            <i className='bx bxs-down-arrow'></i>
-                            <div className='header__menu__user__info'>
-                                <NavLink to='#1' className='header__menu__user__info__title'>Tài khoản của tôi</NavLink>
-                                <NavLink to='/gio-hang' className='header__menu__user__info__title'>Đơn mua</NavLink>
-                                <div className='header__menu__user__info__title header__menu__user__logout'>Đăng xuất</div>
-                            </div>
-                        </div>
+                        {
+                            isLogin === false 
+                            ?
+                                <NavLink to='/dang-nhap' className='header__menu-right--center'>Đăng nhập</NavLink>
+                            :
+                                <div className='header__menu__user'>
+                                    <img src={photo} alt='' />
+                                    <p className='header__menu__user'>{name}</p>
+                                    <i className='bx bxs-down-arrow'></i>
+                                    <div className='header__menu__user__info'>
+                                        <NavLink to='#1' className='header__menu__user__info__title'>Thông tin tài khoản</NavLink>
+                                        <NavLink to='/gio-hang' className='header__menu__user__info__title'>Đơn hàng</NavLink>
+                                        <div className='header__menu__user__info__title header__menu__user__logout'>Đăng xuất</div>
+                                    </div>
+                                </div>
+                        }
                     </div>
                 </div>
             </div>
@@ -138,4 +160,12 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, null)(Header)
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        onLogoutUser: boolean => {
+            dispatch(logoutAccountUser(boolean))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

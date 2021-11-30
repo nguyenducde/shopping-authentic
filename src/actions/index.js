@@ -32,3 +32,10 @@ export const saveAccountUser = user => {
         user
     }
 }
+
+export const logoutAccountUser = boolean => {
+    return {
+        type: types.LOGOUT_ACCOUNT_USER,
+        boolean
+    }
+}
