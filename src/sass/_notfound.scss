@@ -1,5 +1,5 @@
 .not-found {
-    background: #43c79b;
+    background-color: #43c79b;
     color:#161d2a;
     position: absolute;
     top: 0;
@@ -104,6 +104,43 @@
             bottom: 10%;
             transform: scale(0.5);
             opacity: 0.9; 
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+    .not-found {
+        &__title {
+            font-size: 12rem;
+            height: unset;
+        }
+        &__info {
+            width: 90%;
+        }
+        &__description {
+            font-size: 1.9rem;
+            line-height: 1.6;
+        }
+
+        &__cloud {
+            &--1 {
+                top: -10%;
+                right: -60%;
+            }
+            &--2 {
+                top: -15%;
+                right: 20%;
+            }
+            &--3 {
+                display: none;
+            }
+            &--5 {
+                display: none;
+            }
         }
     }
 }
