@@ -35,6 +35,36 @@ function Header({carts, user}){
 
     }, [])
 
+    const handleClickUser = useCallback(() => {
+        const app = document.querySelector('.App')
+        const header = document.querySelector('.header')
+        const userName = document.querySelector('.header__menu__user')
+        const modalUser = document.querySelector('.header__menu__user__info')
+
+        userName.addEventListener('click', () => {
+            modalUser.classList.toggle('modal-user--open')
+        })
+
+        function removeModalUser() {
+            modalUser.classList.remove('modal-user--open')
+        }
+
+        function handleStopPropagation(e) {
+            e.stopPropagation()
+        }
+
+        app.addEventListener('click', removeModalUser)
+        header.addEventListener('click', removeModalUser)
+
+        userName.addEventListener('click', handleStopPropagation)
+        modalUser.addEventListener('click', handleStopPropagation)
+
+    }, [])
+
+    useEffect(() => {
+        handleClickUser()
+    }, [handleClickUser])
+
     useEffect(() => {
         headerMobile()
     },[headerMobile])
@@ -82,8 +112,18 @@ function Header({carts, user}){
                         <NavLink className='cart__link' to='/gio-hang'><i className='bx bx-cart'></i>
                             {carts.length > 0 ? <span className='cart__link__notification'>{carts.length}</span> : ''}
                         </NavLink>
-                        <NavLink to='/dang-nhap' className='header__menu-right--center'>{user.length > 0 ? user.displayName : 'Đăng nhập'}</NavLink>
+                        {/* <NavLink to='/dang-nhap' className='header__menu-right--center'>{user.length > 0 ? user[0].displayName : 'Đăng nhập'}</NavLink> */}
                         {/* <NavLink to='#1'>Đăng ký</NavLink> */}
+                        <div className='header__menu__user'>
+                            <img src={logo} alt='' />
+                            <p className='header__menu__user'>Lương Tuyên Quang</p>
+                            <i className='bx bxs-down-arrow'></i>
+                            <div className='header__menu__user__info'>
+                                <NavLink to='#1' className='header__menu__user__info__title'>Tài khoản của tôi</NavLink>
+                                <NavLink to='/gio-hang' className='header__menu__user__info__title'>Đơn mua</NavLink>
+                                <div className='header__menu__user__info__title header__menu__user__logout'>Đăng xuất</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

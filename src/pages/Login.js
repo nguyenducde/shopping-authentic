@@ -6,7 +6,8 @@ import { facebookProvider, googleProvider } from '../config/authMethod'
 import socialMediaAuth from '../services/auth'
 import { connect } from 'react-redux'
 import { saveAccountUser } from '../actions'
-// import { firebase } from '../config/firebase'
+import { useHistory } from 'react-router'
+
 
 function Login(props){
 
@@ -32,44 +33,13 @@ function Login(props){
         })
     })
 
-    // const uiConfig = {
-    //     signInFlow: 'redirect',
-    //     signInSuccessUrl: '/gio-hang',
-    //     signInOptions: [
-    //       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    //     //   firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-    //     ],
-    //   };
+    const history = useHistory()
 
     const handleAuth = async(provider) => {
         const res = await socialMediaAuth(provider)
         props.onAddProductToCart(res)
-        // const uiConfig = {
-        //     signInFlow: 'redirect',
-        //     signInSuccessUrl: '/gio-hang',
-        //     // signInOptions: [
-        //     //   firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        //     // //   firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-        //     // ],
-        //   };
-    }
-
-
-    // useEffect(() => {
-    //     const unregisterAuthObserver = firebase.auth().onAuthStateChanged(async (user) => {
-    //         if(!user) {
-    //             console.log('chưa login');
-    //             return 
-    //         }
-    //         console.log('user', user.displayName);
-    //         const token = await user.getIdToken()
-    //         console.log('token', token);
-
-    //       });
-    //       return () => unregisterAuthObserver()
-    // }, [])
-
-    
+        history.push('gio-hang')
+    } 
 
     return (
         <Helmet title='Đăng nhập'>
