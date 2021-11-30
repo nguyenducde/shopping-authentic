@@ -5,6 +5,7 @@ import Category from "../pages/Category";
 import Home from "../pages/Home";
 import Product from "../pages/Product";
 import Login from "../pages/Login";
+import NotFound from "../pages/NotFound"
 
 export default function Routes(){
     return (
@@ -26,6 +27,9 @@ export default function Routes(){
             </Route>
             <Route path='/dang-nhap'>
                 <Login />
+            </Route>
+            <Route path="*">
+                <NotFound />
             </Route>
         </Switch>
     )
