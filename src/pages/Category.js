@@ -5,6 +5,7 @@ import CategoryProduct from "../components/CategoryProduct"
 import { dress, sex, colors, size } from "../assets/fake-data/category"
 import { useState } from "react"
 import Checkbox from "../components/Checkbox"
+import removeVietNameseTones from "../utils/removeVietNameseTones"
 import image_empty from '../assets/images/empty_product.png'
 
 function Category(){
@@ -21,7 +22,8 @@ function Category(){
 
     useEffect(() => {
         const searchProduct = productSearch.filter((product) => {
-            return product.name.toLowerCase().includes(valueSearch.toLowerCase())
+            return product.name.toLowerCase().includes(valueSearch.toLowerCase()) || 
+                removeVietNameseTones(product.name.toLowerCase()).includes(valueSearch.toLowerCase())
         })
         setProduct(searchProduct)
         // eslint-disable-next-line react-hooks/exhaustive-deps
