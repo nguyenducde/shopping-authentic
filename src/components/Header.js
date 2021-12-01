@@ -140,7 +140,7 @@ function Header({carts, user, onLogoutUser}){
                                     <p className='header__menu__user'>{name}</p>
                                     <i className='bx bxs-down-arrow'></i>
                                     <div className='header__menu__user__info'>
-                                        <NavLink to='#1' className='header__menu__user__info__title'>Thông tin tài khoản</NavLink>
+                                        <NavLink to='/user' className='header__menu__user__info__title'>Thông tin tài khoản</NavLink>
                                         <NavLink to='/gio-hang' className='header__menu__user__info__title'>Đơn hàng</NavLink>
                                         <div className='header__menu__user__info__title header__menu__user__logout'>Đăng xuất</div>
                                     </div>

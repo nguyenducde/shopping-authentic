@@ -75,7 +75,7 @@ function Login(props){
                             <i className='fab fa-facebook-f' style={{color: '#0d3178'}} onClick={() => handleAuth(facebookProvider)}></i>
                         </div>
                         <div className='login__info__register'>
-                            Bạn chưa có tài khoản? <a className='login__info__register__link' href='#1'>Đăng ký tại đây</a>
+                            Bạn chưa có tài khoản? <a className='login__info__register__link' href='dang-ky'>Đăng ký tại đây</a>
                         </div>
                     </form>
                 </div>
