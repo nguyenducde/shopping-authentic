@@ -14,7 +14,9 @@
         display: block;
         position: relative;
         width:80%;
-        margin:100px auto;
+        margin: 0 auto;
+        top: 45%;
+        transform: translateY(-50%);
     }
 
     &__title {
@@ -88,9 +90,9 @@
             transform: scale(0.3);
         }
         &--3 {
-            left: 250px;
+            left: 15%;
             top:30px;
-            transform: scale(0.6);
+            transform: scale(0.4);
             opacity: 0.8; 
         }
         &--4 {
