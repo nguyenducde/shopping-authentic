@@ -5,6 +5,7 @@ import CategoryProduct from "../components/CategoryProduct"
 import { dress, sex, colors, size } from "../assets/fake-data/category"
 import { useState } from "react"
 import Checkbox from "../components/Checkbox"
+import image_empty from '../assets/images/empty_product.png'
 
 function Category(){
 
@@ -164,13 +165,23 @@ function Category(){
                             </div>
                         </div>
                     </div>
-                    <div className='category__product'>
-                        {
-                            products.map((product, index) => {
-                                return <CategoryProduct product={product} key={index}/>
-                            })
-                        }
-                    </div>
+                    {
+                        products.length === 0 
+                        ? 
+                            <div className='category__empty'>
+                                <img src={image_empty} alt='' />
+                                <p>Không tìm thấy sản phẩm</p>
+                            </div>
+                        :
+                            <div className='category__product'>
+                                {
+                                    products.map((product, index) => {
+                                        return <CategoryProduct product={product} key={index}/>
+                                    })
+                                }
+                            </div>
+                    }
+                    
                 </div>
             </div>
         </Helmet>
