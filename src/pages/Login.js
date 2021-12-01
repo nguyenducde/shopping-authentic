@@ -71,8 +71,8 @@ function Login(props){
                         </div>
                         <h3 className='login__info__or'>HOẶC</h3>
                         <div className='login__info__social'>
-                            {/* <i className='fab fa-facebook-f' onClick={() => handleAuth(facebookProvider)}></i> */}
-                            <i className='fab fa-google' onClick={() => handleAuth(googleProvider)}></i>
+                            <i className='fab fa-google' style={{color: '#c75454'}} onClick={() => handleAuth(googleProvider)}></i>
+                            <i className='fab fa-facebook-f' style={{color: '#0d3178'}} onClick={() => handleAuth(facebookProvider)}></i>
                         </div>
                         <div className='login__info__register'>
                             Bạn chưa có tài khoản? <a className='login__info__register__link' href='#1'>Đăng ký tại đây</a>

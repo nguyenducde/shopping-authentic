@@ -194,11 +194,12 @@ $color-main-login: #429076;
                 margin: 2rem 0 2rem 1.5rem;
                 font-size: 1.6rem;
                 cursor: pointer;
-                transition: 0.3s;
+                transition: 0.2s;
 
                 &:hover {
-                    border-color: #287058;
+                    border-color: #287058 !important;
                     color: #287058;
+                    box-shadow: 0 0 4px;
                 }
             }
         }
