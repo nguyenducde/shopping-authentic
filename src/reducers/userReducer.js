@@ -11,10 +11,18 @@ const initialState = data ? data : {
 const userReducer = (state = initialState, action) => {
     switch(action.type) {
         case types.SAVE_ACCOUNT_USER:
-            state = {
-                isLogin: true,
-                name: action.user.displayName,
-                photo: action.user.photoURL
+            if(action.user.id) {
+                state = {
+                    isLogin: true,
+                    name: action.user.name,
+                    photo: action.user.picture.data.url
+                }
+            }else {
+                state = {
+                    isLogin: true,
+                    name: action.user.displayName,
+                    photo: action.user.photoURL
+                }
             }
             localStorage.setItem('USER', JSON.stringify(state))
             return state

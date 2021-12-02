@@ -7,10 +7,9 @@ import socialMediaAuth from '../services/auth'
 import { connect } from 'react-redux'
 import { saveAccountUser } from '../actions'
 import { useHistory } from 'react-router'
-
+import graph from 'fb-react-sdk';
 
 function Login(props){
-
 
     useEffect(() => {
         const input = document.querySelectorAll('.login__info__group__content__input')
@@ -36,9 +35,20 @@ function Login(props){
     const history = useHistory()
 
     const handleAuth = async(provider) => {
-        const res = await socialMediaAuth(provider)
-        props.onAddProductToCart(res)
-        history.push('gio-hang')
+            const res = await socialMediaAuth(provider)
+            if(provider.providerId === 'facebook.com'){
+                const credential = res.credential
+                const accessToken = credential.accessToken
+                graph.setAccessToken(accessToken);
+                graph.get("/me?fields=id,name,picture", function(err, res) {
+                    props.onAddProductToCart(res)
+                    history.push('gio-hang')
+                });
+            }
+            else {
+                props.onAddProductToCart(res)
+                history.push('gio-hang')
+            }
     } 
 
     return (
@@ -71,8 +81,8 @@ function Login(props){
                         </div>
                         <h3 className='login__info__or'>HOẶC</h3>
                         <div className='login__info__social'>
-                            <i className='fab fa-google' style={{color: '#c75454'}} onClick={() => handleAuth(googleProvider)}></i>
                             <i className='fab fa-facebook-f' style={{color: '#0d3178'}} onClick={() => handleAuth(facebookProvider)}></i>
+                            <i className='fab fa-google' style={{color: '#c75454'}} onClick={() => handleAuth(googleProvider)}></i>
                         </div>
                         <div className='login__info__register'>
                             Bạn chưa có tài khoản? <a className='login__info__register__link' href='dang-ky'>Đăng ký tại đây</a>
