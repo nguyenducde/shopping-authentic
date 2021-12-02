@@ -229,10 +229,6 @@
     display: block;
 }
 
-@media only screen and (min-width: 1300px){
-    
-}
-
 @media only screen and (min-width: 1024px) and (max-width: 1299px){
     .cart__info__product__item__group img {
         max-width: 11rem;
@@ -360,8 +356,4 @@
     .btn-size {
         padding: 0.2rem 0.4rem;
     }
-}
-
-@media only screen and (max-width: 767px){
-    
 }
