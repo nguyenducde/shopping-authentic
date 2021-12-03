@@ -320,6 +320,16 @@
             &__icon-open {
                 display: block;
             }
+
+            &__user {
+                &__info {
+                    padding: 1.3rem 0 0 1rem;
+
+                    &__title {
+                        padding-bottom: 1.5rem;
+                    }
+                }
+            }
         }
     }
     .cart__link {
