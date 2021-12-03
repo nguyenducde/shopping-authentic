@@ -12,24 +12,29 @@ function Header({carts, user, onLogoutUser}){
 
     const headerMobile = useCallback(() => {
         const app = document.querySelector('.App')
+        const navItem = document.querySelectorAll('.nav__item')
         const iconOpen = document.querySelector('.header__menu__icon-open')
         const iconClose = document.querySelector('.header__menu__icon-close')
         const navList = document.querySelector('.nav')
         const header = document.querySelector('.header')
         
-        iconOpen.addEventListener('click', () => {
-            navList.classList.add('nav-active')
-            header.classList.add('playing')
+        iconOpen.addEventListener('click', openMenu)
+        iconClose.addEventListener('click', closeMenu)
+        app.addEventListener('click', closeMenu)
+
+        navItem.forEach(item => {
+            item.addEventListener('click', closeMenu)
         })
 
-        iconClose.addEventListener('click', () => {
+        function openMenu() {
+            navList.classList.add('nav-active')
+            header.classList.add('playing')
+        }
+
+        function closeMenu() {
             header.classList.remove('playing')
             navList.classList.remove('nav-active')
-        })
-        app.addEventListener('click', () => {
-            header.classList.remove('playing')
-            navList.classList.remove('nav-active')
-        })
+        }
 
         function handleStopPropagation(e) {
             e.stopPropagation()
