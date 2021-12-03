@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import Product from "../pages/Product";
 import Login from "../pages/Login";
 import NotFound from "../pages/NotFound"
+import UserInfo from "../pages/UserInfo";
 
 export default function Routes(){
     return (
@@ -24,6 +25,9 @@ export default function Routes(){
             </Route>
             <Route path='/gio-hang'>
                 <Cart />
+            </Route>
+            <Route path='/user'>
+                <UserInfo />
             </Route>
             <Route path='/dang-nhap'>
                 <Login />
