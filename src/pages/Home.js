@@ -38,7 +38,7 @@ export default function Home(){
             </div>
 
             <div className='container container--850'>
-                <section className='product'>
+                <section className='product mt-0'>
                     <h3 className='product__heading'>Sản phẩm mới</h3>
                     <div className='product-card'>
                         {

@@ -34,6 +34,10 @@ a {
     color: unset;
 }
 
+.mt-0 {
+    margin-top: 0 !important;
+}
+
 @media only screen and (min-width: 1300px){
     .container {
         max-width: 1200px;
