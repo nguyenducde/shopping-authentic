@@ -4,6 +4,7 @@ const data = JSON.parse(localStorage.getItem('USER'))
 
 const initialState = data ? data : {
     isLogin: false,
+    email: '',
     name: '',
     photo: ''
 }
@@ -14,12 +15,14 @@ const userReducer = (state = initialState, action) => {
             if(action.user.id) {
                 state = {
                     isLogin: true,
+                    email: action.user.email,
                     name: action.user.name,
                     photo: action.user.picture.data.url
                 }
             }else {
                 state = {
                     isLogin: true,
+                    email: action.user.email,
                     name: action.user.displayName,
                     photo: action.user.photoURL
                 }

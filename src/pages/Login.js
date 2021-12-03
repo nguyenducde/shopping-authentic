@@ -40,13 +40,14 @@ function Login(props){
                 const credential = res.credential
                 const accessToken = credential.accessToken
                 graph.setAccessToken(accessToken);
-                graph.get("/me?fields=id,name,picture", function(err, res) {
+                graph.get("/me?fields=id,name,email,picture", function(err, res) {
                     props.onAddProductToCart(res)
                     history.push('gio-hang')
                 });
             }
             else {
                 props.onAddProductToCart(res)
+                console.log(res);
                 history.push('gio-hang')
             }
     } 

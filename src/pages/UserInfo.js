@@ -1,23 +1,29 @@
-import images from '../assets/images/Logo-2.png'
+import { connect } from 'react-redux'
 
-function UserInfo() {
+function UserInfo({user}) { 
     return (
         <div className='info-user'>
-            <img src={images} alt='' />
+            <img src={user.photo} alt='' />
             <div className='info-user__info'>
                 <div className='info-user__group'>
                     <i className='bx bx-user'></i>
                     <p>Họ tên:</p>
-                    <span>Lương Tuyên Quang</span>
+                    <span>{user.name}</span>
                 </div>
                 <div className='info-user__group'>
                     <i className='bx bx-envelope'></i>
                     <p>Email:</p>
-                    <span>luongtuyenquang@gmail.com</span>
+                    <span>{user.email}</span>
                 </div>
             </div>
         </div>
     )
 }
 
-export default UserInfo
+const mapStateToProps = state => {
+    return {
+        user: state.userReducer
+    }
+}
+
+export default connect(mapStateToProps, null)(UserInfo)
