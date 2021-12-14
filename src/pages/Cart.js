@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { connect } from "react-redux"
 import CartItem from "../components/CartItem"
 import CartTotal from "../components/CartTotal"
@@ -6,6 +7,10 @@ import * as Message from '../constants/Message'
 function Cart(props){
 
     const { carts } = props
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, [])
 
     return (
         <div className='cart'>
