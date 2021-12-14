@@ -1,4 +1,5 @@
 import Helmet from '../components/Helmet'
+import { NavLink } from "react-router-dom"
 import avatar_login from '../assets/images/login.png'
 import avatar__wave from '../assets/images/login_wave.png'
 import { useEffect } from 'react'
@@ -31,6 +32,10 @@ function Login(props){
             input.addEventListener("blur", remcl);
         })
     })
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, [])
 
     const history = useHistory()
 
@@ -86,7 +91,7 @@ function Login(props){
                             <i className='fab fa-google' style={{color: '#c75454'}} onClick={() => handleAuth(googleProvider)}></i>
                         </div>
                         <div className='login__info__register'>
-                            Bạn chưa có tài khoản? <a className='login__info__register__link' href='dang-ky'>Đăng ký tại đây</a>
+                            Bạn chưa có tài khoản? <NavLink className='login__info__register__link' to='/dang-ky'>Đăng ký tại đây</NavLink>
                         </div>
                     </form>
                 </div>
