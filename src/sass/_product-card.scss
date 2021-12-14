@@ -98,7 +98,7 @@
 
 @media only screen and (max-width: 767px){
     .product {
-        margin-top: 0;
+        margin-top: 0 !important;
         border-bottom: 2px solid $main-color;
         padding-bottom: 2rem;
 
@@ -112,16 +112,20 @@
         }
 
         &-card {
-            flex-direction: column;
 
             &__item {
-                width: 300px;
+                width: 48%;
                 margin: 0 auto 3rem;
 
                 &__info {
                     &__name, &__price {
                         font-size: 1.6rem;
                     }
+                }
+
+                &__buy {
+                    width: 85%;
+                    font-size: 1.4rem;
                 }
             }
         }

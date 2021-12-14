@@ -186,15 +186,17 @@
         }
 
         &__product {
-            margin-top: 2rem;
-            flex-direction: column;
+            margin: 2rem 0 0;
 
             &__item {
-                width: 300px;
+                width: 48%;
                 margin: 0 auto 3rem;
+                height: 42rem;
 
-                &:first-child {
-                    margin-top: 1.5rem;
+                &__image {
+                    img {
+                        height: 27rem;
+                    }
                 }
             }
         }
