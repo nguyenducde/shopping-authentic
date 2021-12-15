@@ -51,7 +51,8 @@ function Header({carts, user, onLogoutUser}){
         const userName = document.querySelector('.header__menu__user')
         const modalUser = document.querySelector('.header__menu__user__info')
         const logoutUser = document.querySelector('.header__menu__user__logout')
-
+        const menuUser = document.querySelectorAll('.header__menu__user__info__title')
+        
         if(isLogin) {
             userName.addEventListener('click', () => {
                 modalUser.classList.toggle('modal-user--open')
@@ -73,6 +74,10 @@ function Header({carts, user, onLogoutUser}){
         function handleStopPropagation(e) {
             e.stopPropagation()
         }
+
+        menuUser.forEach(item => {
+            item.addEventListener('click', removeModalUser)
+        })
 
         app.addEventListener('click', removeModalUser)
         header.addEventListener('click', removeModalUser)
