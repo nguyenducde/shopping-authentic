@@ -52,7 +52,6 @@ function Login(props){
             }
             else {
                 props.onAddProductToCart(res)
-                console.log(res);
                 history.push('gio-hang')
             }
     } 
