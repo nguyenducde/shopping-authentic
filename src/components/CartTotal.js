@@ -23,7 +23,13 @@ function CartTotal(props) {
                 </div>
             </div>
             <div>
-                <NavLink to='/dang-nhap' className='btn btn-full'>Tiến hành đặt hàng</NavLink>
+                {
+                    carts.length === 0
+                    ?
+                    <NavLink to='/danh-muc' className='btn btn-full'>Trở về mua hàng</NavLink>
+                    :
+                    <NavLink to='/dang-nhap' className='btn btn-full'>Tiến hành đặt hàng</NavLink>
+                }
             </div>
         </div>
     )
