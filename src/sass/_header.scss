@@ -300,10 +300,15 @@
         &__menu {
             &-right {
                 margin: unset;
+                
                 &>a {
                     margin-right: 1rem;
                     padding: 0;
+                    transition: unset;
 
+                    &:hover {
+                        border: unset;
+                    }
                     &:last-child {
                         margin-right: unset;
                     }
@@ -345,4 +350,3 @@
         }
     }
 }
-
