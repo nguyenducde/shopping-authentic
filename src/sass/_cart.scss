@@ -71,14 +71,18 @@
                     &__info {
                         padding-left: 1.5rem;
 
-                        p {
+                        a {
                             font-size: 1.6rem;
-                            padding-bottom: 2rem;
                             font-weight: 500;
+                        }
 
-                            &.color {
-                                font-size: 1.4rem;
-                                font-weight: unset;
+                        .color {
+                            font-size: 1.4rem;
+                            padding-bottom: 2rem;
+                            font-weight: unset;
+
+                            &:first-of-type {
+                                padding-top: 2rem;
                             }
                         }
 

@@ -3,12 +3,13 @@ import numberWithCommas from "../utils/numberWithCommas"
 import { deleteProductInCart, updateProductInCart } from "../actions"
 import { connect } from "react-redux"
 import { toastSuccess } from "../utils/toastify"
+import { NavLink } from "react-router-dom"
 
 
 function CartItem(props) {
     const { cart, color, size } = props
-
     const quantityCart = props.quantityCart
+    const slug = cart.slug
 
     const [quantity, setQuantity] = useState(quantityCart)
 
@@ -30,9 +31,13 @@ function CartItem(props) {
     return (
         <div className='cart__info__product__item'>
             <div className='cart__info__product__item__group'>
+            <NavLink exact to={`/danh-muc/san-pham/${slug}`}>
                 <img src={cart.image01} alt='' />
+            </NavLink>
                 <div className='cart__info__product__item__group__info'>
-                    <p>{cart.name}</p>
+                    <NavLink exact to={`/danh-muc/san-pham/${slug}`}>
+                        {cart.name}
+                    </NavLink>
                     <p className='color'>Màu: {color}</p>
                     <p className='color'>Size: {size.toUpperCase()}</p>
                 </div>
