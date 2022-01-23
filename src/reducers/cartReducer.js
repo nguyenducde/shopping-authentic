@@ -7,18 +7,18 @@ const initialState = data ? data : []
 const cartReducer = (state = initialState, action) => {
     const product = action.product
     const quantity = action.quantity
+    const color = action.color
+    const size = action.size
     let index = -1
 
     switch(action.type){
         case types.ADD_TO_CART:
-
-            const color = action.color
-            const size = action.size
-
             index = state.findIndex(item => item.product.id === product.id)
             
             if(index > -1){
                 state[index].quantity += quantity
+                state[index].color = color
+                state[index].size = size
             } else {
                 state.push({
                     product,
