@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react"
+import React, { useCallback, useEffect, useRef } from "react"
 import Helmet from "../components/Helmet"
 import productData from "../assets/fake-data/products"
 import CategoryProduct from "../components/CategoryProduct"
@@ -19,6 +19,7 @@ function Category(){
     const [valueSearch, setValueSearch] = useState('')
     const [products, setProduct] = useState(productData.getAllProducts())
     const productSearch = productData.getAllProducts()
+    const inputRef = useRef(null)
 
     useEffect(() => {
         const searchProduct = productSearch.filter((product) => {
@@ -101,6 +102,11 @@ function Category(){
         window.scrollTo(0,0)
     }, [products])
 
+    function handleClearSearch() {
+        setValueSearch('')
+        inputRef.current.focus()
+    }
+
     return (
         <Helmet title='Sản phẩm'>
             <div className='container'>
@@ -112,8 +118,12 @@ function Category(){
                             placeholder='Nhập tên sản phẩm' 
                             value={valueSearch}
                             onChange={(e) => setValueSearch(e.target.value)}
+                            ref={inputRef}
                         />
-                        <i className='bx bx-x search__clear'></i>
+                        <i className='bx bx-x search__clear'
+                            onClick={handleClearSearch}
+                        >
+                        </i>
                     </div>
                 </div>
                 <div className='category'>

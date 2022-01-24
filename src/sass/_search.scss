@@ -87,6 +87,12 @@
             margin: 0 auto;
         }
 
+        &__clear {
+            &:hover {
+                color: unset;
+            }
+        }
+        
         span {
             display: none;
         }
