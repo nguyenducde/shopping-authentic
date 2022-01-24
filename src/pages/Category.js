@@ -107,14 +107,37 @@ function Category(){
         inputRef.current.focus()
     }
 
+    useEffect(() => {
+        const search = document.querySelector('.search')
+        const input = document.querySelector('.search__input')
+
+        function addClass() {
+            search.classList.add('search-focus')
+        }
+
+        function removeClass() {
+            search.classList.remove('search-focus')
+        }
+
+        input.addEventListener('focus', addClass)
+        input.addEventListener('blur', removeClass)
+
+        return () => {
+            input.removeEventListener('focus', addClass)
+            input.removeEventListener('blur', removeClass)
+        }
+
+    }, [])
+
     return (
         <Helmet title='Sản phẩm'>
             <div className='container'>
                 <div className='search'>
                     <span>Tìm kiếm</span>
                     <div className='search__group'>
-                        <input 
+                        <input
                             type='text' 
+                            className='search__input'
                             placeholder='Nhập tên sản phẩm' 
                             value={valueSearch}
                             onChange={(e) => setValueSearch(e.target.value)}
@@ -122,6 +145,7 @@ function Category(){
                         />
                         <i className='bx bx-x search__clear'
                             onClick={handleClearSearch}
+                            style={{visibility: `${valueSearch !== '' ? 'visible' : 'hidden'}`}}
                         >
                         </i>
                     </div>
