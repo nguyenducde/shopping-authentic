@@ -6,7 +6,17 @@
     justify-content: flex-end;
     align-items: center;
 
-    &__group {
+        &__group {
+            display: flex;
+            align-items: center;
+            border: 1px solid $main-color;
+            border-radius: 25px;
+            height: $height-search;
+
+            // &:focus {
+            //     box-shadow: 0 0 0 1px $main-color;
+            // }
+        }
 
         span {
             font-size: 1.6rem;
@@ -14,20 +24,33 @@
         }
 
         input {
-            height: 3.5rem;
-            width: 40rem;
+            height: calc(#{$height-search} - 0.2rem);
+            width: 36rem;
             border-radius: 25px;
             outline: none;
             padding-left: 1rem;
             font-size: 1.3rem;
-            border: 1px solid $main-color;
+            border: 0px solid $main-color;
             transition: 0.3s;
+        }
 
-            &:focus {
-                box-shadow: 0 0 0 1px $main-color;
+        &__clear {
+            font-size: 2.3rem;
+            cursor: pointer;
+            height: $height-search;
+            border-radius: 0 25px 25px 0;
+            border-left-color: transparent;
+            line-height: $height-search;
+            padding-right: 1rem;
+            padding-left: 0.5rem;
+            transition: 0.2s;
+            color: #000000d6;
+
+            &:hover {
+                color: #e92828;
             }
         }
-    }
+    
 }
 
 .cart__link {
@@ -59,19 +82,13 @@
 
 @media only screen and (max-width: 767px){
     .search {
-
         &__group {
-            display: flex;
-            width: 100%;
-            
-            span {
-                display: none;
-            }
+            width: 95%;
+            margin: 0 auto;
+        }
 
-            input {
-                width: 95%;
-                margin: 0 auto;
-            }
+        span {
+            display: none;
         }
     }
 }

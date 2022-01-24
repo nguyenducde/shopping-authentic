@@ -105,16 +105,16 @@ function Category(){
         <Helmet title='Sản phẩm'>
             <div className='container'>
                 <div className='search'>
+                    <span>Tìm kiếm</span>
                     <div className='search__group'>
-                        <span>Tìm kiếm</span>
                         <input 
                             type='text' 
                             placeholder='Nhập tên sản phẩm' 
                             value={valueSearch}
                             onChange={(e) => setValueSearch(e.target.value)}
                         />
+                        <i className='bx bx-x search__clear'></i>
                     </div>
-                    
                 </div>
                 <div className='category'>
                     <div className='category__filter'>
