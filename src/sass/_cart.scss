@@ -261,9 +261,7 @@
             flex-direction: column;
 
             &--quantity-flex {
-                display: flex;
                 flex-direction: column;
-                align-items: center;
             }
 
             &__product {
@@ -298,11 +296,28 @@
 
                         &__info {
 
+                            a {
+                                font-size: 1.5rem;
+                                overflow: hidden;
+                                display: -webkit-box;
+                                line-height: 1.6;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                            }
+
                             p {
                                 font-size: 1.3rem;
 
                                 &.color {
                                     font-size: 1.2rem;
+
+                                    &:first-of-type {
+                                        padding-top: 1rem;
+                                        padding-bottom: 1rem;
+                                    }
+                                    &:last-child {
+                                        padding-bottom: unset;
+                                    }
                                 }
                             }
                         }

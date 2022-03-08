@@ -69,16 +69,16 @@ const products = [
     
     {
         id: 2,
-        name: 'Áo thun Dinosaur W2ATN2051004',
+        name: 'Áo thun Dinosaur 01',
         price: 166500,
         image01: product_02_image_01,
         image02: product_02_image_02,
         dressSlug: 'ao-thun',
         colors: ['Trắng', 'Đen', 'Cam'],
-        slug: 'ao-thun-dinosaur-W2ATN2051004',
+        slug: 'ao-thun-dinosaur-01',
         size: ['s', 'm', 'xl'],
         sex: 'female',
-        description: '- Áo thun Dinosaur W2ATN2051004 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur W2ATN2051004 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
+        description: '- Áo thun Dinosaur 01 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 01 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
     },
     {
         id: 16,
@@ -95,29 +95,29 @@ const products = [
     },
     {
         id: 4,
-        name: 'Áo thun Dinosaur W2ATN2021029',
+        name: 'Áo thun Dinosaur 02',
         price: 166500,
         image01: product_04_image_01,
         image02: product_04_image_02,
         dressSlug: 'ao-thun',
         colors: ['Trắng', 'Cam', 'Xanh'],
-        slug: 'ao-thun-dinosaur-W2ATN2021029',
+        slug: 'ao-thun-dinosaur-02',
         size: ['xl'],
         sex: 'female',
-        description: '- Áo thun Dinosaur W2ATN2021029 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur W2ATN2021029 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
+        description: '- Áo thun Dinosaur 02 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 02 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
     },
     {
         id: 5,
-        name: 'Áo thun Dinosaur W2ATN2021027',
+        name: 'Áo thun Dinosaur 03',
         price: 166500,
         image01: product_05_image_01,
         image02: product_05_image_02,
         dressSlug: 'ao-thun',
         colors: ['Trắng', 'Hồng'],
-        slug: 'ao-thun-dinosaur-W2ATN2021027',
+        slug: 'ao-thun-dinosaur-03',
         size: ['xxl'],
         sex: 'female',
-        description: '- Áo thun Dinosaur W2ATN2021027 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur W2ATN2021027 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
+        description: '- Áo thun Dinosaur 03 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 03 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
     },
     {
         id: 17,
@@ -186,16 +186,16 @@ const products = [
     },
     {
         id: 6,
-        name: 'Áo thun Dinosaur W2ATN2021028',
+        name: 'Áo thun Dinosaur 04',
         price: 166500,
         image01: product_06_image_01,
         image02: product_06_image_02,
         dressSlug: 'ao-thun',
         colors: ['Đen'],
-        slug: 'ao-thun-dinosaur-W2ATN2021028',
+        slug: 'ao-thun-dinosaur-04',
         size: ['s', 'm', 'xl'],
         sex: 'female',
-        description: '- Áo thun Dinosaur W2ATN2021028 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur W2ATN2021028 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
+        description: '- Áo thun Dinosaur 04 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 04 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
     },
     {
         id: 12,
@@ -212,16 +212,16 @@ const products = [
     },
     {
         id: 1,
-        name: 'Áo thun Dinosaur W2ATN2051007',
+        name: 'Áo thun Dinosaur 05',
         price: 166500,
         image01: product_01_image_01,
         image02: product_01_image_02,
         dressSlug: 'ao-thun',
         colors: ['Trắng', 'Đỏ', 'Cam'],
-        slug: 'ao-thun-dinosaur-W2ATN2051007',
+        slug: 'ao-thun-dinosaur-05',
         size: ['s', 'm', 'l', 'xl'],
         sex: 'female',
-        description: '- Áo thun Dinosaur W2ATN2051007 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur W2ATN2051007 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
+        description: '- Áo thun Dinosaur 05 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 05 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
     },
     {
         id: 14,
@@ -251,16 +251,16 @@ const products = [
     },
     {
         id: 3,
-        name: 'Áo thun Dinosaur W2ATN2051001',
+        name: 'Áo thun Dinosaur 06',
         price: 166500,
         image01: product_03_image_01,
         image02: product_03_image_02,
         dressSlug: 'ao-thun',
         colors: ['Trắng', 'Đỏ', 'Cam', 'Vàng'],
-        slug: 'ao-thun-dinosaur-W2ATN2051001',
+        slug: 'ao-thun-dinosaur-06',
         size: ['m'],
         sex: 'female',
-        description: '- Áo thun Dinosaur W2ATN2051001 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur W2ATN2051001 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
+        description: '- Áo thun Dinosaur 06 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 06 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.'
     },
     {
         id: 11,
