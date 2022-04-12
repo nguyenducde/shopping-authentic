@@ -204,6 +204,12 @@
             }
         }
     }
+
+    &-disable {
+        background-color: #525252db;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
 }
 .btn-size {
     padding: 0.2rem 1rem;

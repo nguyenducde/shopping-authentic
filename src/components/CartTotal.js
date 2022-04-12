@@ -1,9 +1,11 @@
+import { connect } from "react-redux"
 import { NavLink } from "react-router-dom"
 import numberWithCommas from "../utils/numberWithCommas"
 
 function CartTotal(props) {
 
     const carts = props.carts
+    const user = props.user
 
     const totalPrice = (carts) => {
         let total = 0
@@ -28,11 +30,22 @@ function CartTotal(props) {
                     ?
                     <NavLink to='/danh-muc' className='btn btn-full'>Trở về mua hàng</NavLink>
                     :
-                    <NavLink to='/dang-nhap' className='btn btn-full'>Tiến hành đặt hàng</NavLink>
+                    <NavLink 
+                        to='/dang-nhap' 
+                        className={`btn btn-full ${user.isLogin ? 'cart-disable' : ''}`}
+                    >
+                        {user.isLogin ? 'Admin chưa xử lý !!!' : 'Tiến hành đặt hàng'}
+                    </NavLink>
                 }
             </div>
         </div>
     )
 }
 
-export default CartTotal
+const mapStateToProps = state => {
+    return {
+        user: state.userReducer
+    }
+}
+
+export default connect(mapStateToProps, null)(CartTotal)
