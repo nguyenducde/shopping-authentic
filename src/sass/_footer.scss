@@ -27,7 +27,7 @@
                 line-height: 1.4;
                 text-align: justify;
 
-                & span {
+                & span, a{
                     color: black;
                     padding-left: 0.3rem;
                     font-weight: 500;
@@ -38,6 +38,10 @@
                         color: $main-color;
                     }
                 }
+            }
+
+            &--large {
+                width: 35%;
             }
         }
     }

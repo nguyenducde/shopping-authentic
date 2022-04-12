@@ -6,11 +6,19 @@ export default function Footer(){
         <footer className='footer'>
             <div className='container'>
                 <div className='footer-group'>
-                    <div className='footer-group__item'>
+                    <div className='footer-group__item footer-group__item--large'>
                         <h3 className='footer-group__item-heading'>TỔNG ĐÀI HỖ TRỢ</h3>
-                        <p className='footer-group__item-content'>Liên hệ đặt hàng: <span>0123456789</span></p>
-                        <p className='footer-group__item-content'>Thắc mắc đơn hàng: <span>0123456789</span></p>
-                        <p className='footer-group__item-content'>Góp ý, khiếu nại: <span>0123456789</span></p>
+                        <p className='footer-group__item-content'>Liên hệ với tôi: <span>032 948 6975</span></p>
+                        <p className='footer-group__item-content'>Email: <span>luongtuyenquang.it@gmail.com</span></p>
+                        <p 
+                            className='footer-group__item-content'
+                        >
+                            Facebook: 
+                            <a href='https://www.facebook.com/fb.luongtuyenquang' rel="noreferrer" target='_blank'
+                            >
+                                Lương Tuyên Quang
+                            </a>
+                        </p>
                     </div>
                     <div className='footer-group__item'>
                         <h3 className='footer-group__item-heading'>VỀ YOLO</h3>
