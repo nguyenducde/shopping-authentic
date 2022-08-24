@@ -29,11 +29,13 @@ function Header({carts, user, onLogoutUser}){
         function openMenu() {
             navList.classList.add('nav-active')
             header.classList.add('playing')
+            document.body.style.overflow = 'hidden'
         }
 
         function closeMenu() {
             header.classList.remove('playing')
             navList.classList.remove('nav-active')
+            document.body.style.overflow = 'visible'
         }
 
         function handleStopPropagation(e) {
