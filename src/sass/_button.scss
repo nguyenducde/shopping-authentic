@@ -5,9 +5,12 @@
     outline: none;
     cursor: pointer;
     font-size: 1.5rem;
-    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 4px;
-    text-align: center;
+    width: 12rem;
+    height: 4rem;
 
     color: $btn-main-color;
     background-color: $main-color;

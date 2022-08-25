@@ -38,7 +38,7 @@ export default function HomeSlider(props){
                             <div className='home-slider__item__info'>
                                 <h3 className='home-slider__item__info__title'>{item.title}</h3>
                                 <p className='home-slider__item__info__description'>{item.description}</p>
-                                <NavLink to='/danh-muc' className='btn'>Đi đến shop</NavLink>
+                                <NavLink to='/danh-muc' className='btn home-slider__btn'>Đi đến shop</NavLink>
                             </div>
                             <div className='home-slider__item__img'>
                                 <div className='shape' style={{backgroundColor: item.color}}></div>
