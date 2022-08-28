@@ -162,6 +162,22 @@ function Category(){
         }
     }, [])
 
+    useEffect(() => {
+        const categoryFilterTitle = document.querySelector('.category__filter-sort')
+        const categoryProduct = document.querySelector('.category__product')
+
+        const handleStickyFilter = () => {
+            categoryProduct.classList.toggle('top', window.scrollY > 60)
+            categoryFilterTitle.classList.toggle('sticky', window.scrollY > 60)
+        }
+
+        window.addEventListener('scroll', handleStickyFilter)
+
+        return () => {
+            window.removeEventListener('scroll', handleStickyFilter)
+        }
+    }, [])
+
 
     return (
         <Helmet title='Sản phẩm'>
