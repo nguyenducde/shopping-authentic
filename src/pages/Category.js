@@ -129,6 +129,40 @@ function Category(){
 
     }, [])
 
+    useEffect(() => {
+        const body = document.querySelector('body')
+        const categoryFilter = document.querySelector('.category__filter')
+        const titleFilter = document.querySelector('.category__filter-sort')
+        const categoryFilterMobile = document.querySelector('.category__filter--mobile')
+        const iconClose = document.querySelector('.category__filter__icon-close')
+
+        const handleOpenModalFilter = (e) => {
+            e.stopPropagation()
+            categoryFilter.style.display = 'flex'
+            categoryFilterMobile.style.display = 'block'
+            iconClose.style.display = 'block'
+            body.style.overflow = 'hidden'
+        }
+
+        const handleCloseModalFilter = () => {
+            categoryFilter.style.display = 'none'
+            categoryFilterMobile.style.display = 'none'
+            iconClose.style.display = 'none'
+            body.style.overflow = 'visible'
+        }
+
+        categoryFilterMobile.addEventListener('click', handleCloseModalFilter)
+        titleFilter.addEventListener('click', handleOpenModalFilter)
+        iconClose.addEventListener('click', handleCloseModalFilter)
+
+        return () => {
+            categoryFilterMobile.removeEventListener('click', handleCloseModalFilter)
+            titleFilter.removeEventListener('click', handleOpenModalFilter)
+            iconClose.removeEventListener('click', handleCloseModalFilter)
+        }
+    }, [])
+
+
     return (
         <Helmet title='Sản phẩm'>
             <div className='container'>
@@ -151,7 +185,13 @@ function Category(){
                     </div>
                 </div>
                 <div className='category'>
+                    <div className='category__filter--mobile'></div>
+                    <div className='category__filter-sort'>
+                        <p>Lọc sản phẩm </p>
+                        <i className="fas fa-sort-down"></i>
+                    </div>
                     <div className='category__filter'>
+                        <i className='fas fa-times category__filter__icon-close'></i>
                         <div className='category__filter__group'>
                             <h3 className='category__filter__title'>Danh mục sản phẩm</h3>
                             <div className='category__filter__list'>
