@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import Helmet from "../components/Helmet"
+import Helmet from "../common/Helmet"
 
 function NotFound(){
     return (

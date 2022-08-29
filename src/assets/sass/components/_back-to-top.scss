@@ -1,0 +1,30 @@
+
+.back-top{
+    position: fixed;
+    top: 82%;
+    right: 1%;
+    font-size: 1.8rem;
+    color: white;
+    display: none;
+
+    &-icon {
+        padding: 1.2rem;
+        border-radius: 50%;
+        background-color: $main-color;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .back-top {
+        top: 85%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .back-top {
+        top: 85%;
+        right: 2%;
+    }
+}

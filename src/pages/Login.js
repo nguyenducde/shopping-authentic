@@ -1,12 +1,12 @@
-import Helmet from '../components/Helmet'
+import Helmet from '../common/Helmet'
 import { NavLink } from "react-router-dom"
 import avatar_login from '../assets/images/login.png'
 import avatar__wave from '../assets/images/login_wave.png'
 import { useEffect } from 'react'
-import { facebookProvider, googleProvider } from '../config/authMethod'
-import socialMediaAuth from '../services/auth'
+import { facebookProvider, googleProvider } from '../authentication/config/authMethod'
+import socialMediaAuth from '../authentication/services/auth'
 import { connect } from 'react-redux'
-import { saveAccountUser } from '../actions'
+import { saveAccountUser } from '../redux/actions'
 import { useHistory } from 'react-router'
 import graph from 'fb-react-sdk';
 

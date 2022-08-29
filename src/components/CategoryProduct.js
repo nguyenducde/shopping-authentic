@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import numberWithCommas from "../utils/numberWithCommas"
+import numberWithCommas from "../common/numberWithCommas"
 
 export default function CategoryProduct(props){
 

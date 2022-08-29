@@ -1,0 +1,23 @@
+// common
+@import './common/base';
+@import './common/variables';
+@import './common/button';
+@import './common/header';
+@import './common/footer';
+
+// pages
+@import './pages/cart';
+@import './pages/category';
+@import './pages/notfound';
+@import './pages/login';
+@import './pages/info-user';
+@import './pages/policy';
+
+// components
+@import './components/home-slider';
+@import './components/product-detail';
+@import './components/product-card';
+@import './components/banner';
+@import './components/search';
+@import './components/back-to-top';
+@import './components/toast-notification';

@@ -1,10 +1,10 @@
-import Helmet from "../components/Helmet"
+import Helmet from "../common/Helmet"
 import HomeSlider from "../components/HomeSlider"
-import homeSliderData from "../assets/fake-data/home-slider"
-import PolicyCard from "../components/PolicyCard"
-import policyCard from "../assets/fake-data/policy-card"
-import productData from "../assets/fake-data/products"
-import ProductCard from "../components/ProductCard"
+import homeSliderData from "../fake-data/home-slider"
+import Policy from "../pages/Policy"
+import policyCard from "../fake-data/policy-card"
+import productData from "../fake-data/products"
+import ProductCard from "../components/Product/Card"
 import Banner from "../components/Banner"
 import BackToTop from "../components/BackToTop"
 
@@ -18,7 +18,7 @@ export default function Home(){
                 <section className='policy'>
                     {
                         policyCard.map((item, index) => {
-                        return <PolicyCard name={item.name} description={item.description} icon={item.icon} key={index} />
+                        return <Policy name={item.name} description={item.description} icon={item.icon} key={index} />
                         })
                     }
                 </section>

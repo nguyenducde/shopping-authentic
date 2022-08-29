@@ -1,8 +1,8 @@
 import { useEffect } from "react"
 import { connect } from "react-redux"
-import CartItem from "../components/CartItem"
-import CartTotal from "../components/CartTotal"
-import * as Message from '../constants/Message'
+import CartItem from "../components/Cart/Item"
+import CartTotal from "../components/Cart/Total"
+import * as Message from '../redux/constants/Message'
 
 function Cart(props){
 

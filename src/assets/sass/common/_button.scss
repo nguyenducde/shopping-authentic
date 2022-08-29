@@ -1,0 +1,29 @@
+
+.btn {
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 12rem;
+    height: 4rem;
+
+    color: $btn-main-color;
+    background-color: $main-color;
+    transition: background-color 0.1s linear;
+
+    &:hover {
+        background-color: transparent;
+        border: 1px solid $main-color;
+        color: black;
+    }
+}
+
+.vnd {
+    text-decoration: underline;
+    display: inline-block;
+    padding-left: 0.4rem;
+}

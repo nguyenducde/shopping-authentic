@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useRef } from "react"
-import Helmet from "../components/Helmet"
-import productData from "../assets/fake-data/products"
+import Helmet from "../common/Helmet"
+import productData from "../fake-data/products"
 import CategoryProduct from "../components/CategoryProduct"
-import { dress, sex, colors, size } from "../assets/fake-data/category"
+import { dress, sex, colors, size } from "../fake-data/category"
 import { useState } from "react"
 import Checkbox from "../components/Checkbox"
-import removeVietNameseTones from "../utils/removeVietNameseTones"
+import removeVietNameseTones from "../common/removeVietNameseTones"
 import image_empty from '../assets/images/empty_product.png'
 
 function Category(){

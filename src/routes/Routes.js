@@ -3,10 +3,10 @@ import {Switch, Route} from "react-router-dom";
 import Cart from "../pages/Cart";
 import Category from "../pages/Category";
 import Home from "../pages/Home";
-import Product from "../pages/Product";
+import Product from "../components/Product";
 import Login from "../pages/Login";
 import NotFound from "../pages/NotFound"
-import UserInfo from "../pages/UserInfo";
+import User from "../pages/User";
 
 export default function Routes(){
     return (
@@ -27,7 +27,7 @@ export default function Routes(){
                 <Cart />
             </Route>
             <Route path='/user'>
-                <UserInfo />
+                <User />
             </Route>
             <Route path='/dang-nhap'>
                 <Login />

@@ -1,0 +1,263 @@
+
+$color-main-login: #429076;
+
+.login {
+    height: calc(100vh - #{$header-height});
+    display: flex;
+    margin-top: $header-height;
+
+    &__image {
+        flex-basis: 50%;
+        position: relative;
+        
+        &__wave {
+            position: absolute;
+            width: 50rem;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+        }
+
+        &__logo {
+            width: 50rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__info {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__group {
+            position: relative;
+            width: 100%;
+            margin-bottom: 5rem;
+            border-bottom: 2px solid #00000078;
+            display: flex;
+            height: 4.5rem;
+            align-items: center;
+            transition: 0.3s;
+
+            &::before {
+                right: 50%;
+            }
+
+            &::after {
+                left: 50%;
+            }
+
+            &:nth-child(odd) {
+            margin-bottom: 0;
+                
+            }
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                width: 0%;
+                height: 2px;
+                background-color: #38d39f;
+                transition: .4s;
+            }
+
+            &.focus::before, &.focus::after {
+                width: 50%;
+            }
+
+            &.focus .login__info__group__content__name {
+                top: -5px;
+	            font-size: 15px;
+            }
+            
+            &.focus .login__info__group__content__icon {
+                color: #38d39f;
+            }
+            
+            &__content {
+                display: flex;
+
+                &__name {
+                    font-size: 1.7rem;
+                    font-weight: 500;
+                    position: absolute;
+                    left: 3rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: -1;
+                    transition: 0.3s;
+                }
+
+                &__icon {
+                    font-size: 1.8rem;
+                    color: $color-main-login;
+
+                }
+
+                &__input {
+                    position: absolute;
+                    background-color: transparent;
+                    width: 92%;
+                    height: 100%;
+                    top: 0;
+                    left: 3rem;
+                    outline: none;
+                    border: none;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        
+        &__title {
+            font-size: 3rem;
+            font-weight: 500;
+            padding-bottom: 5rem;
+        }
+
+        form {
+            width: 36rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__forgetPass {
+            margin-bottom: 3rem;
+            width: 100%;
+
+            &__link {
+                font-size: 1.4rem;
+                color: #00009f;
+            }
+        }
+
+        &__submit {
+            width: 100%;
+            height: 5rem;
+            border-radius: 25px;
+            border: none;
+            background-image: linear-gradient(to right, #38bf91, #17cb8e, #0eb378);
+            background-size: 200%;
+            font-size: 1.5rem;
+            color: #fff;
+            margin: 2rem 0;
+            cursor: pointer;
+            transition: .4s;
+            
+            &:hover {
+                background-position: right;
+            }
+        }
+
+        &__or {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            color: #0000006e;
+            font-size: 1.5rem;
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 50%;
+                height: 1px;
+                background-color: #0000006e;
+            }
+            &::after {
+                left: 0;
+                width: 40%;
+            }
+            &::before {
+                right: 0;
+                width: 40%;
+            }
+        }
+
+        &__social {
+            display: flex;
+            i {
+                width: 4rem;
+                height: 4rem;
+                border: 1px solid black;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 2rem 0 2rem 1.5rem;
+                font-size: 1.6rem;
+                cursor: pointer;
+                transition: 0.2s;
+
+                &:hover {
+                    border-color: #287058 !important;
+                    color: #287058;
+                    box-shadow: 0 0 4px;
+                }
+            }
+        }
+
+        &__register {
+            font-size: 1.4rem;
+
+            &__link {
+                color: red;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1300px){
+    .login {
+        &__image {
+            &__wave {
+                width: 75%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    .login {
+        &__image {
+            &__logo {
+                width: 40rem;
+            }
+        }
+        &__info {
+            align-items: center;
+            form {
+                width: 30rem;
+            }
+            &__submit {
+                height: 4rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .login {
+        &__image {
+            display: none;
+        }
+        &__info {
+            align-items: center;
+            width: 100%;
+            flex-basis: unset;
+
+            form {
+                width: 32rem;
+            }
+            &__submit {
+                height: 4rem;
+            }
+        }
+    }
+}
