@@ -1,13 +1,13 @@
 import { useEffect } from 'react'
 import { useRouteMatch } from 'react-router'
 import Helmet from '../../../common/Helmet'
-import productData from '../../../fake-data/products'
+import { getProductsBySlice, getProductBySlug } from '../../../fake-data/products'
 import ProductCard from '../../../common/ProductCard'
 
 function ProductMore() {
     const match = useRouteMatch()
 
-    const product = productData.getProductBySlug(match.params.slug)
+    const product = getProductBySlug(match.params.slug)
     // const getProduct = productData.getProducts(8)
 
     useEffect(() => {
@@ -19,7 +19,7 @@ function ProductMore() {
             <div className='product__more'>
                 <h3 className='product__more__title'>Khám phá thêm</h3>
                 <div className='product__more__list'>
-                    {productData.getProducts(8).map((product, index) => {
+                    {getProductsBySlice(1, 9).map((product, index) => {
                         return (
                             <ProductCard
                                 className={'product-card__item'}

@@ -1,19 +1,18 @@
-import { useEffect } from "react"
-import { useRouteMatch } from "react-router"
-import Helmet from "../../common/Helmet"
-import productData from "../../fake-data/products"
-import ProductDetail from "../../components/Product/Detail"
-import ProductMore from "../../components/Product/More"
+import { useEffect } from 'react'
+import { useRouteMatch } from 'react-router'
+import Helmet from '../../common/Helmet'
+import { getProductBySlug } from '../../fake-data/products'
+import ProductDetail from '../../components/Product/Detail'
+import ProductMore from '../../components/Product/More'
 
-export default function Product(){
-
+export default function Product() {
     const match = useRouteMatch()
 
-    const product = productData.getProductBySlug(match.params.slug)
+    const product = getProductBySlug(match.params.slug)
     // const getProduct = productData.getProducts(8)
 
     useEffect(() => {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     }, [product])
 
     return (

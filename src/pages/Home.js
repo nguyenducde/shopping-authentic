@@ -3,7 +3,7 @@ import HomeSlider from '../components/HomeSlider'
 import homeSliderData from '../fake-data/home-slider'
 import Policy from '../pages/Policy'
 import policyCard from '../fake-data/policy-card'
-import productData from '../fake-data/products'
+import { getProductsBySlice } from '../fake-data/products'
 import ProductCard from '../common/ProductCard'
 import Banner from '../components/Banner'
 import BackToTop from '../components/BackToTop'
@@ -34,7 +34,7 @@ export default function Home() {
                         Top sản phẩm bán chạy trong tuần
                     </h3>
                     <div className='product-card'>
-                        {productData.getProducts(4).map((product, index) => {
+                        {getProductsBySlice(1, 5).map((product, index) => {
                             return (
                                 <ProductCard
                                     className={'product-card__item'}
@@ -55,7 +55,7 @@ export default function Home() {
                 <section className='product mt-0'>
                     <h3 className='product__heading'>Sản phẩm mới</h3>
                     <div className='product-card'>
-                        {productData.getProducts(8).map((product, index) => {
+                        {getProductsBySlice(4, 12).map((product, index) => {
                             return (
                                 <ProductCard
                                     className={'product-card__item'}
@@ -80,7 +80,7 @@ export default function Home() {
                 <section className='product product--unset-border'>
                     <h3 className='product__heading'>Sản phẩm phổ biến</h3>
                     <div className='product-card'>
-                        {productData.getProducts(12).map((product, index) => {
+                        {getProductsBySlice(6, 18).map((product, index) => {
                             return (
                                 <ProductCard
                                     className={'product-card__item'}

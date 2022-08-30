@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import Helmet from '../common/Helmet'
-import productData from '../fake-data/products'
+import { getAllProducts } from '../fake-data/products'
 import ProductCard from '../common/ProductCard'
 import { dress, sex, colors, size } from '../fake-data/category'
 import { useState } from 'react'
@@ -16,8 +16,8 @@ function Category() {
         size: [],
     })
     const [valueSearch, setValueSearch] = useState('')
-    const [products, setProduct] = useState(productData.getAllProducts())
-    const productSearch = productData.getAllProducts()
+    const [products, setProduct] = useState(getAllProducts())
+    const productSearch = getAllProducts()
     const inputRef = useRef(null)
 
     useEffect(() => {
@@ -74,7 +74,7 @@ function Category() {
     }
 
     const updateProducts = useCallback(() => {
-        let allProduct = productData.getAllProducts()
+        let allProduct = getAllProducts()
 
         if (filter.dress.length > 0) {
             allProduct = allProduct.filter((e) => filter.dress.includes(e.dressSlug))
