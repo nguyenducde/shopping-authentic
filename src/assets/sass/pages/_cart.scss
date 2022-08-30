@@ -1,4 +1,3 @@
-
 .cart {
     margin-top: $header-height;
     background-color: #fdeaede8; //fff1f3
@@ -98,7 +97,6 @@
                 }
 
                 &__delete {
-
                     span {
                         font-size: 1.4rem;
                         color: red;
@@ -116,15 +114,14 @@
                         padding: 1rem 1rem 1.5rem;
                         cursor: default;
                         font-size: 1.4rem;
-                        box-shadow: 0 3px 6px -4px #00000073, 
-                                    0 6px 16px 0 #00000014,
-                                    0 9px 28px 8px #0000000d;
+                        box-shadow: 0 3px 6px -4px #00000073, 0 6px 16px 0 #00000014,
+                            0 9px 28px 8px #0000000d;
                         border-radius: 5px;
                         color: black;
                         display: none;
 
                         &::after {
-                            content: "";
+                            content: '';
                             border: 7px solid;
                             position: absolute;
                             top: -15px;
@@ -132,7 +129,7 @@
                             cursor: default;
                             border-color: transparent transparent black transparent;
                         }
-                        
+
                         p {
                             cursor: default;
                             text-align: center;
@@ -152,14 +149,13 @@
                                 color: black;
                                 cursor: pointer;
 
-                                &:first-child{
+                                &:first-child {
                                     margin-right: 1rem;
                                 }
                             }
                         }
                     }
                 }
-                
             }
         }
 
@@ -204,6 +200,10 @@
         }
     }
 
+    &__btn {
+        width: 100%;
+    }
+
     &-disable {
         background-color: #525252db;
         cursor: not-allowed;
@@ -224,8 +224,8 @@
     margin: 0 -1rem;
 }
 .btn-yes:hover {
-    background: #0C2B68;
-    border-color: #0C2B68;
+    background: #0c2b68;
+    border-color: #0c2b68;
 }
 .btn-unDelete:hover {
     border-color: #009fff;
@@ -241,12 +241,12 @@
     display: block;
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1299px){
+@media only screen and (min-width: 1024px) and (max-width: 1299px) {
     .cart__info__product__item__group img {
         max-width: 11rem;
     }
     .cart__info__totoalPrice__info__group span {
-        font-size: 1.3rem; 
+        font-size: 1.3rem;
     }
 }
 
@@ -284,7 +284,7 @@
                         text-align: center;
                     }
                 }
-                
+
                 &__item {
                     padding: 1rem;
 
@@ -293,14 +293,12 @@
                     }
 
                     &__group {
-
                         img {
                             width: 8rem;
                             height: 10rem;
                         }
 
                         &__info {
-
                             a {
                                 font-size: 1.5rem;
                                 overflow: hidden;
@@ -335,7 +333,6 @@
                 margin-bottom: 3rem;
 
                 &__info {
-
                     p {
                         font-size: 1.5rem;
                     }
@@ -363,7 +360,7 @@
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px){
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     .cart {
         &__info {
             &__product {

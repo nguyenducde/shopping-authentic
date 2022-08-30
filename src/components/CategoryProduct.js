@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom"
-import numberWithCommas from "../common/numberWithCommas"
+import { NavLink } from 'react-router-dom'
+import numberWithCommas from '../common/numberWithCommas'
+import { ButtonNoLink } from '../common/Button'
 
-export default function CategoryProduct(props){
-
+export default function CategoryProduct(props) {
     const { image01, name, price } = props.product
 
     return (
@@ -18,7 +18,9 @@ export default function CategoryProduct(props){
                         <label className='vnd'>đ</label>
                     </div>
                 </div>
-                <div className='btn category__product__item__buy'>Chọn mua</div>
+                <ButtonNoLink className='btn product-card__item__buy' width={12 + 'rem'}>
+                    Chọn mua
+                </ButtonNoLink>
             </NavLink>
         </div>
     )
