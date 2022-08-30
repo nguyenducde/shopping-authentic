@@ -1,34 +1,30 @@
-import $ from "jquery"
-import { useEffect } from "react"
+import $ from 'jquery'
+import { useEffect } from 'react'
+import ScrollToTop from '../common/ScrollToTop'
 window.jQuery = $
 window.jquery = $
 
 function BackToTop() {
-
     useEffect(() => {
-        const backTop = document.querySelector('.back-top')
+        const backTop = document.querySelector('.back-top')
 
-        const handleScroll = () => {
-            backTop.classList.toggle('back-top', window.scrollY > 500)
-            backTop.style.display = 'block'
+        const handleShowIcon = () => {
+            backTop.classList.toggle('back-top', window.scrollY > 500)
+            backTop.style.display = 'block'
         }
 
-        const handleScrollToTop = () => {
-            $('html,body').animate({scrollTop:0}, "slow")
-        }
-        
-        window.addEventListener('scroll',handleScroll)
-        backTop.addEventListener('click', handleScrollToTop)
+        window.addEventListener('scroll', handleShowIcon)
+        backTop.addEventListener('click', ScrollToTop)
 
         return () => {
-            window.removeEventListener('scroll', handleScroll)
-            backTop.removeEventListener('click', handleScrollToTop)
+            window.removeEventListener('scroll', handleShowIcon)
+            backTop.removeEventListener('click', ScrollToTop)
         }
     }, [])
 
     return (
-        <div className="back-top">
-            <i className="fas fa-chevron-up back-top-icon"></i>
+        <div className='back-top'>
+            <i className='fas fa-chevron-up back-top-icon'></i>
         </div>
     )
 }

@@ -1,5 +1,4 @@
-
-@mixin flex ($align-item, $justify-content){
+@mixin flex($align-item, $justify-content) {
     display: flex;
     align-items: $align-item;
     justify-content: $justify-content;
@@ -26,26 +25,23 @@
         font-size: 1.5rem;
         align-items: center;
     }
-    
-    &.shrink{
+
+    &.shrink {
         box-shadow: $box-shadow;
         height: $header-shrink-height;
         z-index: 100;
     }
     &__logo {
-        img {
-            height: 2.8rem;
-        }
+        height: 2.8rem;
     }
 
     &__menu {
-
         &-right {
             margin: 0 -3rem;
             display: flex;
             align-items: center;
-            
-            &>a {
+
+            & > a {
                 padding: 0 1rem;
                 height: 4rem;
                 margin-right: 3rem;
@@ -54,7 +50,7 @@
                 border-color: transparent;
 
                 &:last-child {
-                    margin-right: 2rem
+                    margin-right: 2rem;
                 }
                 &:hover {
                     border: 1px solid $main-color;
@@ -67,7 +63,8 @@
             }
         }
 
-        &__icon-close, &__icon-open {
+        &__icon-close,
+        &__icon-open {
             display: none;
             font-size: 2rem;
             padding: 0.5rem 0.7rem;
@@ -80,7 +77,7 @@
             top: 1rem;
             left: 0;
         }
-        
+
         &__icon-close {
             left: 12px;
             top: 10px;
@@ -135,7 +132,6 @@
     &.header__menu__icon-close {
         display: none;
     }
-
 }
 .nav {
     display: flex;
@@ -170,12 +166,11 @@
                 display: block;
             }
         }
-        
     }
 
     &__active {
         color: $main-color;
-        
+
         &::before {
             content: '';
             position: absolute;
@@ -207,7 +202,7 @@
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1299px){
+@media only screen and (min-width: 1024px) and (max-width: 1299px) {
     .header {
         &__container {
             width: 95%;
@@ -215,17 +210,17 @@
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px){
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     .header {
         height: $header-tablet-height;
-        
+
         &__container {
             width: 95%;
         }
     }
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 767px) {
     .nav {
         position: fixed;
         top: 0;
@@ -266,7 +261,7 @@
         }
 
         &__active {
-            background-color: #F0F0F0;
+            background-color: #f0f0f0;
 
             &::before {
                 display: none;
@@ -290,17 +285,15 @@
         }
 
         &__logo {
-            img {
-                height: 2rem;
-                display: none;
-            }
+            height: 2rem;
+            display: none;
         }
 
         &__menu {
             &-right {
                 margin: unset;
-                
-                &>a {
+
+                & > a {
                     margin-right: 1rem;
                     padding: 0;
                     transition: unset;

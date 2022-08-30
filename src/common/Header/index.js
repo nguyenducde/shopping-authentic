@@ -1,11 +1,12 @@
-import { useEffect, useCallback } from "react";
-import { NavLink } from "react-router-dom";
-import { connect } from "react-redux"
-import logo from "../../assets/images/Logo-2.png"
-import { logoutAccountUser } from "../../redux/actions";
+import { useEffect, useCallback, useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { connect } from 'react-redux'
+import logo from '../../assets/images/Logo-2.png'
+import { logoutAccountUser } from '../../redux/actions'
+import ScrollToTop from '../ScrollToTop'
 
-function Header({carts, user, onLogoutUser}){
-
+function Header({ carts, user, onLogoutUser }) {
+    const [isHomePage, setIsHomePage] = useState(false)
     const isLogin = user.isLogin
     const name = user.name
     const photo = user.photo
@@ -17,12 +18,12 @@ function Header({carts, user, onLogoutUser}){
         const iconClose = document.querySelector('.header__menu__icon-close')
         const navList = document.querySelector('.nav')
         const header = document.querySelector('.header')
-        
+
         iconOpen.addEventListener('click', openMenu)
         iconClose.addEventListener('click', closeMenu)
         app.addEventListener('click', closeMenu)
 
-        navItem.forEach(item => {
+        navItem.forEach((item) => {
             item.addEventListener('click', closeMenu)
         })
 
@@ -44,7 +45,6 @@ function Header({carts, user, onLogoutUser}){
 
         iconOpen.addEventListener('click', handleStopPropagation)
         header.addEventListener('click', handleStopPropagation)
-
     }, [])
 
     const handleClickUser = useCallback(() => {
@@ -54,21 +54,20 @@ function Header({carts, user, onLogoutUser}){
         const modalUser = document.querySelector('.header__menu__user__info')
         const logoutUser = document.querySelector('.header__menu__user__logout')
         const menuUser = document.querySelectorAll('.header__menu__user__info__title')
-        
-        if(isLogin) {
+
+        if (isLogin) {
             userName.addEventListener('click', () => {
                 modalUser.classList.toggle('modal-user--open')
             })
         }
 
         function removeModalUser() {
-            if(isLogin) {
-            modalUser.classList.remove('modal-user--open')
-
+            if (isLogin) {
+                modalUser.classList.remove('modal-user--open')
             }
         }
 
-        if(isLogin) {
+        if (isLogin) {
             logoutUser.addEventListener('click', () => {
                 onLogoutUser(false)
             })
@@ -77,14 +76,14 @@ function Header({carts, user, onLogoutUser}){
             e.stopPropagation()
         }
 
-        menuUser.forEach(item => {
+        menuUser.forEach((item) => {
             item.addEventListener('click', removeModalUser)
         })
 
         app.addEventListener('click', removeModalUser)
         header.addEventListener('click', removeModalUser)
 
-        if(isLogin) {
+        if (isLogin) {
             userName.addEventListener('click', handleStopPropagation)
             modalUser.addEventListener('click', handleStopPropagation)
         }
@@ -96,31 +95,53 @@ function Header({carts, user, onLogoutUser}){
 
     useEffect(() => {
         headerMobile()
-    },[headerMobile])
-
+    }, [headerMobile])
 
     useEffect(() => {
-        const header = document.querySelector('.header')
-        window.addEventListener('scroll', function(){
-            header.classList.toggle('shrink', window.scrollY > 0)
+        const header = document.querySelector('.header')
+        window.addEventListener('scroll', function () {
+            header.classList.toggle('shrink', window.scrollY > 0)
         })
-    },[])
+    }, [])
 
+    useEffect(() => {
+        const logo = document.querySelector('.header__logo')
+        logo.addEventListener('click', ScrollToTop)
+
+        return () => {
+            logo.removeEventListener('click', ScrollToTop)
+        }
+    }, [])
+
+    useEffect(() => {
+        const homePage = document.querySelector('.home')
+
+        const handleUpdateStateHomePage = () => {
+            setIsHomePage(!isHomePage)
+        }
+        homePage.addEventListener('click', handleUpdateStateHomePage)
+
+        window.scrollTo(0, 0)
+
+        return () => {
+            homePage.removeEventListener('click', handleUpdateStateHomePage)
+        }
+    }, [isHomePage])
 
     return (
         <header>
             <div className='header'>
                 <div className='header__container'>
-                    <i className="fas fa-bars header__menu__icon-open"></i>
+                    <i className='fas fa-bars header__menu__icon-open'></i>
                     <ul className='nav'>
                         <li className='nav__item'>
-                            <NavLink activeClassName="nav__active" exact to='/'>
+                            <NavLink activeClassName='nav__active' exact to='/' className='home'>
                                 <i className='bx bx-home nav__icon'></i>
                                 Trang chủ
                             </NavLink>
                         </li>
                         <li className='nav__item'>
-                            <NavLink activeClassName="nav__active" to='/danh-muc'>
+                            <NavLink activeClassName='nav__active' to='/danh-muc'>
                                 <i className='bx bx-category nav__icon'></i>
                                 Sản phẩm
                             </NavLink>
@@ -132,32 +153,44 @@ function Header({carts, user, onLogoutUser}){
                             <NavLink activeClassName="nav__active" to='/lien-he'>Liên hệ</NavLink>
                         </li> */}
                     </ul>
-                    <i className="fas fa-times header__menu__icon-close"></i>
-                    <div className='header__logo'>
-                        <NavLink to='/'>
-                            <img src={logo} alt=''/>
-                        </NavLink>
-                    </div>
+                    <i className='fas fa-times header__menu__icon-close'></i>
+                    <NavLink to='/'>
+                        <img src={logo} alt='' className='header__logo' />
+                    </NavLink>
                     <div className='header__menu-right'>
-                        <NavLink className='cart__link' to='/gio-hang'><i className='bx bx-cart'></i>
-                            {carts.length > 0 ? <span className='cart__link__notification'>{carts.length}</span> : ''}
+                        <NavLink className='cart__link' to='/gio-hang'>
+                            <i className='bx bx-cart'></i>
+                            {carts.length > 0 ? (
+                                <span className='cart__link__notification'>{carts.length}</span>
+                            ) : (
+                                ''
+                            )}
                         </NavLink>
-                        {
-                            isLogin === false 
-                            ?
-                                <NavLink to='/dang-nhap' className='header__menu-right--center'>Đăng nhập</NavLink>
-                            :
-                                <div className='header__menu__user'>
-                                    <img src={photo} alt='' />
-                                    <p className='header__menu__user'>{name}</p>
-                                    <i className='bx bxs-down-arrow'></i>
-                                    <div className='header__menu__user__info'>
-                                        <NavLink to='/user' className='header__menu__user__info__title'>Thông tin tài khoản</NavLink>
-                                        <NavLink to='/gio-hang' className='header__menu__user__info__title'>Đơn hàng</NavLink>
-                                        <div className='header__menu__user__info__title header__menu__user__logout'>Đăng xuất</div>
+                        {isLogin === false ? (
+                            <NavLink to='/dang-nhap' className='header__menu-right--center'>
+                                Đăng nhập
+                            </NavLink>
+                        ) : (
+                            <div className='header__menu__user'>
+                                <img src={photo} alt='' />
+                                <p className='header__menu__user'>{name}</p>
+                                <i className='bx bxs-down-arrow'></i>
+                                <div className='header__menu__user__info'>
+                                    <NavLink to='/user' className='header__menu__user__info__title'>
+                                        Thông tin tài khoản
+                                    </NavLink>
+                                    <NavLink
+                                        to='/gio-hang'
+                                        className='header__menu__user__info__title'
+                                    >
+                                        Đơn hàng
+                                    </NavLink>
+                                    <div className='header__menu__user__info__title header__menu__user__logout'>
+                                        Đăng xuất
                                     </div>
                                 </div>
-                        }
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
@@ -165,18 +198,18 @@ function Header({carts, user, onLogoutUser}){
     )
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
         carts: state.cartReducer,
-        user: state.userReducer
+        user: state.userReducer,
     }
 }
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        onLogoutUser: boolean => {
+        onLogoutUser: (boolean) => {
             dispatch(logoutAccountUser(boolean))
-        }
+        },
     }
 }
 
