@@ -2,11 +2,11 @@ import Helmet from '../common/Helmet'
 import HomeSlider from '../components/HomeSlider'
 import homeSliderData from '../fake-data/home-slider'
 import Policy from '../pages/Policy'
-import policyCard from '../fake-data/policy-card'
-import { getProductsBySlice } from '../fake-data/products'
-import ProductCard from '../common/ProductCard'
 import Banner from '../components/Banner'
 import BackToTop from '../components/BackToTop'
+import ProductBestSeller from '../components/Product/BestSeller'
+import ProductNew from '../components/Product/New'
+import ProductPopular from '../components/Product/Popular'
 
 export default function Home() {
     return (
@@ -14,62 +14,15 @@ export default function Home() {
             <HomeSlider data={homeSliderData} control={true} autoRunSlide={true} />
 
             <div className='container'>
-                <section className='policy'>
-                    {policyCard.map((item, index) => {
-                        return (
-                            <Policy
-                                name={item.name}
-                                description={item.description}
-                                icon={item.icon}
-                                key={index}
-                            />
-                        )
-                    })}
-                </section>
+                <Policy />
             </div>
 
             <div className='container container--850'>
-                <section className='product'>
-                    <h3 className='product__heading product__heading--top'>
-                        Top sản phẩm bán chạy trong tuần
-                    </h3>
-                    <div className='product-card'>
-                        {getProductsBySlice(1, 5).map((product, index) => {
-                            return (
-                                <ProductCard
-                                    className={'product-card__item'}
-                                    link={`/san-pham/${product.slug}`}
-                                    image={product.image01}
-                                    name={product.name}
-                                    price={product.price}
-                                    buttonTitle={'Xem chi tiết'}
-                                    key={index}
-                                />
-                            )
-                        })}
-                    </div>
-                </section>
+                <ProductBestSeller />
             </div>
 
             <div className='container container--850'>
-                <section className='product mt-0'>
-                    <h3 className='product__heading'>Sản phẩm mới</h3>
-                    <div className='product-card'>
-                        {getProductsBySlice(4, 12).map((product, index) => {
-                            return (
-                                <ProductCard
-                                    className={'product-card__item'}
-                                    link={`/san-pham/${product.slug}`}
-                                    image={product.image01}
-                                    name={product.name}
-                                    price={product.price}
-                                    buttonTitle={'Xem chi tiết'}
-                                    key={index}
-                                />
-                            )
-                        })}
-                    </div>
-                </section>
+                <ProductNew />
             </div>
 
             <div className='container'>
@@ -77,24 +30,7 @@ export default function Home() {
             </div>
 
             <div className='container container--850'>
-                <section className='product product--unset-border'>
-                    <h3 className='product__heading'>Sản phẩm phổ biến</h3>
-                    <div className='product-card'>
-                        {getProductsBySlice(6, 18).map((product, index) => {
-                            return (
-                                <ProductCard
-                                    className={'product-card__item'}
-                                    link={`/san-pham/${product.slug}`}
-                                    image={product.image01}
-                                    name={product.name}
-                                    price={product.price}
-                                    buttonTitle={'Xem chi tiết'}
-                                    key={index}
-                                />
-                            )
-                        })}
-                    </div>
-                </section>
+                <ProductPopular />
             </div>
             <BackToTop />
         </Helmet>

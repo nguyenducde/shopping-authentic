@@ -64,6 +64,7 @@ const products = [
         slug: 'ao-somi-nam-tay-dai-keisha',
         size: ['s', 'm', 'xl'],
         sex: 'male',
+        isBestSeller: true,
         description:
             '- Áo Sơ Mi Nam Tay Dài Keisha Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo Sơ Mi Nam Tay Dài Keisha Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.',
     },
@@ -79,6 +80,7 @@ const products = [
         slug: 'ao-thun-dinosaur-01',
         size: ['s', 'm', 'xl'],
         sex: 'female',
+        isNewProduct: true,
         description:
             '- Áo thun Dinosaur 01 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 01 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.',
     },
@@ -93,6 +95,7 @@ const products = [
         slug: 'ao-thun-nam-pima-tron',
         size: ['m', 'l', 'xl'],
         sex: 'male',
+        isNewProduct: true,
         description:
             '- Áo Thun Nam Pima Trơn Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo Thun Nam Pima Trơn Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.',
     },
@@ -107,6 +110,7 @@ const products = [
         slug: 'ao-thun-dinosaur-02',
         size: ['xl'],
         sex: 'female',
+        isNewProduct: true,
         description:
             '- Áo thun Dinosaur 02 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 02 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.',
     },
@@ -135,6 +139,7 @@ const products = [
         slug: 'ao-so-mi-nam-tay-ngan-melange',
         size: ['s', 'l', 'xl'],
         sex: 'male',
+        isNewProduct: true,
         description:
             '- Áo Sơ Mi Nam Tay Ngắn Melange Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo Sơ Mi Nam Tay Ngắn Melange Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.',
     },
@@ -149,6 +154,7 @@ const products = [
         slug: 'ao-so-mi-nu-tay-dai-ke-soc-caro',
         size: ['l', 'xl'],
         sex: 'female',
+        isBestSeller: true,
         description:
             '- Áo Sơ Mi Nữ Tay Dài Kẻ Sọc Caro Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo Sơ Mi Nữ Tay Dài Kẻ Sọc Caro Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.',
     },
@@ -163,6 +169,7 @@ const products = [
         slug: 'ao-so-mi-nu-tay-dai-cong-so',
         size: ['s', 'm', 'xl'],
         sex: 'female',
+        isNewProduct: true,
         description:
             '- Áo Sơ Mi Nữ Tay Dài Công Sở Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo Sơ Mi Nữ Tay Dài Công Sở Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.',
     },
@@ -177,6 +184,7 @@ const products = [
         slug: 'ao-so-mi-nu-tay-dai-dang-suong',
         size: ['m'],
         sex: 'female',
+        isNewProduct: true,
         description:
             '- Áo Sơ Mi Nữ Tay Dài Dáng Suông Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo Sơ Mi Nữ Tay Dài Dáng Suông Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.',
     },
@@ -191,6 +199,7 @@ const products = [
         slug: 'quan-jean-nu-dang-skinny-tron',
         size: ['l'],
         sex: 'female',
+        isNewProduct: true,
         description:
             '- Quần Jean Nữ Dáng Skinny Trơn Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Quần Jean Nữ Dáng Skinny Trơn Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.',
     },
@@ -205,6 +214,7 @@ const products = [
         slug: 'ao-thun-dinosaur-04',
         size: ['s', 'm', 'xl'],
         sex: 'female',
+        isBestSeller: true,
         description:
             '- Áo thun Dinosaur 04 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 04 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.',
     },
@@ -219,6 +229,7 @@ const products = [
         slug: 'quan-jean-nu-lung-cao-xuoc-nhe',
         size: ['s', 'm', 'xl'],
         sex: 'female',
+        isBestSeller: true,
         description:
             '- Quần Jean Nữ Lưng Cao Xước Nhẹ Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Quần Jean Nữ Lưng Cao Xước Nhẹ Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nữ Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.',
     },
@@ -233,6 +244,7 @@ const products = [
         slug: 'ao-thun-dinosaur-05',
         size: ['s', 'm', 'l', 'xl'],
         sex: 'female',
+        isNewProduct: true,
         description:
             '- Áo thun Dinosaur 05 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính có thiết kế kiểu dáng cơ bản với dáng ôm vừa, cổ bẻ, tay ngắn in logo 5S, kiểu dáng thể thao <br><br> - Áo thun Dinosaur 05 Chất Liêu 100% Coolmax Phối Viền Năng Động, Trẻ Trung, Nam Tính, dễ dàng phối cùng quần jeans hoặc shorts, giày thể thao hoặc giày lười, thích hợp sử dụng trong các dịp đi chơi, gặp gỡ bạn bè và các hoạt động ngoài trời.',
     },

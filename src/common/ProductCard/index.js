@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 import numberWithCommas from '../../common/numberWithCommas'
 import { ButtonNoLink } from '../../common/Button'
 
-function ProductCard({ className, link, image, name, price, buttonTitle }) {
+function ProductCard({ className, link, image, name, price, buttonTitle, ...type }) {
     return (
         <div className={className}>
             <NavLink exact to={link}>
@@ -17,6 +17,18 @@ function ProductCard({ className, link, image, name, price, buttonTitle }) {
                     </div>
                 </div>
                 <ButtonNoLink className='btn product-card__item__buy'>{buttonTitle}</ButtonNoLink>
+                {type.isBestSeller ? (
+                    <div className='best-seller'>
+                        <i className='bx bxs-hot'></i>
+                        <span>Best Seller</span>
+                    </div>
+                ) : type.isNewProduct ? (
+                    <div className='new'>
+                        <span>NEW</span>
+                    </div>
+                ) : (
+                    ''
+                )}
             </NavLink>
         </div>
     )

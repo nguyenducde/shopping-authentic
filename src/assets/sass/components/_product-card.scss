@@ -25,6 +25,77 @@
                 box-shadow: 0rem 0.8rem 2.4rem rgba(149, 157, 165, 0.5);
             }
 
+            & .best-seller {
+                position: absolute;
+                top: 1rem;
+                left: -0.4rem;
+                width: 9rem;
+                height: 2.5rem;
+                background-color: $color-best-seller;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+                box-shadow: 1px 1px 3px 0px #682424;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    border-top: 3px solid currentColor;
+                    border-left: 3px solid transparent;
+                    bottom: -3px;
+                    left: 0;
+                    filter: brightness(60%);
+                }
+
+                & i {
+                    font-size: 1.5rem;
+                }
+
+                & span {
+                    font-size: 1.3rem;
+                    padding-left: 0.4rem;
+                }
+            }
+
+            & .new {
+                position: absolute;
+                top: 1rem;
+                left: -0.4rem;
+                background-color: $color-best-seller;
+                color: white;
+                font-size: 1.4rem;
+                width: 5rem;
+                height: 3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-style: italic;
+                font-weight: 500;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    border-top: 15px solid $color-best-seller;
+                    border-bottom: 15px solid $color-best-seller;
+                    border-right: 10px solid transparent;
+                    right: -1rem;
+                    top: 0;
+                    bottom: 0;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    border-top: 3px solid currentColor;
+                    border-left: 3px solid transparent;
+                    bottom: -3px;
+                    left: 0;
+                    filter: brightness(60%);
+                }
+            }
+
             &__image {
                 padding-bottom: 1.8rem;
 

@@ -16,13 +16,12 @@ html {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden;
 }
 
 ul {
@@ -38,22 +37,28 @@ a {
     margin-top: 0 !important;
 }
 
-@media only screen and (min-width: 1300px){
+@media only screen and (min-width: 1300px) {
     .container {
         max-width: 1200px;
     }
 }
 
-@media only screen and (max-width: 1299px){
+@media only screen and (max-width: 1299px) {
     .container {
-        width: 95%
+        width: 95%;
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px){
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     .container {
         &--850 {
             max-width: 850px;
         }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        overflow: hidden;
     }
 }

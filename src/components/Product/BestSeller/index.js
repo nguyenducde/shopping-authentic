@@ -1,0 +1,30 @@
+import { getAllProducts } from '../../../fake-data/products'
+import ProductCard from '../../../common/ProductCard'
+
+function ProductBestSeller() {
+    return (
+        <section className='product'>
+            <h3 className='product__heading product__heading--top'>Top sản phẩm bán chạy nhất</h3>
+            <div className='product-card'>
+                {getAllProducts().map((product, index) => {
+                    if (product.isBestSeller) {
+                        return (
+                            <ProductCard
+                                className={'product-card__item'}
+                                link={`/san-pham/${product.slug}`}
+                                image={product.image01}
+                                name={product.name}
+                                price={product.price}
+                                buttonTitle={'Xem chi tiết'}
+                                isBestSeller={product.isBestSeller}
+                                key={index}
+                            />
+                        )
+                    } else return null
+                })}
+            </div>
+        </section>
+    )
+}
+
+export default ProductBestSeller
