@@ -1,7 +1,5 @@
-
 .policy {
-    display: flex;
-    justify-content: space-between;
+    @include flex(unset, space-between);
     margin-bottom: 6rem;
 
     &-card {
@@ -12,7 +10,7 @@
         transition: transform 0.5s ease;
 
         &:hover {
-            transform: translateY(-1rem)
+            transform: translateY(-1rem);
         }
 
         &--active {
@@ -38,18 +36,17 @@
                 line-height: 1.6;
             }
         }
-        
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1299px){
+@media only screen and (min-width: 1024px) and (max-width: 1299px) {
     .policy {
         margin-bottom: 7rem;
         margin-top: 2rem;
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px){
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     .policy {
         flex-wrap: wrap;
 

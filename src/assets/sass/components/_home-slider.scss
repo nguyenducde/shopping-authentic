@@ -6,7 +6,6 @@
 
     &__item {
         @include flex(center, space-between);
-
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
@@ -89,12 +88,9 @@
 
     &__btn {
         width: 16rem;
-        display: flex;
-        align-items: center;
 
         & span {
-            display: flex;
-            align-items: center;
+            @include flex(center, unset);
             padding-left: 0.5rem;
             font-size: 2rem;
         }

@@ -1,10 +1,5 @@
-@mixin flex($align-item, $justify-content) {
-    display: flex;
-    align-items: $align-item;
-    justify-content: $justify-content;
-}
-
 .header {
+    @include flex(center, unset);
     background-color: $main-bg;
     position: fixed;
     top: 0;
@@ -12,18 +7,14 @@
     width: 100%;
     z-index: 99;
     height: $header-height;
-    display: flex;
-    align-items: center;
     transition: height linear 0.2s;
 
     &__container {
+        @include flex(center, space-between);
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
         font-size: 1.5rem;
-        align-items: center;
     }
 
     &.shrink {
@@ -37,9 +28,8 @@
 
     &__menu {
         &-right {
+            @include flex(center, unset);
             margin: 0 -3rem;
-            display: flex;
-            align-items: center;
 
             & > a {
                 padding: 0 1rem;
@@ -57,9 +47,7 @@
                 }
             }
             &--center {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flex(center, center);
             }
         }
 
@@ -85,8 +73,7 @@
         }
 
         &__user {
-            display: flex;
-            align-items: center;
+            @include flex(center, unset);
             cursor: pointer;
             position: relative;
 

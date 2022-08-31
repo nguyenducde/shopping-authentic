@@ -1,6 +1,6 @@
 .not-found {
     background-color: #43c79b;
-    color:#161d2a;
+    color: #161d2a;
     position: absolute;
     top: 0;
     left: 0;
@@ -13,7 +13,7 @@
         text-align: center;
         display: block;
         position: relative;
-        width:80%;
+        width: 80%;
         margin: 0 auto;
         top: 45%;
         transform: translateY(-50%);
@@ -29,16 +29,15 @@
     }
 
     &__description {
-        text-align:center;
-        display:block;
+        text-align: center;
+        display: block;
         position: relative;
         font-size: 2.5rem;
         padding-bottom: 3rem;
     }
 
     &__back {
-        display: flex;
-        justify-content: center;
+        @include flex(unset, center);
         font-size: 2rem;
 
         &__link {
@@ -48,64 +47,66 @@
     }
 
     &__cloud {
-        width: 350px; height: 120px;
-        background: #FFF;
+        width: 350px;
+        height: 120px;
+        background: #fff;
         border-radius: 100px;
         position: absolute;
         margin: 120px auto 20px;
         z-index: 1;
 
-        &::after, &::before {
+        &::after,
+        &::before {
             content: '';
             position: absolute;
-            background: #FFF;
-            z-index: -1
+            background: #fff;
+            z-index: -1;
         }
 
         &::after {
-            width: 100px; 
+            width: 100px;
             height: 100px;
-            top: -50px; 
+            top: -50px;
             left: 50px;
             border-radius: 100px;
         }
 
         &::before {
-            width: 180px; 
+            width: 180px;
             height: 180px;
-            top: -90px; 
+            top: -90px;
             right: 50px;
             border-radius: 200px;
         }
 
         &--1 {
-            top:-50px;
+            top: -50px;
             left: 0;
             transform: scale(0.3);
             opacity: 1;
         }
         &--2 {
-            top:-80px;
+            top: -80px;
             right: 0;
             transform: scale(0.3);
         }
         &--3 {
             left: 15%;
-            top:30px;
+            top: 30px;
             transform: scale(0.4);
-            opacity: 0.8; 
+            opacity: 0.8;
         }
         &--4 {
             right: 0;
             bottom: 0;
             transform: scale(0.6);
-            opacity: 0.9; 
+            opacity: 0.9;
         }
         &--5 {
-            left: 10%; 
+            left: 10%;
             bottom: 10%;
             transform: scale(0.5);
-            opacity: 0.9; 
+            opacity: 0.9;
         }
     }
 }

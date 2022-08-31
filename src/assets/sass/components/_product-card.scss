@@ -8,9 +8,8 @@
     }
 
     &-card {
-        display: flex;
+        @include flex(unset, space-between);
         flex-wrap: wrap;
-        justify-content: space-between;
 
         &__item {
             position: relative;
@@ -26,15 +25,13 @@
             }
 
             & .best-seller {
+                @include flex(center, center);
                 position: absolute;
                 top: 1rem;
                 left: -0.4rem;
                 width: 9rem;
                 height: 2.5rem;
                 background-color: $color-best-seller;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 color: white;
                 border-top-right-radius: 3px;
                 border-bottom-right-radius: 3px;
@@ -61,6 +58,7 @@
             }
 
             & .new {
+                @include flex(center, center);
                 position: absolute;
                 top: 1rem;
                 left: -0.4rem;
@@ -69,9 +67,6 @@
                 font-size: 1.4rem;
                 width: 5rem;
                 height: 3rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 font-style: italic;
                 font-weight: 500;
 
