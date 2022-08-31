@@ -1,4 +1,4 @@
-import { getAllProducts } from '../../../fake-data/products'
+import { getAllProducts } from '../../../store-data/products'
 import ProductCard from '../../../common/ProductCard'
 
 function ProductBestSeller() {

@@ -1,4 +1,4 @@
-import { getProductsBySlice } from '../../../fake-data/products'
+import { getProductsBySlice } from '../../../store-data/products'
 import ProductCard from '../../../common/ProductCard'
 
 function ProductPopular() {

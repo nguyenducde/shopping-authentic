@@ -1,6 +1,6 @@
 import Helmet from '../common/Helmet'
 import HomeSlider from '../components/HomeSlider'
-import homeSliderData from '../fake-data/home-slider'
+import homeSliderData from '../store-data/home-slider'
 import Policy from '../pages/Policy'
 import Banner from '../components/Banner'
 import BackToTop from '../components/BackToTop'

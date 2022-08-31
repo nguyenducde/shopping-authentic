@@ -34,6 +34,12 @@
                 }
             }
         }
+
+        &__btn {
+            width: 17rem;
+            height: 3.5rem;
+        }
+
         &-sort {
             display: none;
         }
@@ -135,7 +141,7 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            padding: 5rem 2rem 1rem 2rem;
+            padding: 5rem 2rem 2.5rem 2rem;
             animation: scale ease 0.2s;
             transform-origin: left top;
 
@@ -172,6 +178,13 @@
                 background-color: #00a786;
             }
 
+            &__btn {
+                &:hover {
+                    background-color: $main-color;
+                    color: white;
+                }
+            }
+
             &-sort {
                 @include flex(center, unset);
                 width: 13rem;
@@ -202,7 +215,7 @@
             &__group {
                 flex-shrink: 0;
 
-                &:nth-child(even) {
+                &:nth-child(even):not(:last-of-type) {
                     width: 50%;
                 }
                 &:nth-child(odd) {

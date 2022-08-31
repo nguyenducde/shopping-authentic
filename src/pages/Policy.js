@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import policyCard from '../fake-data/policy-card'
+import policyCard from '../store-data/policy-card'
 
 function Policy() {
     return (

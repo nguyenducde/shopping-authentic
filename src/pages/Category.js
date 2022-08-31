@@ -1,12 +1,13 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import Helmet from '../common/Helmet'
-import { getAllProducts } from '../fake-data/products'
+import { getAllProducts } from '../store-data/products'
 import ProductCard from '../common/ProductCard'
-import { dress, sex, colors, size } from '../fake-data/category'
+import { dress, sex, colors, size } from '../store-data/category'
 import { useState } from 'react'
 import Checkbox from '../components/Checkbox'
 import removeVietNameseTones from '../common/removeVietNameseTones'
 import image_empty from '../assets/images/empty_product.png'
+import { ButtonNoLink } from '../common/Button'
 
 function Category() {
     const [filter, setFilter] = useState({
@@ -219,6 +220,7 @@ function Category() {
                                             onChange={(input) =>
                                                 filterSelect('DRESS', input.checked, item)
                                             }
+                                            checked={filter.dress.includes(item.dressSlug)}
                                             key={index}
                                         />
                                     )
@@ -235,6 +237,7 @@ function Category() {
                                             onChange={(input) =>
                                                 filterSelect('SEX', input.checked, item)
                                             }
+                                            checked={filter.initialSex.includes(item.sex)}
                                             key={index}
                                         />
                                     )
@@ -251,6 +254,7 @@ function Category() {
                                             onChange={(input) =>
                                                 filterSelect('COLOR', input.checked, item)
                                             }
+                                            checked={filter.color.includes(item.color)}
                                             key={index}
                                         />
                                     )
@@ -267,11 +271,22 @@ function Category() {
                                             onChange={(input) =>
                                                 filterSelect('SIZE', input.checked, item)
                                             }
+                                            checked={filter.size.includes(item.size)}
                                             key={index}
                                         />
                                     )
                                 })}
                             </div>
+                        </div>
+                        <div className='category__filter__group'>
+                            <ButtonNoLink
+                                className='btn category__filter__btn'
+                                onClick={() =>
+                                    setFilter({ dress: [], initialSex: [], color: [], size: [] })
+                                }
+                            >
+                                Reset bộ lọc
+                            </ButtonNoLink>
                         </div>
                     </div>
                     {products.length === 0 ? (

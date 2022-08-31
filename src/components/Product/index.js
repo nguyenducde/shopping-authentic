@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useRouteMatch } from 'react-router'
 import Helmet from '../../common/Helmet'
-import { getProductBySlug } from '../../fake-data/products'
+import { getProductBySlug } from '../../store-data/products'
 import ProductDetail from '../../components/Product/Detail'
 import ProductMore from '../../components/Product/More'
 

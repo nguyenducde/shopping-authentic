@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useRouteMatch } from 'react-router'
 import Helmet from '../../../common/Helmet'
-import { getProductsBySlice, getProductBySlug } from '../../../fake-data/products'
+import { getProductsBySlice, getProductBySlug } from '../../../store-data/products'
 import ProductCard from '../../../common/ProductCard'
 
 function ProductMore() {
