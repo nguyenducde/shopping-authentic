@@ -1,0 +1,43 @@
+.product {
+    margin-bottom: 3rem;
+
+    &__heading {
+        font-size: 2.4rem;
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 5rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1299px) {
+    .product {
+        margin-top: 2rem !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .product {
+        margin-top: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .product {
+        margin-top: 0 !important;
+        border-bottom: 2px solid $main-color;
+        padding-bottom: 2rem;
+
+        &__heading {
+            font-size: 1.9rem;
+            font-weight: 500;
+
+            &--top {
+                padding-top: 5rem;
+            }
+        }
+
+        &--unset-border {
+            border-bottom: unset;
+        }
+    }
+}

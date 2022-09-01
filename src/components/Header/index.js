@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import logo from '../../assets/images/Logo-2.png'
 import { logoutAccountUser } from '../../redux/actions'
-import ScrollToTop from '../ScrollToTop'
+import ScrollToTop from '../../common/ScrollToTop'
 
 function Header({ carts, user, onLogoutUser }) {
-    const [isHomePage, setIsHomePage] = useState(false)
+    const [isCurrentPage, setIsCurrentHomePage] = useState(false)
     const isLogin = user.isLogin
     const name = user.name
     const photo = user.photo
@@ -114,19 +114,23 @@ function Header({ carts, user, onLogoutUser }) {
     }, [])
 
     useEffect(() => {
-        const homePage = document.querySelector('.home')
+        const homePage = document.querySelector('.home-page')
+        const productPage = document.querySelector('.product-page')
 
         const handleUpdateStateHomePage = () => {
-            setIsHomePage(!isHomePage)
+            setIsCurrentHomePage(!isCurrentPage)
         }
+
         homePage.addEventListener('click', handleUpdateStateHomePage)
+        productPage.addEventListener('click', handleUpdateStateHomePage)
 
         window.scrollTo(0, 0)
 
         return () => {
             homePage.removeEventListener('click', handleUpdateStateHomePage)
+            productPage.removeEventListener('click', handleUpdateStateHomePage)
         }
-    }, [isHomePage])
+    }, [isCurrentPage])
 
     return (
         <header>
@@ -135,13 +139,22 @@ function Header({ carts, user, onLogoutUser }) {
                     <i className='fas fa-bars header__menu__icon-open'></i>
                     <ul className='nav'>
                         <li className='nav__item'>
-                            <NavLink activeClassName='nav__active' exact to='/' className='home'>
+                            <NavLink
+                                activeClassName='nav__active'
+                                exact
+                                to='/'
+                                className='home-page'
+                            >
                                 <i className='bx bx-home nav__icon'></i>
                                 Trang chủ
                             </NavLink>
                         </li>
                         <li className='nav__item'>
-                            <NavLink activeClassName='nav__active' to='/danh-muc'>
+                            <NavLink
+                                activeClassName='nav__active'
+                                to='/danh-muc'
+                                className='product-page'
+                            >
                                 <i className='bx bx-category nav__icon'></i>
                                 Sản phẩm
                             </NavLink>

@@ -3,22 +3,21 @@
 @import './common/variables';
 @import './common/base';
 @import './common/button';
-@import './common/header';
-@import './common/footer';
-
-// pages
-@import './pages/cart';
-@import './pages/category';
-@import './pages/notfound';
-@import './pages/login';
-@import './pages/info-user';
-@import './pages/policy';
 
 // components
-@import './components/home-slider';
-@import './components/product-detail';
-@import './components/product-card';
-@import './components/banner';
-@import './components/search';
-@import './components/back-to-top';
-@import './components/toast-notification';
+@import './components/header/index.scss';
+@import './components/back-to-top/index.scss';
+@import './components/home-slider/index.scss';
+@import './components/search/index.scss';
+@import './components/toast-notification/index.scss';
+@import './components/policy/index.scss';
+@import './components/footer/index.scss';
+@import './components/product/index.scss';
+@import './components/banner/index.scss';
+
+//pages
+@import './pages/user/index.scss';
+@import './pages/notfound/index.scss';
+@import './pages/cart/index.scss';
+@import './pages/login/index.scss';
+@import './pages/category/index.scss';

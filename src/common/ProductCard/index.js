@@ -6,17 +6,17 @@ function ProductCard({ className, link, image, name, price, buttonTitle, ...type
     return (
         <div className={className}>
             <NavLink exact to={link}>
-                <div className='product-card__item__image'>
+                <div className='product-card__image'>
                     <img src={image} alt='' />
                 </div>
-                <div className='product-card__item__info'>
-                    <h3 className='product-card__item__info__name'>{name}</h3>
-                    <div className='product-card__item__info__price'>
+                <div className='product-card__info'>
+                    <h3 className='product-card__info__name'>{name}</h3>
+                    <div className='product-card__info__price'>
                         {numberWithCommas(price)}
                         <label className='vnd'>đ</label>
                     </div>
                 </div>
-                <ButtonNoLink className='btn product-card__item__buy'>{buttonTitle}</ButtonNoLink>
+                <ButtonNoLink className='btn product-card__buy'>{buttonTitle}</ButtonNoLink>
                 {type.isBestSeller ? (
                     <div className='best-seller'>
                         <i className='bx bxs-hot'></i>

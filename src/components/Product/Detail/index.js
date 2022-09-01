@@ -35,47 +35,47 @@ function ProductDetail(props) {
 
     return (
         <>
-            <div className='product-detail__image'>
-                <div className='product-detail__image__group'>
+            <div className='product-detail__info'>
+                <div className='product-detail__image'>
                     <div className='product-detail__image__list'>
                         <img
-                            className='product-detail__image__list__item'
+                            className='product-detail__image__item'
                             onClick={() => setPreviewImage(image01)}
                             src={image01}
                             alt=''
                         />
                         <img
-                            className='product-detail__image__list__item'
+                            className='product-detail__image__item'
                             onClick={() => setPreviewImage(image02)}
                             src={image02}
                             alt=''
                         />
                     </div>
-                    {/* <img className='product-detail__image__main' src={previewImage} alt='' /> */}
+                    {/* <img className='product-detail__info__main' src={previewImage} alt='' /> */}
                     {imageManify(previewImage, previewImage)}
                 </div>
-                <div className='product-detail__info'>
-                    <p className='product-detail__info__name'>{name}</p>
-                    <p className='product-detail__info__price'>
+                <div className='product-detail__option'>
+                    <p className='product-detail__option__name'>{name}</p>
+                    <p className='product-detail__option__price'>
                         Giá:
                         <span>
                             {numberWithCommas(price)}
                             <label className='vnd'>đ</label>
                         </span>
                     </p>
-                    <div className='product-detail__info__group'>
-                        <p className='product-detail__info__group__title'>Màu sắc</p>
-                        <div className='product-detail__info__group__list'>
+                    <div className='product-detail__option__group'>
+                        <p className='product-detail__option__group__title'>Màu sắc</p>
+                        <div className='product-detail__option__group__list'>
                             {colors.map((color, index) => {
                                 return (
                                     <div
-                                        className={`product-detail__info__group__item ${
+                                        className={`product-detail__option__group__item ${
                                             activeColor === color ? 'active' : ''
                                         }`}
                                         key={index}
                                         onClick={() => setActiveColor(color)}
                                     >
-                                        <div className='product-detail__info__group__item--color'>
+                                        <div className='product-detail__option__group__item--color'>
                                             {color}
                                         </div>
                                     </div>
@@ -83,15 +83,15 @@ function ProductDetail(props) {
                             })}
                         </div>
                     </div>
-                    <div className='product-detail__info__group'>
-                        <p className='product-detail__info__group__title'>Kích cỡ</p>
-                        <div className='product-detail__info__group__list'>
+                    <div className='product-detail__option__group'>
+                        <p className='product-detail__option__group__title'>Kích cỡ</p>
+                        <div className='product-detail__option__group__list'>
                             {size.map((item, index) => {
                                 return (
                                     <div
-                                        className={`product-detail__info__group__item ${
+                                        className={`product-detail__option__group__item ${
                                             activeSize === item ? 'active' : ''
-                                        } product-detail__info__group__item--size}`}
+                                        } product-detail__option__group__item--size}`}
                                         key={index}
                                         onClick={() => setActiveSize(item)}
                                     >
@@ -101,21 +101,21 @@ function ProductDetail(props) {
                             })}
                         </div>
                     </div>
-                    <div className='product-detail__info__group'>
-                        <p className='product-detail__info__group__title'>Số lượng</p>
-                        <div className='product-detail__info__group__list'>
+                    <div className='product-detail__option__group'>
+                        <p className='product-detail__option__group__title'>Số lượng</p>
+                        <div className='product-detail__option__group__list'>
                             <button
-                                className='product-detail__info__group__list__btn'
+                                className='product-detail__option__group__list__btn'
                                 disabled={quantity === 1 ? 'disabled' : ''}
                                 onClick={() => updateQuantity('minus')}
                             >
                                 <i className='fas fa-minus'></i>
                             </button>
-                            <div className='product-detail__info__group__list__quatity'>
+                            <div className='product-detail__option__group__list__quatity'>
                                 {quantity}
                             </div>
                             <button
-                                className='product-detail__info__group__list__btn'
+                                className='product-detail__option__group__list__btn'
                                 onClick={() => updateQuantity('plus')}
                             >
                                 <i className='fas fa-plus'></i>
@@ -123,7 +123,7 @@ function ProductDetail(props) {
                         </div>
                     </div>
                     <ButtonNoLink
-                        className='btn product-detail__info__cart'
+                        className='btn product-detail__option__cart'
                         onClick={() => handleAddToCart(product, quantity, activeColor, activeSize)}
                     >
                         Thêm vào giỏ hàng

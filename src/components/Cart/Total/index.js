@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import numberWithCommas from '../../../common/numberWithCommas'
 import { ButtonLink } from '../../../common/Button'
+import numberWithCommas from '../../../common/numberWithCommas'
 
 function CartTotal(props) {
     const carts = props.carts

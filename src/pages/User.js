@@ -1,15 +1,12 @@
 import { connect } from 'react-redux'
 import { useHistory } from 'react-router'
 
-function User({user}) {
-
+function User({ user }) {
     const history = useHistory()
-    
+
     return (
         <>
-            {
-                user.isLogin 
-                ?
+            {user.isLogin ? (
                 <div className='info-user'>
                     <img src={user.photo} alt='' />
                     <div className='info-user__info'>
@@ -25,16 +22,16 @@ function User({user}) {
                         </div>
                     </div>
                 </div>
-                :
+            ) : (
                 history.push('dang-nhap')
-            }
+            )}
         </>
     )
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
-        user: state.userReducer
+        user: state.userReducer,
     }
 }
 

@@ -18,11 +18,11 @@ function ProductMore() {
         <Helmet title={product.name}>
             <div className='product__more'>
                 <h3 className='product__more__title'>Khám phá thêm</h3>
-                <div className='product__more__list'>
+                <div className='product-list'>
                     {getProductsBySlice(1, 9).map((product, index) => {
                         return (
                             <ProductCard
-                                className={'product-card__item'}
+                                className={'product-card'}
                                 link={`/san-pham/${product.slug}`}
                                 image={product.image01}
                                 name={product.name}

@@ -126,7 +126,7 @@
     transition: 0.4s;
 
     &__icon {
-        display: none;
+        display: none !important;
     }
 
     &__item {
@@ -224,7 +224,7 @@
         z-index: 299;
 
         &__icon {
-            display: block;
+            display: block !important;
         }
 
         &__item {

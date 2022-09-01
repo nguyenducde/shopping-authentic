@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from '../../assets/images/Logo-2.png'
-import ScrollToTop from '../ScrollToTop'
+import ScrollToTop from '../../common/ScrollToTop'
 
 export default function Footer() {
     useEffect(() => {

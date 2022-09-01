@@ -1,0 +1,104 @@
+.cart {
+    margin-top: $header-height;
+    background-color: #fdeaede8; //fff1f3
+    padding-top: 2rem;
+
+    &__title {
+        font-size: 2rem;
+        background-color: white;
+        margin-bottom: 2rem;
+        padding: 1.5rem 2rem;
+        border-radius: 6px;
+
+        span {
+            font-size: 1.7rem;
+            color: #000000c7;
+        }
+    }
+
+    &__info {
+        display: flex;
+    }
+
+    &-disable {
+        background-color: #525252db;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+.btn-size {
+    padding: 0.2rem 1rem;
+}
+.btn-disable {
+    cursor: not-allowed;
+}
+.btn-yes {
+    background-color: #0c3891;
+    color: white !important;
+    border-color: #0c3891 !important;
+    padding: 0 1rem;
+    margin: 0 -1rem;
+}
+.btn-yes:hover {
+    background: #0c2b68;
+    border-color: #0c2b68;
+}
+.btn-unDelete:hover {
+    border-color: #009fff;
+    color: #009fff;
+}
+.text-size {
+    font-size: 1.7rem;
+}
+.btn-full {
+    display: block;
+}
+.show-notification {
+    display: block;
+}
+
+@media only screen and (max-width: 1023px) {
+    .cart {
+        margin-top: $header-mobile-height;
+
+        &__title {
+            font-size: 1.7rem;
+
+            span {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__info {
+            flex-direction: column;
+
+            &--quantity-flex {
+                flex-direction: column;
+            }
+        }
+    }
+    .btn-size {
+        padding: 0.1rem 0.4rem;
+        font-size: 1rem;
+    }
+    .text-size {
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .cart {
+        &__info {
+            &--quantity-flex {
+                flex-direction: row;
+            }
+        }
+    }
+    .text-size {
+        padding: 0;
+    }
+    .btn-size {
+        padding: 0.2rem 0.4rem;
+    }
+}

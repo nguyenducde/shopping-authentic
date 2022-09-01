@@ -5,12 +5,12 @@ function ProductNew() {
     return (
         <section className='product mt-0'>
             <h3 className='product__heading'>Sản phẩm mới</h3>
-            <div className='product-card'>
+            <div className='product-list'>
                 {getAllProducts().map((product, index) => {
                     if (product.isNewProduct) {
                         return (
                             <ProductCard
-                                className={'product-card__item'}
+                                className={'product-card'}
                                 link={`/san-pham/${product.slug}`}
                                 image={product.image01}
                                 name={product.name}

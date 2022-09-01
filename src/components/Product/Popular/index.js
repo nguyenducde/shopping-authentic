@@ -5,11 +5,11 @@ function ProductPopular() {
     return (
         <section className='product product--unset-border'>
             <h3 className='product__heading'>Sản phẩm phổ biến</h3>
-            <div className='product-card'>
+            <div className='product-list'>
                 {getProductsBySlice(6, 18).map((product, index) => {
                     return (
                         <ProductCard
-                            className={'product-card__item'}
+                            className={'product-card'}
                             link={`/san-pham/${product.slug}`}
                             image={product.image01}
                             name={product.name}

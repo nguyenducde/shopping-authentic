@@ -1,76 +1,75 @@
-
 export const dress = [
     {
         name: 'Áo thun',
-        dressSlug: 'ao-thun'
+        dressSlug: 'ao-thun',
     },
     {
         name: 'Áo somi',
-        dressSlug: 'ao-somi'
+        dressSlug: 'ao-somi',
     },
     {
         name: 'Quần jean',
-        dressSlug: 'quan-jean'
-    }
+        dressSlug: 'quan-jean',
+    },
 ]
 
 export const colors = [
     {
         name: 'Trắng',
-        color: 'Trắng'
+        color: 'Trắng',
     },
     {
         name: 'Hồng',
-        color: 'Hồng'
+        color: 'Hồng',
     },
     {
         name: 'Đen',
-        color: 'Đen'
+        color: 'Đen',
     },
     {
         name: 'Vàng',
-        color: 'Vàng'
+        color: 'Vàng',
     },
     {
         name: 'Cam',
-        color: 'Cam'
+        color: 'Cam',
     },
     {
         name: 'Xanh',
-        color: 'Xanh'
-    }
+        color: 'Xanh',
+    },
 ]
 
 export const size = [
     {
         name: 'S',
-        size: 's'
+        size: 's',
     },
     {
         name: 'M',
-        size: 'm'
+        size: 'm',
     },
     {
         name: 'L',
-        size: 'l'
+        size: 'l',
     },
     {
         name: 'XL',
-        size: 'xl'
+        size: 'xl',
     },
     {
         name: 'XXL',
-        size: 'xxl'
+        size: 'xxl',
     },
 ]
 
 export const sex = [
     {
         name: 'Nam',
-        sex: 'male'
+        sex: 'male',
     },
     {
         name: 'Nữ',
-        sex: 'female'
-    }
+        sex: 'female',
+    },
 ]

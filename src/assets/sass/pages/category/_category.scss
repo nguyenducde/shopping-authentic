@@ -1,0 +1,30 @@
+.category {
+    margin-top: 3rem;
+    display: flex;
+
+    &__empty {
+        @include flex(center, unset);
+        flex-direction: column;
+        width: 100%;
+
+        img {
+            width: 30rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .category {
+        flex-direction: column;
+        margin-top: unset;
+
+        &__empty {
+            margin: 4rem 0;
+        }
+    }
+}

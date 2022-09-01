@@ -1,60 +1,58 @@
+import { useEffect } from 'react'
+import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
+import { useHistory } from 'react-router'
+import graph from 'fb-react-sdk'
 import Helmet from '../common/Helmet'
-import { NavLink } from "react-router-dom"
 import avatar_login from '../assets/images/login.png'
 import avatar__wave from '../assets/images/login_wave.png'
-import { useEffect } from 'react'
 import { facebookProvider, googleProvider } from '../authentication/config/authMethod'
 import socialMediaAuth from '../authentication/services/auth'
-import { connect } from 'react-redux'
 import { saveAccountUser } from '../redux/actions'
-import { useHistory } from 'react-router'
-import graph from 'fb-react-sdk';
 
-function Login(props){
-
+function Login(props) {
     useEffect(() => {
         const input = document.querySelectorAll('.login__info__group__content__input')
-        
-        function addcl(){
-            let parent = this.parentNode.parentNode;
-	        parent.classList.add("focus");
-        }
-        
-        function remcl(){
-            let parent = this.parentNode.parentNode;
-            if(this.value === ""){
-                parent.classList.remove("focus");
-        }
-    }
 
-        input.forEach(input => {
-            input.addEventListener("focus", addcl);
-            input.addEventListener("blur", remcl);
+        function addcl() {
+            let parent = this.parentNode.parentNode
+            parent.classList.add('focus')
+        }
+
+        function remcl() {
+            let parent = this.parentNode.parentNode
+            if (this.value === '') {
+                parent.classList.remove('focus')
+            }
+        }
+
+        input.forEach((input) => {
+            input.addEventListener('focus', addcl)
+            input.addEventListener('blur', remcl)
         })
     })
 
     useEffect(() => {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     }, [])
 
     const history = useHistory()
 
-    const handleAuth = async(provider) => {
-            const res = await socialMediaAuth(provider)
-            if(provider.providerId === 'facebook.com'){
-                const credential = res.credential
-                const accessToken = credential.accessToken
-                graph.setAccessToken(accessToken);
-                graph.get("/me?fields=id,name,email,picture", function(err, res) {
-                    props.onAddProductToCart(res)
-                    history.push('gio-hang')
-                });
-            }
-            else {
+    const handleAuth = async (provider) => {
+        const res = await socialMediaAuth(provider)
+        if (provider.providerId === 'facebook.com') {
+            const credential = res.credential
+            const accessToken = credential.accessToken
+            graph.setAccessToken(accessToken)
+            graph.get('/me?fields=id,name,email,picture', function (err, res) {
                 props.onAddProductToCart(res)
                 history.push('gio-hang')
-            }
-    } 
+            })
+        } else {
+            props.onAddProductToCart(res)
+            history.push('gio-hang')
+        }
+    }
 
     return (
         <Helmet title='Đăng nhập'>
@@ -76,7 +74,10 @@ function Login(props){
                         <div className='login__info__group'>
                             <i className='fas fa-lock login__info__group__content__icon'></i>
                             <div className='login__info__group__content'>
-                                <input type='password' className='login__info__group__content__input' />
+                                <input
+                                    type='password'
+                                    className='login__info__group__content__input'
+                                />
                                 <h3 className='login__info__group__content__name'>Mật khẩu</h3>
                             </div>
                         </div>
@@ -86,11 +87,22 @@ function Login(props){
                         </div>
                         <h3 className='login__info__or'>HOẶC</h3>
                         <div className='login__info__social'>
-                            <i className='fab fa-facebook-f' style={{color: '#0d3178'}} onClick={() => handleAuth(facebookProvider)}></i>
-                            <i className='fab fa-google' style={{color: '#c75454'}} onClick={() => handleAuth(googleProvider)}></i>
+                            <i
+                                className='fab fa-facebook-f'
+                                style={{ color: '#0d3178' }}
+                                onClick={() => handleAuth(facebookProvider)}
+                            ></i>
+                            <i
+                                className='fab fa-google'
+                                style={{ color: '#c75454' }}
+                                onClick={() => handleAuth(googleProvider)}
+                            ></i>
                         </div>
                         <div className='login__info__register'>
-                            Bạn chưa có tài khoản? <NavLink className='login__info__register__link' to='/dang-ky'>Đăng ký tại đây</NavLink>
+                            Bạn chưa có tài khoản?{' '}
+                            <NavLink className='login__info__register__link' to='/dang-ky'>
+                                Đăng ký tại đây
+                            </NavLink>
                         </div>
                     </form>
                 </div>
@@ -103,7 +115,7 @@ const mapDispatchToProps = (dispatch, props) => {
     return {
         onAddProductToCart: (user) => {
             dispatch(saveAccountUser(user))
-        }
+        },
     }
 }
 

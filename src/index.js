@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
 import './assets/boxicons-2.0.7/css/boxicons.min.css'
 import './assets/sass/index.scss'
 import { Provider } from 'react-redux'
@@ -14,6 +14,6 @@ ReactDOM.render(
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')
-);
+)
 
-reportWebVitals();
+reportWebVitals()
