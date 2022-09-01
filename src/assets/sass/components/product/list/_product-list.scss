@@ -1,10 +1,19 @@
 .product-list {
     @include flex(unset, space-between);
     flex-wrap: wrap;
+    flex: 1;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .product-list {
         justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .product-list {
+        &.top {
+            margin-top: 5rem;
+        }
     }
 }

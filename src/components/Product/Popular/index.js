@@ -3,7 +3,7 @@ import ProductCard from '../../../common/ProductCard'
 
 function ProductPopular() {
     return (
-        <section className='product product--unset-border'>
+        <section className='product product--unset-border product--mb-2 product--mb-unset'>
             <h3 className='product__heading'>Sản phẩm phổ biến</h3>
             <div className='product-list'>
                 {getProductsBySlice(6, 18).map((product, index) => {

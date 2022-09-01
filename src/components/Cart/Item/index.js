@@ -41,10 +41,10 @@ function CartItem(props) {
                 </div>
             </div>
 
-            <div className='product-detail__info__group cart__info__product__heading__quantity'>
-                <div className='product-detail__info__group__list cart__info--quantity-flex'>
+            <div className='cart__info__product__group cart__info__product__heading__quantity'>
+                <div className='cart__info__product__group__list cart__info--quantity-flex'>
                     <button
-                        className={`product-detail__info__group__list__btn btn-size ${
+                        className={`cart__info__product__item__btn btn-size ${
                             quantity === 1 ? 'btn-disable' : ''
                         }`}
                         disabled={quantity === 1 ? 'disabled' : ''}
@@ -52,11 +52,9 @@ function CartItem(props) {
                     >
                         <i className='fas fa-minus'></i>
                     </button>
-                    <div className='product-detail__info__group__list__quatity text-size'>
-                        {quantity}
-                    </div>
+                    <div className='cart__info__product__item__quantity text-size'>{quantity}</div>
                     <button
-                        className='product-detail__info__group__list__btn btn-size'
+                        className='cart__info__product__item__btn btn-size'
                         onClick={() => handleUpdateProductInCart(cart, quantity + 1)}
                     >
                         <i className='fas fa-plus'></i>

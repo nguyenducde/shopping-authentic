@@ -10,11 +10,11 @@ function ListAllProducts({ products }) {
                     <p>Không tìm thấy sản phẩm</p>
                 </div>
             ) : (
-                <div className='product-list'>
+                <div className='category__product'>
                     {products.map((product, index) => {
                         return (
                             <ProductCard
-                                className={'product-card'}
+                                className={'category__product__item'}
                                 link={`/danh-muc/san-pham/${product.slug}`}
                                 image={product.image01}
                                 name={product.name}

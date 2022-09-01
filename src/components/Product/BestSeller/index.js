@@ -3,7 +3,7 @@ import ProductCard from '../../../common/ProductCard'
 
 function ProductBestSeller() {
     return (
-        <section className='product'>
+        <section className='product product--mb-5'>
             <h3 className='product__heading product__heading--top'>Top sản phẩm bán chạy nhất</h3>
             <div className='product-list'>
                 {getAllProducts().map((product, index) => {

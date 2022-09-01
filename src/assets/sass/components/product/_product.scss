@@ -1,11 +1,17 @@
 .product {
-    margin-bottom: 3rem;
+    &--mb-5 {
+        margin-bottom: -5rem;
+    }
+    &--mb-2 {
+        margin-bottom: 2rem;
+    }
 
     &__heading {
         font-size: 2.4rem;
         text-align: center;
         font-weight: 400;
         margin-bottom: 5rem;
+        margin-top: 7rem;
     }
 }
 
@@ -23,17 +29,25 @@
 
 @media only screen and (max-width: 767px) {
     .product {
-        margin-top: 0 !important;
         border-bottom: 2px solid $main-color;
         padding-bottom: 2rem;
 
         &__heading {
             font-size: 1.9rem;
             font-weight: 500;
+            margin-top: 4rem;
+            margin-bottom: 3rem;
 
-            &--top {
-                padding-top: 5rem;
-            }
+            // &--top {
+            //     padding-top: 5rem;
+            // }
+        }
+
+        &--mt-9 {
+            margin-top: 9rem;
+        }
+        &--mb-unset {
+            margin-bottom: unset;
         }
 
         &--unset-border {

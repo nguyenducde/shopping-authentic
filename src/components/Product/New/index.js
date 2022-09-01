@@ -3,8 +3,8 @@ import ProductCard from '../../../common/ProductCard'
 
 function ProductNew() {
     return (
-        <section className='product mt-0'>
-            <h3 className='product__heading'>Sản phẩm mới</h3>
+        <section className='product product--mb-2'>
+            <h3 className='product__heading product--mt-9'>Sản phẩm mới</h3>
             <div className='product-list'>
                 {getAllProducts().map((product, index) => {
                     if (product.isNewProduct) {

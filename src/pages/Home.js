@@ -15,23 +15,12 @@ export default function Home() {
 
             <div className='container'>
                 <Policy />
-            </div>
-
-            <div className='container container--850'>
                 <ProductBestSeller />
-            </div>
-
-            <div className='container container--850'>
                 <ProductNew />
-            </div>
-
-            <div className='container'>
                 <Banner />
-            </div>
-
-            <div className='container container--850'>
                 <ProductPopular />
             </div>
+
             <BackToTop />
         </Helmet>
     )

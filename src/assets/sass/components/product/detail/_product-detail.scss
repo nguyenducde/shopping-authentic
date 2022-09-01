@@ -242,6 +242,11 @@
 
             &__cart {
                 width: 100%;
+
+                &:hover {
+                    background-color: $main-color;
+                    color: white;
+                }
             }
         }
 

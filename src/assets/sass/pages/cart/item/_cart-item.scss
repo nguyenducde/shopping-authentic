@@ -27,12 +27,36 @@
         }
     }
 
+    &__group {
+        &__list {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+        }
+    }
+
     &__item {
         display: flex;
         padding: 1.5rem 2rem;
         background-color: white;
         margin-bottom: 2rem;
         border-radius: 6px;
+
+        &__quantity {
+            width: 4rem;
+            text-align: center;
+        }
+
+        &__btn {
+            @include flex(center, center);
+            border-radius: 0.5rem 0 0 0.5rem;
+            cursor: pointer;
+            padding: 0.5rem 1.5rem;
+            outline: none;
+            width: 30px;
+            background-color: #fff;
+            border: 1px solid #a5a5a5;
+        }
 
         &__group {
             flex: 1;
@@ -136,6 +160,10 @@
             }
         }
     }
+
+    .btn-size {
+        padding: 0.2rem 1rem;
+    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1299px) {
@@ -202,6 +230,15 @@
                 }
             }
         }
+    }
+
+    .text-size {
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
+    }
+    .btn-size {
+        padding: 0.1rem 0.4rem;
+        font-size: 1rem;
     }
 }
 

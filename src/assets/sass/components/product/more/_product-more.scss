@@ -3,7 +3,27 @@
 
     &__title {
         font-size: 2rem;
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
         text-align: center;
+    }
+
+    & .product-card__image {
+        & img {
+            height: 33rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .product__more {
+        &__title {
+            padding-bottom: 3rem;
+        }
+
+        & .product-card__image {
+            & img {
+                height: 27rem;
+            }
+        }
     }
 }

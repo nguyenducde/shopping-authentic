@@ -7,7 +7,7 @@ function ProductCard({ className, link, image, name, price, buttonTitle, ...type
         <div className={className}>
             <NavLink exact to={link}>
                 <div className='product-card__image'>
-                    <img src={image} alt='' />
+                    <img src={image} alt='' className='product-card__image--height' />
                 </div>
                 <div className='product-card__info'>
                     <h3 className='product-card__info__name'>{name}</h3>
