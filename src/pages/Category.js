@@ -84,10 +84,6 @@ function Category() {
         updateProducts()
     }, [updateProducts])
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [products])
-
     return (
         <Helmet title='Sản phẩm'>
             <div className='container'>

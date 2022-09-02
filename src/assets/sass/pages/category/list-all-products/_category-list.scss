@@ -42,7 +42,15 @@
             margin-left: 5%;
 
             &__item {
-                width: 230px;
+                width: 30%;
+                margin: 0 0rem 4rem 1rem;
+                height: 40rem;
+            }
+
+            & .product-card__image {
+                & img {
+                    height: 25rem;
+                }
             }
         }
     }

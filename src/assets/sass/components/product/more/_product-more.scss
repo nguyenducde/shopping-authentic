@@ -14,6 +14,16 @@
     }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .product__more {
+        & .product-card__image {
+            & img {
+                height: 29rem;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .product__more {
         &__title {
