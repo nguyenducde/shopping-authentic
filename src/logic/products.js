@@ -1,5 +1,5 @@
 import { publicRequest } from '../../requestMethods'
-import { handleError } from '../toast'
+// import { handleError } from '../toast'
 
 // ---- --GET PRODUCTS -- ----
 
@@ -14,7 +14,7 @@ export const productById = async (id, setProduct, setColor, setSize) => {
     setSize(productResponse.size[0]); // establece el tamaño al primer tamaño devuelto
   } catch (error) {
     console.log(error);
-    handleError(error);
+    // handleError(error);
   
   }
 };
@@ -27,7 +27,7 @@ export const SearchProducts = async (query) => {
     return response;
   } catch (error) {
     console.log(error);
-    handleError(error);
+    // handleError(error);
     
   }
 };
@@ -43,7 +43,7 @@ export const getProductByTags = async (tag, currentPage, pageSize) => {
     return response;
   } catch (error) {
     console.log(error);
-    handleError(error);
+    // handleError(error);
     const response = await publicRequest.get(
       `/products/tag?tag=${tag}&page=${currentPage}&size=${pageSize}`,
     );
@@ -65,7 +65,7 @@ export const getAllProducts = async (currentPage, pageSize) => {
     return response;
   } catch (error) {
     console.log(error);
-    handleError(error);
+    // handleError(error);
     const response = await publicRequest.get(
       `/products?page=${currentPage}&size=${pageSize}`,
     );
