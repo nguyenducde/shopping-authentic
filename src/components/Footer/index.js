@@ -37,7 +37,7 @@ export default function Footer() {
                         </p>
                     </div>
                     <div className='footer-group__item'>
-                        <h3 className='footer-group__item-heading'>VỀ Shop Authentic</h3>
+                        <h3 className='footer-group__item-heading'>VỀ SHOP AUTHENTIC</h3>
                         <NavLink
                             to='/about'
                             className='footer-group__item-content footer-group__item-content-link'
