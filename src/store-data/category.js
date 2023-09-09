@@ -11,6 +11,10 @@ export const dress = [
         name: 'Quần jean',
         dressSlug: 'quan-jean',
     },
+    {
+        name: 'Vape',
+        dressSlug: 'vape',
+    },
 ]
 
 export const colors = [
