@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 export default function Helmet(props){
 
-    document.title = 'Yolo - ' + props.title
+    document.title = 'Shop Authentic - ' + props.title
 
     return (
         <div>

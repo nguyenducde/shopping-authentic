@@ -36,7 +36,7 @@ function CartTotal(props) {
                         to='/dang-nhap'
                         className={`btn cart__btn ${user.isLogin ? 'cart-disable' : ''}`}
                     >
-                        {user.isLogin ? 'Admin chưa xử lý !!!' : 'Tiến hành đặt hàng'}
+                        {user.isLogin ? '' : 'Tiến hành đặt hàng'}
                     </ButtonLink>
                 )}
             </div>

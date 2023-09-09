@@ -1,7 +1,7 @@
 import { useEffect, useCallback, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
-import logo from '../../assets/images/Logo-2.png'
+import logo from '../../assets/images/favicon.png'
 import { logoutAccountUser } from '../../redux/actions'
 import ScrollToTop from '../../common/ScrollToTop'
 
