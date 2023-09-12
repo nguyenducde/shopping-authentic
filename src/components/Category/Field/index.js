@@ -69,7 +69,7 @@ function CategoryField({ filter, setFilter, filterSelect, dress, sex, colors, si
                                 <Checkbox
                                     label={item.name}
                                     onChange={(input) => filterSelect('DRESS', input.checked, item)}
-                                    checked={filter.dress.includes(item.dressSlug)}
+                                    checked={filter.dress.includes(item.dresstag)}
                                     key={index}
                                 />
                             )

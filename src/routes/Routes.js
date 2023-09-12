@@ -14,10 +14,10 @@ export default function Routes() {
             <Route exact path='/'>
                 <Home />
             </Route>
-            <Route path='/san-pham/:slug'>
+            <Route path='/san-pham/:tag'>
                 <Product />
             </Route>
-            <Route path='/danh-muc/san-pham/:slug'>
+            <Route path='/danh-muc/san-pham/:tag'>
                 <Product />
             </Route>
             <Route path='/danh-muc'>

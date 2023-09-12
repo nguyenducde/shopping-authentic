@@ -20,7 +20,7 @@ function Category() {
         if (checked) {
             switch (type) {
                 case 'DRESS':
-                    setFilter({ ...filter, dress: [...filter.dress, item.dressSlug] })
+                    setFilter({ ...filter, dress: [...filter.dress, item.dresstag] })
                     break
                 case 'SEX':
                     setFilter({ ...filter, initialSex: [...filter.initialSex, item.sex] })
@@ -36,7 +36,7 @@ function Category() {
         } else {
             switch (type) {
                 case 'DRESS':
-                    const newDress = filter.dress.filter((e) => e !== item.dressSlug)
+                    const newDress = filter.dress.filter((e) => e !== item.dresstag)
                     setFilter({ ...filter, dress: newDress })
                     break
                 case 'SEX':
@@ -60,7 +60,7 @@ function Category() {
         let allProduct = getAllProducts()
 
         if (filter.dress.length > 0) {
-            allProduct = allProduct.filter((e) => filter.dress.includes(e.dressSlug))
+            allProduct = allProduct.filter((e) => filter.dress.includes(e.dresstag))
         }
         if (filter.initialSex.length > 0) {
             allProduct = allProduct.filter((e) => filter.initialSex.includes(e.sex))

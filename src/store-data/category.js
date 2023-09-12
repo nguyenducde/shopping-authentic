@@ -1,23 +1,23 @@
 export const dress = [
     {
         name: 'Áo thun',
-        dressSlug: 'ao-thun',
+        dresstag: 'ao-thun',
     },
     {
         name: 'Áo somi',
-        dressSlug: 'ao-somi',
+        dresstag: 'ao-somi',
     },
     {
         name: 'Quần jean',
-        dressSlug: 'quan-jean',
+        dresstag: 'quan-jean',
     },
     {
         name: 'Vape',
-        dressSlug: 'vape',
+        dresstag: 'vape',
     },
     {
         name: 'Giày',
-        dressSlug: 'vape',
+        dresstag: 'vape',
     },
 ]
 

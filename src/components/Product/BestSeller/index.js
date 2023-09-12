@@ -11,7 +11,7 @@ function ProductBestSeller() {
                         return (
                             <ProductCard
                                 className={'product-card'}
-                                link={`/san-pham/${product.slug}`}
+                                link={`/san-pham/${product.tag}`}
                                 image={product.image01}
                                 name={product.name}
                                 price={product.price}

@@ -15,7 +15,7 @@ function ListAllProducts({ products }) {
                         return (
                             <ProductCard
                                 className={'category__product__item'}
-                                link={`/danh-muc/san-pham/${product.slug}`}
+                                link={`/danh-muc/san-pham/${product.tag}`}
                                 image={product.image01}
                                 name={product.name}
                                 price={product.price}

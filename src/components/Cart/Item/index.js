@@ -8,7 +8,7 @@ import { toastSuccess } from '../../../common/toastify'
 function CartItem(props) {
     const { cart, color, size } = props
     const quantityCart = props.quantityCart
-    const slug = cart.slug
+    const tag = cart.tag
 
     const [quantity, setQuantity] = useState(quantityCart)
 
@@ -29,11 +29,11 @@ function CartItem(props) {
     return (
         <div className='cart__info__product__item'>
             <div className='cart__info__product__item__group'>
-                <NavLink exact to={`/danh-muc/san-pham/${slug}`}>
+                <NavLink exact to={`/danh-muc/san-pham/${tag}`}>
                     <img src={cart.image01} alt='' />
                 </NavLink>
                 <div className='cart__info__product__item__group__info'>
-                    <NavLink exact to={`/danh-muc/san-pham/${slug}`}>
+                    <NavLink exact to={`/danh-muc/san-pham/${tag}`}>
                         {cart.name}
                     </NavLink>
                     <p className='color'>Màu: {color}</p>

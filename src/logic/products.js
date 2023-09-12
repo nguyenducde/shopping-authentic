@@ -60,14 +60,14 @@ export const getAllProducts = async (currentPage, pageSize) => {
   // obtiene todos los productos y le pide al backend la paginacion necesaria
   try {
     const response = await publicRequest.get(
-      `/products?page=${currentPage}&size=${pageSize}`,
+      `/products`,
     );
     return response;
   } catch (error) {
     console.log(error);
     // handleError(error);
     const response = await publicRequest.get(
-      `/products?page=${currentPage}&size=${pageSize}`,
+      `/products`,
     );
     return response;
   }
@@ -87,7 +87,7 @@ export const getProductsFunction = async (
     const res = await SearchProducts(query);
     return res;
   } else {
-    const res = await getAllProducts(currentPage, pageSize);
+    const res = await getAllProducts();
     return res;
   }
 };
